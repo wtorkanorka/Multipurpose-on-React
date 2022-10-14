@@ -1,13 +1,14 @@
 import React from 'react'
 import HeaderSecond from '../HeaderSecond/HeaderSecond'
 import styles from './HeroSecond.module.scss'
-
+import { useState } from 'react'
 import image from '../../assets/images/second-hero-image.svg'
 import SmartButton from '../SmartButton/SmartButton'
+
 export default function HeroSecond() {
   return (
     <div className={styles['content-wrapper']}>
-      <HeaderSecond />
+      <HeaderSecond backgroundColorProps={'none'} />
       <div className={styles['container']}>
         <div className={styles['content']}>
           <h1 className={styles['paragraph-h1']}>

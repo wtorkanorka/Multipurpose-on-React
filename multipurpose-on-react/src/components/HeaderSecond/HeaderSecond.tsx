@@ -3,13 +3,25 @@ import styles from './HeaderSecond.module.scss'
 import logo from '../../assets/images/logo.svg'
 import { useState } from 'react'
 import burger from '../../assets/images/burger.svg'
-export default function HeaderSecond() {
+import { Link } from 'react-router-dom'
+export default function HeaderSecond({ backgroundColorProps = 'white' }: any) {
   const [visible, setVisible] = useState(false)
   return (
     <>
-      <div className={styles['header']}>
+      <div
+        className={styles['header']}
+        style={{
+          backgroundColor: backgroundColorProps,
+          boxShadow:
+            backgroundColorProps == 'white'
+              ? '0px 1px 10px rgba(0, 0, 0, 0.1)'
+              : 'none',
+        }}
+      >
         <div className={styles['logo']}>
-          <img src={logo} alt="" />
+          <Link to="/1">
+            <img src={logo} alt="" />
+          </Link>
         </div>
         <div className={styles['navigation']}>
           <ul>
@@ -25,7 +37,10 @@ export default function HeaderSecond() {
           </div>
         </div>
       </div>
-      <div className={styles['header-second']}>
+      <div
+        className={styles['header-second']}
+        style={{ backgroundColor: backgroundColorProps }}
+      >
         <div className={styles['logo']}>
           <img src={logo} alt="" />
         </div>
@@ -35,7 +50,7 @@ export default function HeaderSecond() {
         <div className={styles['navigation']}>
           <img src={burger} alt="burger" onClick={() => setVisible(!visible)} />
         </div>
-      </div>{' '}
+      </div>
       {visible && (
         <ul className={styles['nav-ul']}>
           <li>Home</li>
