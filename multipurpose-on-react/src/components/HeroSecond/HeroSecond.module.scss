@@ -1,0 +1,77 @@
+@use '../../mixins/mixins.variables.scss';
+.content-wrapper {
+  background: #fff7f4;
+}
+.container {
+  display: flex;
+  gap: 36px;
+  padding: 0 135px;
+  margin-top: 135px;
+  padding-bottom: 150px;
+  align-items: center;
+}
+
+.paragraph-h1 {
+  font-weight: 700;
+  font-size: 48.83px;
+  line-height: 73px;
+  color: #373737;
+  margin-bottom: 18px;
+}
+.image img {
+  width: 553px;
+  height: 470px;
+}
+
+.paragraph-p {
+  @include mixins.paragraph-style;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 1360px) {
+  //Планшет
+  .paragraph-h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 39.06px;
+    line-height: 123.6%;
+  }
+  .container {
+    display: flex;
+    gap: 28px;
+    padding: 0 40px;
+    margin-top: 73px;
+    padding-bottom: 73px;
+    align-items: center;
+  }
+  .image img {
+    width: 329px;
+  }
+}
+
+@media (max-width: 767px) {
+  //мобилка
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 50px;
+    gap: 70px;
+  }
+  .image img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .paragraph-h1 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 31.25px;
+    line-height: 123.6%;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

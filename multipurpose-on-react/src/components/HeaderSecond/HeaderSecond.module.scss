@@ -1,0 +1,139 @@
+.header {
+  height: 100px;
+  align-items: center;
+  padding: 0 135px;
+  gap: 28px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo img {
+  width: 186px;
+  height: 50px;
+}
+.navigation {
+  display: flex;
+  align-items: center;
+  ul {
+    display: flex;
+    gap: 29px;
+    margin-right: 40px;
+    font-weight: 500;
+    font-size: 20px;
+  }
+  li {
+    color: black;
+    &:active {
+      color: #ff5300;
+    }
+  }
+}
+
+.lets-talk {
+  button {
+    all: unset;
+    border: 2px solid black;
+    height: 50px;
+    width: 135px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
+  }
+}
+.header-second {
+  display: none;
+}
+@media (max-width: 1360px) {
+  .header-second {
+    display: none;
+  }
+  .header {
+    height: 80px;
+    align-items: center;
+    padding: 0 40px;
+    gap: 28px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .logo img {
+    width: 83px;
+    height: 25px;
+  }
+  .navigation {
+    display: flex;
+    align-items: center;
+    ul {
+      display: flex;
+      gap: 29px;
+      margin-right: 16px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 150.6%;
+    }
+    li {
+      text-align: center;
+    }
+  }
+
+  .lets-talk {
+    button {
+      all: unset;
+      border: 2px solid black;
+      height: 30px;
+      width: 85px;
+      display: flex;
+      align-items: center;
+      border-radius: 10px;
+      justify-content: center;
+      font-weight: 500;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .nav-ul {
+    display: flex;
+    position: absolute;
+    background-color: white;
+    box-shadow: 1px 1px 10px black;
+    flex-direction: column;
+    gap: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    align-items: left;
+    line-height: 150.6%;
+    right: 0;
+    padding: 20px;
+
+    li {
+      color: black;
+      &:hover {
+        color: #ff5300;
+      }
+    }
+  }
+  .header {
+    display: none;
+  }
+  .header-second {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding: 0 16px;
+  }
+  .navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    // align-items: baseline;
+    margin: 0;
+  }
+}
