@@ -4,6 +4,7 @@ import logo from '../../assets/images/logo.svg'
 import { useState } from 'react'
 import burger from '../../assets/images/burger.svg'
 import { Link } from 'react-router-dom'
+import sun from '../../assets/icons/light.svg'
 export default function HeaderSecond({ backgroundColorProps = 'white' }: any) {
   const [visible, setVisible] = useState(false)
   return (
@@ -44,9 +45,18 @@ export default function HeaderSecond({ backgroundColorProps = 'white' }: any) {
         <div className={styles['logo']}>
           <img src={logo} alt="" />
         </div>
-        <div className={styles['lets-talk']}>
-          <button>Let`s Talk</button>
-        </div>
+        {backgroundColorProps !== 'white' && (
+          <div className={styles['lets-talk']}>
+            <button>Let`s Talk</button>
+          </div>
+        )}
+        {backgroundColorProps == 'white' && (
+          <div className={styles['sun']}>
+            <button>
+              <img src={sun} alt="sun" />
+            </button>
+          </div>
+        )}
         <div className={styles['navigation']}>
           <img src={burger} alt="burger" onClick={() => setVisible(!visible)} />
         </div>

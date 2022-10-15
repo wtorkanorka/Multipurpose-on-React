@@ -10,7 +10,7 @@ import digitalMarketing from '../../assets/images/digital-marketing.svg'
 export default function OurServices() {
   return (
     <div className={styles['container']}>
-      <TitleOfPage position="center" />
+      <TitleOfPage position="center">Our Services</TitleOfPage>
       <h2 className={styles['h2']}>What We Do</h2>
       <div className={styles['blocks']}>
         <ul>
@@ -35,7 +35,7 @@ export default function OurServices() {
           <li>
             <div className={styles['container-for-image']}>
               <img src={gameDesign} alt="ux interface" />
-              <article className={styles['number']}>01</article>
+              <article className={styles['number']}>02</article>
             </div>
             <div>
               <h3>Game Design</h3>
@@ -53,7 +53,7 @@ export default function OurServices() {
           <li>
             <div className={styles['container-for-image']}>
               <img src={graphicDesign} alt="ux interface" />
-              <article className={styles['number']}>01</article>
+              <article className={styles['number']}>03</article>
             </div>
             <div>
               <h3>Graphic Design</h3>
@@ -71,7 +71,7 @@ export default function OurServices() {
           <li>
             <div className={styles['container-for-image']}>
               <img src={webDesign} alt="ux interface" />
-              <article className={styles['number']}>01</article>
+              <article className={styles['number']}>04</article>
             </div>
             <div>
               <h3>Web Design</h3>
@@ -89,7 +89,7 @@ export default function OurServices() {
           <li>
             <div className={styles['container-for-image']}>
               <img src={mobileDeveloper} alt="ux interface" />
-              <article className={styles['number']}>01</article>
+              <article className={styles['number']}>05</article>
             </div>
             <div>
               <h3>App Development</h3>
@@ -107,7 +107,7 @@ export default function OurServices() {
           <li>
             <div className={styles['container-for-image']}>
               <img src={digitalMarketing} alt="ux interface" />
-              <article className={styles['number']}>01</article>
+              <article className={styles['number']}>06</article>
             </div>
             <div>
               <h3>Digital Marketing</h3>
