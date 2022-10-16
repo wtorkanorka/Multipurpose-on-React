@@ -1,9 +1,5 @@
 @use '../../mixins/mixins.variables.scss';
 
-.container {
-  padding: 120px 135px;
-}
-
 .h2 {
   text-align: center;
   margin: 8px 0 30px 0;
@@ -58,17 +54,11 @@
   justify-content: space-between;
 }
 @media (max-width: 1200px) {
-  .container {
-    padding: 80px 70px;
-  }
   .h2 {
     font-size: 35px;
   }
 }
 @media (max-width: 767px) {
-  .container {
-    padding: 60px 40px;
-  }
   .h2 {
     font-size: 30px;
   }

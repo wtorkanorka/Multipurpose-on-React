@@ -7,9 +7,10 @@ import gameDesign from '../../assets/images/gaming.svg'
 import webDesign from '../../assets/images/web-design.svg'
 import mobileDeveloper from '../../assets/images/mobile-development.svg'
 import digitalMarketing from '../../assets/images/digital-marketing.svg'
+import { Wrapper } from '../Wrapper/Wrapper'
 export default function OurServices() {
   return (
-    <div className={styles['container']}>
+    <Wrapper>
       <TitleOfPage position="center">Our Services</TitleOfPage>
       <h2 className={styles['h2']}>What We Do</h2>
       <div className={styles['blocks']}>
@@ -124,6 +125,6 @@ export default function OurServices() {
           </li>
         </ul>
       </div>
-    </div>
+    </Wrapper>
   )
 }

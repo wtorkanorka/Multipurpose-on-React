@@ -2,8 +2,6 @@
 
 .about-us {
   display: flex;
-  padding: 120px 135px;
-  background: #fff7f4;
   position: relative;
   ul {
     display: flex;
@@ -30,7 +28,6 @@
 
 @media (max-width: 1200px) {
   .about-us {
-    padding: 80px 70px;
     align-items: center;
   }
   .container-for-img {
@@ -41,7 +38,6 @@
 }
 @media (max-width: 767px) {
   .about-us {
-    padding: 60px 40px;
     display: flex;
     flex-direction: column-reverse;
   }

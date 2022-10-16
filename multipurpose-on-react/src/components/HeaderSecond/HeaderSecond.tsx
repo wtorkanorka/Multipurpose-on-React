@@ -12,7 +12,8 @@ export default function HeaderSecond({ backgroundColorProps = 'white' }: any) {
       <div
         className={styles['header']}
         style={{
-          backgroundColor: backgroundColorProps,
+          backgroundColor:
+            backgroundColorProps !== 'white' ? '#fff7f4' : 'white',
           boxShadow:
             backgroundColorProps == 'white'
               ? '0px 1px 10px rgba(0, 0, 0, 0.1)'

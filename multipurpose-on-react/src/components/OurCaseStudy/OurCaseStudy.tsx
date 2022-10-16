@@ -12,42 +12,36 @@ import img8 from '../../assets/images/image8.svg'
 import img9 from '../../assets/images/image9.svg'
 import burger from '../../assets/images/burger.svg'
 import { useState } from 'react'
+import { Wrapper } from '../Wrapper/Wrapper'
 
 export default function OurCaseStudy() {
-  const [visible, setVisible] = useState(false)
   return (
-    <div className={styles['container']}>
+    <Wrapper>
       <TitleOfPage position="center">Our Case Study</TitleOfPage>
       <div className={styles['container-for-content']}>
         <h2 className={styles['h2-styles']}>Our Recent Project</h2>
-        <img
-          src={burger}
-          alt="burger"
-          onClick={() => setVisible(!visible)}
-          className={styles['burger']}
-        />
-        {visible && (
-          <ul className={styles['ul-burger']}>
-            <li>
-              <button>All</button>
-            </li>
-            <li>
-              <button>UX Design</button>
-            </li>
-            <li>
-              <button>Web Design</button>
-            </li>
-            <li>
-              <button>App Development</button>
-            </li>
-            <li>
-              <button>Game Design</button>
-            </li>
-            <li>
-              <button>Graphic Design</button>
-            </li>
-          </ul>
-        )}
+
+        <ul className={styles['ul-burger']}>
+          <li>
+            <button>All</button>
+          </li>
+          <li>
+            <button>UX Design</button>
+          </li>
+          <li>
+            <button>Web Design</button>
+          </li>
+          <li>
+            <button>App Development</button>
+          </li>
+          <li>
+            <button>Game Design</button>
+          </li>
+          <li>
+            <button>Graphic Design</button>
+          </li>
+        </ul>
+
         <div className={styles['blocks']}>
           <ul>
             <li>
@@ -80,6 +74,6 @@ export default function OurCaseStudy() {
           </ul>
         </div>
       </div>
-    </div>
+    </Wrapper>
   )
 }
