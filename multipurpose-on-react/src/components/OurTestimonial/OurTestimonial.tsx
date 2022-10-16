@@ -9,13 +9,14 @@ import dots from '../../assets/images/dots.svg'
 import { Reviews } from '../../Types/Types'
 import arrow from '../../assets/icons/arrow.svg'
 import { useState, useEffect } from 'react'
+import cx from 'classnames'
 export default function OurTestimonial() {
   const [page, setPage] = useState(1)
   const { data, error } = useSWR<Reviews>(
     `http://localhost:3004/our_testimonial?_limit=3&_page=${page}`,
     fetcher,
   )
-  console.log(data)
+
   useEffect(() => {
     if (page < 1) {
       setPage(1)
@@ -32,7 +33,7 @@ export default function OurTestimonial() {
         <h2 className={styles['h2']}>What Our Client Saying</h2>
         <div className={styles['commentary']}>
           <button
-            className={styles['nav-button-first']}
+            className={cx(styles['nav-button-first'], styles['visible'])}
             onClick={() => setPage(() => page - 1)}
           >
             <svg
@@ -69,7 +70,7 @@ export default function OurTestimonial() {
             )
           })}
           <button
-            className={styles['nav-button-second']}
+            className={cx(styles['nav-button-second'], styles['visible'])}
             onClick={() => setPage(() => page + 1)}
           >
             <img src={arrow} alt="arrow" />
