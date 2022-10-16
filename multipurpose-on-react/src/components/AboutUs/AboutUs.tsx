@@ -13,6 +13,7 @@ export default function AboutUs() {
           <div className={styles['title-of-page']}>
             <TitleOfPage>About Us</TitleOfPage>
           </div>
+
           <h2 className={styles['h2-style']}>
             Grow Your Business With Our Agency
           </h2>
@@ -38,6 +39,9 @@ export default function AboutUs() {
         </div>
         <div className={styles['container-for-img']}>
           <img src={pana} alt="pana" />
+        </div>
+        <div className={styles['second-title']}>
+          <TitleOfPage position="center">About Us</TitleOfPage>
         </div>
       </div>
     </Wrapper>
