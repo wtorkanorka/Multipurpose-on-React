@@ -17,7 +17,9 @@
 :root {
   --background: '#FFF7F4';
 }
-
+html {
+  scroll-behavior: smooth;
+}
 html,
 body,
 div,

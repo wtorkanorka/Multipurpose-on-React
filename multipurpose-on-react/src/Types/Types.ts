@@ -11,11 +11,14 @@ interface Review {
   author: ReviewAuthor
 }
 
-interface Commentary {
-  photo: string
-  title: string
-  content: string
-  comment: string
+interface Post {
+  cover: string
+  author: string
+  preview: string
+  full_content: string
+  created_at: string
+  id: number
 }
+export type Posts = Post[]
 
 export type Reviews = Review[]

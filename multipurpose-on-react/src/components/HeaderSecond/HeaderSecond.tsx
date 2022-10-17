@@ -8,7 +8,7 @@ import sun from '../../assets/icons/light.svg'
 export default function HeaderSecond({ backgroundColorProps = 'white' }: any) {
   const [visible, setVisible] = useState(false)
   return (
-    <>
+    <div id="header">
       <div
         className={styles['header']}
         style={{
@@ -72,6 +72,6 @@ export default function HeaderSecond({ backgroundColorProps = 'white' }: any) {
           <li>Contact Us</li>
         </ul>
       )}
-    </>
+    </div>
   )
 }

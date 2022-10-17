@@ -1,5 +1,6 @@
 import React from 'react'
 import AboutUs from '../../components/AboutUs/AboutUs'
+import FooterSecond from '../../components/FooterSecond/FooterSecond'
 import HeroSecond from '../../components/HeroSecond/HeroSecond'
 import OurBlog from '../../components/OurBlog/OurBlog'
 import OurCapabilities from '../../components/OurCapabilities/OurCapabilities'
@@ -19,6 +20,7 @@ export default function SecondHome() {
       <OurCapabilities />
       <OurBlog />
       <SubscribeNewsletter />
+      <FooterSecond />
     </>
   )
 }

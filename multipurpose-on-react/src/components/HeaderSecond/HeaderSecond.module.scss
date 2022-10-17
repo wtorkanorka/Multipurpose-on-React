@@ -29,7 +29,9 @@
     }
   }
 }
-
+.nav-ul {
+  display: none;
+}
 .lets-talk {
   button {
     all: unset;
@@ -49,6 +51,9 @@
   display: none;
 }
 @media (max-width: 1200px) {
+  .nav-ul {
+    display: none;
+  }
   .header-second {
     display: none;
   }

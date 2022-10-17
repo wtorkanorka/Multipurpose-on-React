@@ -38,7 +38,7 @@
       "author": {
         "name": "Алефтина Николаевна",
         "position": "CEO / Creative IT",
-        "photo": "https://picsum.photos/id/1/60"
+        "photo": "https://picsum.photos/id/4/60"
       }
     },
     {
@@ -48,7 +48,7 @@
       "author": {
         "name": "Зотова Ольга",
         "position": "CEO / Creative IT",
-        "photo": "https://picsum.photos/id/1/60"
+        "photo": "https://picsum.photos/id/5/60"
       }
     },
     {
@@ -58,7 +58,7 @@
       "author": {
         "name": "Елена Львовна",
         "position": "CEO / Creative IT",
-        "photo": "https://picsum.photos/id/1/60"
+        "photo": "https://picsum.photos/id/6/60"
       }
     },
     {
@@ -68,7 +68,7 @@
       "author": {
         "name": "имя 1",
         "position": "CEO / Creative IT",
-        "photo": "https://picsum.photos/id/1/60"
+        "photo": "https://picsum.photos/id/7/60"
       }
     },
 
@@ -79,7 +79,7 @@
       "author": {
         "name": "имя 2",
         "position": "CEO / Creative IT",
-        "photo": "https://picsum.photos/id/2/60"
+        "photo": "https://picsum.photos/id/8/60"
       }
     },
     {
@@ -89,7 +89,7 @@
       "author": {
         "name": "имя 3",
         "position": "CEO / Creative IT",
-        "photo": "https://picsum.photos/id/3/60"
+        "photo": "https://picsum.photos/id/9/60"
       }
     },
     {
@@ -99,7 +99,7 @@
       "author": {
         "name": "имя 4",
         "position": "CEO / Creative IT",
-        "photo": "https://picsum.photos/id/1/60"
+        "photo": "https://picsum.photos/id/10/60"
       }
     },
     {
@@ -109,7 +109,7 @@
       "author": {
         "name": "имя 5",
         "position": "CEO / Creative IT",
-        "photo": "https://picsum.photos/id/1/60"
+        "photo": "https://picsum.photos/id/11/60"
       }
     },
     {
@@ -119,8 +119,35 @@
       "author": {
         "name": "имя 6",
         "position": "CEO / Creative IT",
-        "photo": "https://picsum.photos/id/1/60"
+        "photo": "https://picsum.photos/id/12/60"
       }
+    }
+  ],
+
+  "blog_post": [
+    {
+      "id": 1,
+      "cover": "/src/assets/images/postImgFirst.png",
+      "preview": "35 Stellar Graphic Design Blogs to Keep YouEducated and Inspired",
+      "created_at": "January 25, 2021",
+      "author": "Cristofer Westervelt",
+      "full_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget nunc, sed sed sed. Sit integer at dui at non ipsum tellus ac. Est."
+    },
+    {
+      "id": 2,
+      "cover": "/src/assets/images/postImgSecond.png",
+      "preview": "Ridiculously powerful 2021 iPad Pro may drop this month",
+      "created_at": "February 11, 1072",
+      "author": "Cristofer Westervelt",
+      "full_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget nunc, sed sed sed. Sit integer at dui at non ipsum tellus ac. Est."
+    },
+    {
+      "id": 3,
+      "cover": "/src/assets/images/postImgThird.png",
+      "preview": "Memphis Design: the defining look of the 1980s",
+      "created_at": "January 25, 2021",
+      "author": "Cristofer Westervelt",
+      "full_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget nunc, sed sed sed. Sit integer at dui at non ipsum tellus ac. Est."
     }
   ]
 }
