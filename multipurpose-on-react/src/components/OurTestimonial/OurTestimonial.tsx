@@ -17,87 +17,101 @@ export default function OurTestimonial() {
     fetcher,
   )
 
-  useEffect(() => {
-    if (page < 1) {
-      setPage(1)
-    }
-    if (data?.length == 0) {
-      setPage(() => page - 1)
-    }
-  }, [page])
+  // useEffect(() => {
+  //   if (page < 1) {
+  //     setPage(1)
+  //   }
+  //   if (data?.length == 0) {
+  //     setPage(() => page - 1)
+  //   }
+  // }, [page])
+
+  if (page < 1) {
+    setPage(1)
+  }
+  if (data?.length == 0) {
+    setPage(() => page - 1)
+  }
+
   console.log(page)
+  if (error) {
+    return <p>An error occurred while fetching the data.</p>
+  }
   return (
     <Wrapper backgroundColor="#FFF7F4">
       <TitleOfPage position="center">Our Testimonial</TitleOfPage>
       <div>
         <h2 className={styles['h2']}>What Our Client Saying</h2>
         <div className={styles['commentary']}>
-          <button
-            className={cx(styles['nav-button-first'], styles['visible'])}
-            onClick={() => setPage(() => page - 1)}
-          >
-            <svg
-              width="10"
-              height="16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
+          {page > 1 ? (
+            <button
+              className={cx(styles['nav-button-first'], styles['visible'])}
+              onClick={() => {
+                setPage(() => page - 1)
+              }}
             >
-              <path
-                d="M6.465 8 .278 1.812 2.045.045 10 8l-7.955 7.955-1.767-1.768L6.465 8Z"
-                fill="#373737"
-                className={styles['test']}
-              />
-            </svg>
-          </button>
-          {data?.map(i => {
-            return (
-              <div className={styles['comment']} key={i.id}>
-                <div>{i.rating}</div>
-                <p>{i.review}</p>
-                <div className={styles['author']}>
-                  <div className={styles['author-name']}>
-                    <img src={i.author.photo} alt="img" />
+              <svg
+                width="10"
+                height="16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.465 8 .278 1.812 2.045.045 10 8l-7.955 7.955-1.767-1.768L6.465 8Z"
+                  fill="#373737"
+                />
+              </svg>
+            </button>
+          ) : null}
+          {!error ? (
+            data?.map(i => {
+              return (
+                <div className={styles['comment']} key={i.id}>
+                  <div>{i.rating}</div>
+                  <p>{i.review}</p>
+                  <div className={styles['author']}>
+                    <div className={styles['author-name']}>
+                      <img src={i.author.photo} alt="img" />
+                      <div>
+                        <p>{i.author.name}</p>
+                        <h5>{i.author.position}</h5>
+                      </div>
+                    </div>
                     <div>
-                      <p>{i.author.name}</p>
-                      <h5>{i.author.position}</h5>
+                      <img src={dots} alt="dots" />
                     </div>
                   </div>
-                  <div>
-                    <img src={dots} alt="dots" />
-                  </div>
                 </div>
-              </div>
-            )
-          })}
-          <button
-            className={cx(styles['nav-button-second'], styles['visible'])}
-            onClick={() => setPage(() => page + 1)}
-          >
-            <img src={arrow} alt="arrow" />
-          </button>
+              )
+            })
+          ) : (
+            <div>Ошибка при запросе</div>
+          )}
+          {data?.length == 0 ? (
+            <div className={styles['comment']}>Ничего нет</div>
+          ) : null}
+          {page !== 0 && data?.length == 3 ? (
+            <button
+              className={cx(styles['nav-button-second'], styles['visible'])}
+              onClick={() => {
+                setPage(() => page + 1)
+              }}
+            >
+              <svg
+                width="10"
+                height="16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.465 8 .278 1.812 2.045.045 10 8l-7.955 7.955-1.767-1.768L6.465 8Z"
+                  fill="#373737"
+                />
+              </svg>
+            </button>
+          ) : null}
         </div>
       </div>
     </Wrapper>
   )
-}
-{
-  /* <div className={styles['comment']}>
-            <div>rating</div>
-            <p>
-              Lorem ipsum dolor sit amet, consecte tur adipiscing elit. Ultrices
-              blandit pelle ntesque nibh arcu elementum odio justo. Rhoncus.
-            </p>
-            <div className={styles['author']}>
-              <div className={styles['author-name']}>
-                <img src={img} alt="img" />
-                <div>
-                  <p>Phillip Levin</p>
-                  <h5>CEO / Creative IT</h5>
-                </div>
-              </div>
-              <div>
-                <img src={dots} alt="dots" />
-              </div>
-            </div>
-          </div> */
 }

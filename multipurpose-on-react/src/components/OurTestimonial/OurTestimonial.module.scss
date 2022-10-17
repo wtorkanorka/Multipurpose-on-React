@@ -28,12 +28,13 @@
     height: 50px;
     text-align: center;
     margin-left: -75px;
-
-    svg {
-      transform: rotateY(180deg);
-      &:active {
+    &:active {
+      svg path {
         fill: #ff5300;
       }
+    }
+    svg {
+      transform: rotateY(180deg);
     }
   }
   .test {
@@ -52,6 +53,11 @@
     height: 50px;
     text-align: center;
     margin-right: -75px;
+    &:active {
+      svg path {
+        fill: #ff5300;
+      }
+    }
   }
 }
 

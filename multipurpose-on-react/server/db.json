@@ -121,6 +121,36 @@
         "position": "CEO / Creative IT",
         "photo": "https://picsum.photos/id/12/60"
       }
+    },
+    {
+      "id": 13,
+      "review": "Lorem ipsum dolor sit amet, consecte tur adipiscing elit. Ultrices blandit pelle ntesque nibh arcu elementum odio justo. Rhoncus.",
+      "rating": 1,
+      "author": {
+        "name": "имя 7",
+        "position": "CEO / Creative IT",
+        "photo": "https://picsum.photos/id/12/60"
+      }
+    },
+    {
+      "id": 14,
+      "review": "Lorem ipsum dolor sit amet, consecte tur adipiscing elit. Ultrices blandit pelle ntesque nibh arcu elementum odio justo. Rhoncus.",
+      "rating": 6,
+      "author": {
+        "name": "имя 8",
+        "position": "CEO / Creative IT",
+        "photo": "https://picsum.photos/id/12/60"
+      }
+    },
+    {
+      "id": 15,
+      "review": "Lorem ipsum dolor sit amet, consecte tur adipiscing elit. Ultrices blandit pelle ntesque nibh arcu elementum odio justo. Rhoncus.",
+      "rating": 2,
+      "author": {
+        "name": "имя 9",
+        "position": "CEO / Creative IT",
+        "photo": "https://picsum.photos/id/12/60"
+      }
     }
   ],
 
@@ -148,6 +178,224 @@
       "created_at": "January 25, 2021",
       "author": "Cristofer Westervelt",
       "full_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget nunc, sed sed sed. Sit integer at dui at non ipsum tellus ac. Est."
+    }
+  ],
+  "our_case_study": [
+    {
+      "id": 1,
+      "image": "/src/assets/images/image1.svg"
+    },
+    {
+      "id": 2,
+      "image": "/src/assets/images/image2.svg"
+    },
+    {
+      "id": 3,
+      "image": "/src/assets/images/image3.svg"
+    },
+    {
+      "id": 4,
+      "image": "/src/assets/images/image4.svg"
+    },
+    {
+      "id": 5,
+      "image": "/src/assets/images/image5.svg"
+    },
+    {
+      "id": 6,
+      "image": "/src/assets/images/image6.svg"
+    },
+    {
+      "id": 7,
+      "image": "/src/assets/images/image7.svg"
+    },
+    {
+      "id": 8,
+      "image": "/src/assets/images/image8.svg"
+    },
+    {
+      "id": 9,
+      "image": "/src/assets/images/image9.svg"
+    },
+    {
+      "id": 10,
+      "image": "/src/assets/images/image9.svg"
+    },
+    {
+      "id": 11,
+      "image": "/src/assets/images/image8.svg"
+    },
+    {
+      "id": 12,
+      "image": "/src/assets/images/image7.svg"
+    },
+    {
+      "id": 13,
+      "image": "/src/assets/images/image6.svg"
+    },
+    {
+      "id": 14,
+      "image": "/src/assets/images/image5.svg"
+    },
+    {
+      "id": 15,
+      "image": "/src/assets/images/image4.svg"
+    },
+    {
+      "id": 16,
+      "image": "/src/assets/images/image3.svg"
+    },
+    {
+      "id": 17,
+      "image": "/src/assets/images/image2.svg"
+    },
+    {
+      "id": 18,
+      "image": "/src/assets/images/image1.svg"
+    },
+    {
+      "id": 19,
+      "image": "https://picsum.photos/id/19/390/313"
+    },
+    {
+      "id": 20,
+      "image": "https://picsum.photos/id/20/390/313"
+    },
+    {
+      "id": 21,
+      "image": "https://picsum.photos/id/21/390/313"
+    },
+    {
+      "id": 22,
+      "image": "https://picsum.photos/id/22/390/313"
+    },
+    {
+      "id": 23,
+      "image": "https://picsum.photos/id/23/390/313"
+    },
+    {
+      "id": 24,
+      "image": "https://picsum.photos/id/24/390/313"
+    },
+    {
+      "id": 25,
+      "image": "https://picsum.photos/id/25/390/313"
+    },
+    {
+      "id": 26,
+      "image": "https://picsum.photos/id/26/390/313"
+    },
+    {
+      "id": 27,
+      "image": "https://picsum.photos/id/27/390/313"
+    },
+    {
+      "id": 28,
+      "image": "https://picsum.photos/id/28/390/313"
+    },
+    {
+      "id": 29,
+      "image": "https://picsum.photos/id/29/390/313"
+    },
+    {
+      "id": 30,
+      "image": "https://picsum.photos/id/30/390/313"
+    },
+    {
+      "id": 31,
+      "image": "https://picsum.photos/id/31/390/313"
+    },
+    {
+      "id": 32,
+      "image": "https://picsum.photos/id/32/390/313"
+    },
+    {
+      "id": 33,
+      "image": "https://picsum.photos/id/33/390/313"
+    },
+    {
+      "id": 34,
+      "image": "https://picsum.photos/id/34/390/313"
+    },
+    {
+      "id": 35,
+      "image": "https://picsum.photos/id/35/390/313"
+    },
+    {
+      "id": 36,
+      "image": "https://picsum.photos/id/36/390/313"
+    },
+    {
+      "id": 37,
+      "image": "https://picsum.photos/id/37/390/313"
+    },
+    {
+      "id": 38,
+      "image": "https://picsum.photos/id/38/390/313"
+    },
+    {
+      "id": 39,
+      "image": "https://picsum.photos/id/39/390/313"
+    },
+    {
+      "id": 40,
+      "image": "https://picsum.photos/id/40/390/313"
+    },
+    {
+      "id": 41,
+      "image": "https://picsum.photos/id/41/390/313"
+    },
+    {
+      "id": 42,
+      "image": "https://picsum.photos/id/42/390/313"
+    },
+    {
+      "id": 43,
+      "image": "https://picsum.photos/id/43/390/313"
+    },
+    {
+      "id": 44,
+      "image": "https://picsum.photos/id/44/390/313"
+    },
+    {
+      "id": 45,
+      "image": "https://picsum.photos/id/45/390/313"
+    },
+    {
+      "id": 46,
+      "image": "https://picsum.photos/id/46/390/313"
+    },
+    {
+      "id": 47,
+      "image": "https://picsum.photos/id/47/390/313"
+    },
+    {
+      "id": 48,
+      "image": "https://picsum.photos/id/48/390/313"
+    },
+    {
+      "id": 49,
+      "image": "https://picsum.photos/id/49/390/313"
+    },
+    {
+      "id": 50,
+      "image": "https://picsum.photos/id/50/390/313"
+    },
+    {
+      "id": 51,
+      "image": "https://picsum.photos/id/51/390/313"
+    },
+    {
+      "id": 52,
+      "image": "https://picsum.photos/id/52/390/313"
+    },
+    {
+      "id": 53,
+      "image": "https://picsum.photos/id/53/390/313"
+    },
+    {
+      "id": 54,
+      "image": "https://picsum.photos/id/54/390/313"
     }
   ]
 }

@@ -18,10 +18,9 @@
       color: #7b7b7b;
       text-align: center;
       transition: 0.2s;
+      border-radius: 10px;
+      transition: 0.2s;
       &:active {
-        background: #ff5300;
-        border-radius: 10px;
-        color: white;
         transition: 0.2s;
       }
     }

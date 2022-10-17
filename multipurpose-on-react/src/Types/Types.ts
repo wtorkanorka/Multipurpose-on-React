@@ -19,6 +19,10 @@ interface Post {
   created_at: string
   id: number
 }
+export interface OurCase {
+  id: number
+  image: string
+}
 export type Posts = Post[]
 
 export type Reviews = Review[]
