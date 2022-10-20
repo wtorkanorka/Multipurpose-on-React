@@ -183,219 +183,273 @@
   "our_case_study": [
     {
       "id": 1,
-      "image": "/src/assets/images/image1.svg"
+      "image": "/src/assets/images/image1.jpg",
+      "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 2,
-      "image": "/src/assets/images/image2.svg"
+      "image": "/src/assets/images/image2.svg",
+      "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 3,
-      "image": "/src/assets/images/image3.svg"
+      "image": "/src/assets/images/image3.svg",
+      "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 4,
-      "image": "/src/assets/images/image4.svg"
+      "image": "/src/assets/images/image4.svg",
+      "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 5,
-      "image": "/src/assets/images/image5.svg"
+      "image": "/src/assets/images/image5.svg",
+      "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 6,
-      "image": "/src/assets/images/image6.svg"
+      "image": "/src/assets/images/image6.svg",
+      "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 7,
-      "image": "/src/assets/images/image7.svg"
+      "image": "/src/assets/images/image7.svg",
+      "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 8,
-      "image": "/src/assets/images/image8.svg"
+      "image": "/src/assets/images/image8.svg",
+      "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 9,
-      "image": "/src/assets/images/image9.svg"
+      "image": "/src/assets/images/image9.svg",
+      "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 10,
-      "image": "/src/assets/images/image9.svg"
+      "image": "/src/assets/images/image9.svg",
+      "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 11,
-      "image": "/src/assets/images/image8.svg"
+      "image": "/src/assets/images/image8.svg",
+      "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 12,
-      "image": "/src/assets/images/image7.svg"
+      "image": "/src/assets/images/image7.svg",
+      "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 13,
-      "image": "/src/assets/images/image6.svg"
+      "image": "/src/assets/images/image6.svg",
+      "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 14,
-      "image": "/src/assets/images/image5.svg"
+      "image": "/src/assets/images/image5.svg",
+      "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 15,
-      "image": "/src/assets/images/image4.svg"
+      "image": "/src/assets/images/image4.svg",
+      "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 16,
-      "image": "/src/assets/images/image3.svg"
+      "image": "/src/assets/images/image3.svg",
+      "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 17,
-      "image": "/src/assets/images/image2.svg"
+      "image": "/src/assets/images/image2.svg",
+      "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 18,
-      "image": "/src/assets/images/image1.svg"
+      "image": "/src/assets/images/image1.svg",
+      "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 19,
-      "image": "https://picsum.photos/id/19/390/313"
+      "image": "https://picsum.photos/id/19/390/313",
+      "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 20,
-      "image": "https://picsum.photos/id/20/390/313"
+      "image": "https://picsum.photos/id/20/390/313",
+      "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 21,
-      "image": "https://picsum.photos/id/21/390/313"
+      "image": "https://picsum.photos/id/21/390/313",
+      "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 22,
-      "image": "https://picsum.photos/id/22/390/313"
+      "image": "https://picsum.photos/id/22/390/313",
+      "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 23,
-      "image": "https://picsum.photos/id/23/390/313"
+      "image": "https://picsum.photos/id/23/390/313",
+      "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 24,
-      "image": "https://picsum.photos/id/24/390/313"
+      "image": "https://picsum.photos/id/24/390/313",
+      "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 25,
-      "image": "https://picsum.photos/id/25/390/313"
+      "image": "https://picsum.photos/id/25/390/313",
+      "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 26,
-      "image": "https://picsum.photos/id/26/390/313"
+      "image": "https://picsum.photos/id/26/390/313",
+      "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 27,
-      "image": "https://picsum.photos/id/27/390/313"
+      "image": "https://picsum.photos/id/27/390/313",
+      "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 28,
-      "image": "https://picsum.photos/id/28/390/313"
+      "image": "https://picsum.photos/id/28/390/313",
+      "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 29,
-      "image": "https://picsum.photos/id/29/390/313"
+      "image": "https://picsum.photos/id/29/390/313",
+      "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 30,
-      "image": "https://picsum.photos/id/30/390/313"
+      "image": "https://picsum.photos/id/30/390/313",
+      "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 31,
-      "image": "https://picsum.photos/id/31/390/313"
+      "image": "https://picsum.photos/id/31/390/313",
+      "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 32,
-      "image": "https://picsum.photos/id/32/390/313"
+      "image": "https://picsum.photos/id/32/390/313",
+      "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 33,
-      "image": "https://picsum.photos/id/33/390/313"
+      "image": "https://picsum.photos/id/33/390/313",
+      "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 34,
-      "image": "https://picsum.photos/id/34/390/313"
+      "image": "https://picsum.photos/id/34/390/313",
+      "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 35,
-      "image": "https://picsum.photos/id/35/390/313"
+      "image": "https://picsum.photos/id/35/390/313",
+      "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 36,
-      "image": "https://picsum.photos/id/36/390/313"
+      "image": "https://picsum.photos/id/36/390/313",
+      "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 37,
-      "image": "https://picsum.photos/id/37/390/313"
+      "image": "https://picsum.photos/id/37/390/313",
+      "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 38,
-      "image": "https://picsum.photos/id/38/390/313"
+      "image": "https://picsum.photos/id/38/390/313",
+      "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 39,
-      "image": "https://picsum.photos/id/39/390/313"
+      "image": "https://picsum.photos/id/39/390/313",
+      "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 40,
-      "image": "https://picsum.photos/id/40/390/313"
+      "image": "https://picsum.photos/id/40/390/313",
+      "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 41,
-      "image": "https://picsum.photos/id/41/390/313"
+      "image": "https://picsum.photos/id/41/390/313",
+      "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 42,
-      "image": "https://picsum.photos/id/42/390/313"
+      "image": "https://picsum.photos/id/42/390/313",
+      "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 43,
-      "image": "https://picsum.photos/id/43/390/313"
+      "image": "https://picsum.photos/id/43/390/313",
+      "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 44,
-      "image": "https://picsum.photos/id/44/390/313"
+      "image": "https://picsum.photos/id/44/390/313",
+      "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 45,
-      "image": "https://picsum.photos/id/45/390/313"
+      "image": "https://picsum.photos/id/45/390/313",
+      "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 46,
-      "image": "https://picsum.photos/id/46/390/313"
+      "image": "https://picsum.photos/id/46/390/313",
+      "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 47,
-      "image": "https://picsum.photos/id/47/390/313"
+      "image": "https://picsum.photos/id/47/390/313",
+      "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 48,
-      "image": "https://picsum.photos/id/48/390/313"
+      "image": "https://picsum.photos/id/48/390/313",
+      "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 49,
-      "image": "https://picsum.photos/id/49/390/313"
+      "image": "https://picsum.photos/id/49/390/313",
+      "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 50,
-      "image": "https://picsum.photos/id/50/390/313"
+      "image": "https://picsum.photos/id/50/390/313",
+      "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 51,
-      "image": "https://picsum.photos/id/51/390/313"
+      "image": "https://picsum.photos/id/51/390/313",
+      "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 52,
-      "image": "https://picsum.photos/id/52/390/313"
+      "image": "https://picsum.photos/id/52/390/313",
+      "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 53,
-      "image": "https://picsum.photos/id/53/390/313"
+      "image": "https://picsum.photos/id/53/390/313",
+      "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 54,
-      "image": "https://picsum.photos/id/54/390/313"
+      "image": "https://picsum.photos/id/54/390/313",
+      "link": "https://vk.com/wtorkanorka"
     }
   ]
 }

@@ -1,0 +1,55 @@
+.about-us {
+  display: flex;
+  position: relative;
+}
+.about-us ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.about-us ul li {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  gap: 17px;
+}
+.h2-style {
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+.paragraph {
+  margin-bottom: 20px;
+}
+.second-title {
+  display: none;
+}
+@media (max-width: 1200px) {
+  .about-us {
+    align-items: center;
+  }
+  .container-for-img img {
+    width: 329px;
+  }
+  .second-title {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .about-us {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .about-us ul {
+    align-items: center;
+  }
+  .container-for-img img {
+    width: 100%;
+  }
+  .title-of-page {
+    display: none;
+  }
+  .second-title {
+    display: block;
+    margin-bottom: 15px;
+  }
+}

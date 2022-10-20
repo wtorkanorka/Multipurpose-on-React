@@ -1,0 +1,23 @@
+.title {
+  color: var(--title-of-page);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  text-align: center;
+  height: 24px;
+  align-items: center;
+  gap: 10px;
+}
+
+.line {
+  height: 1px;
+  width: 40px;
+  border: 1px solid var(--title-of-page);
+}
+
+.another-line {
+  height: 1px;
+  width: 40px;
+  border: 1px solid var(--border);
+}

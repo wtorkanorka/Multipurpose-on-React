@@ -1,13 +1,13 @@
 import React from 'react'
-import AboutUs from '../../components/AboutUs/AboutUs'
-import FooterSecond from '../../components/FooterSecond/FooterSecond'
-import HeroSecond from '../../components/HeroSecond/HeroSecond'
-import OurBlog from '../../components/OurBlog/OurBlog'
-import OurCapabilities from '../../components/OurCapabilities/OurCapabilities'
-import OurCaseStudy from '../../components/OurCaseStudy/OurCaseStudy'
-import OurServices from '../../components/OurServices/OurServices'
-import OurTestimonial from '../../components/OurTestimonial/OurTestimonial'
-import SubscribeNewsletter from '../../components/SubscribeNewsletter/SubscribeNewsletter'
+import AboutUs from './Components/AboutUs/AboutUs'
+import FooterSecond from './Components/FooterSecond/FooterSecond'
+import HeroSecond from './Components/HeroSecond/HeroSecond'
+import OurBlog from './Components/OurBlog/OurBlog'
+import OurCapabilities from './Components/OurCapabilities/OurCapabilities'
+import OurCaseStudy from './Components/OurCaseStudy/OurCaseStudy'
+import OurServices from './Components/OurServices/OurServices'
+import OurTestimonial from './Components/OurTestimonial/OurTestimonial'
+import SubscribeNewsletter from './Components/SubscribeNewsletter/SubscribeNewsletter'
 
 export default function SecondHome() {
   return (

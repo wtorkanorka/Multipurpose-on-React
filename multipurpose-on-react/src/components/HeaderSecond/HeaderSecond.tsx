@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './HeaderSecond.module.scss'
+import styles from './HeaderSecond.module.css'
 import logo from '../../assets/images/logo.svg'
 import { useState } from 'react'
 import burger from '../../assets/images/burger.svg'

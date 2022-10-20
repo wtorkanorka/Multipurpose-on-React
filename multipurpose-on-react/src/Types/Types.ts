@@ -22,6 +22,7 @@ interface Post {
 export interface OurCase {
   id: number
   image: string
+  link: string
 }
 export type Posts = Post[]
 
