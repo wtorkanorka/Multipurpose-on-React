@@ -1,21 +1,20 @@
 import { useState } from 'react'
 import './App.css'
 import { Link, Routes, Route } from 'react-router-dom'
-import HomePage from './pages/Home/HomePage'
+import HomePage from './pages/Main/Main'
 import BlogPage from './pages/Blog/BlogPage'
 import ArticlePage from './pages/Article/ArticlePage'
-import SecondHome from './pages/SecondHome/SecondHome'
-import ContentWrapper from './components/ContentWrapper/ContentWrapper'
+import Home from './pages/Home/Home'
 
 function App() {
   return (
     <>
       <ul style={{ display: 'flex', gap: '10px' }}>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/">Main</Link>
         </li>
         <li>
-          <Link to="/1">SecondHome</Link>
+          <Link to="/Home">Home</Link>
         </li>
         <li>
           <Link to="/blog">Blog</Link>
@@ -27,7 +26,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/:id" element={<SecondHome />} />
+        <Route path="/Home" element={<Home />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/blog/:id" element={<ArticlePage />} />
       </Routes>

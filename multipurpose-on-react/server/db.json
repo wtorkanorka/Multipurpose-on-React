@@ -157,7 +157,7 @@
   "blog_post": [
     {
       "id": 1,
-      "cover": "/src/assets/images/postImgFirst.png",
+      "cover": "https://picsum.photos/id/110/340/225",
       "preview": "35 Stellar Graphic Design Blogs to Keep YouEducated and Inspired",
       "created_at": "January 25, 2021",
       "author": "Cristofer Westervelt",
@@ -165,7 +165,7 @@
     },
     {
       "id": 2,
-      "cover": "/src/assets/images/postImgSecond.png",
+      "cover": "https://picsum.photos/id/153/340/225",
       "preview": "Ridiculously powerful 2021 iPad Pro may drop this month",
       "created_at": "February 11, 1072",
       "author": "Cristofer Westervelt",
@@ -173,7 +173,7 @@
     },
     {
       "id": 3,
-      "cover": "/src/assets/images/postImgThird.png",
+      "cover": "https://picsum.photos/id/120/340/225",
       "preview": "Memphis Design: the defining look of the 1980s",
       "created_at": "January 25, 2021",
       "author": "Cristofer Westervelt",
@@ -183,92 +183,92 @@
   "our_case_study": [
     {
       "id": 1,
-      "image": "/src/assets/images/image1.jpg",
+      "image": "https://picsum.photos/id/10/390/313",
       "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 2,
-      "image": "/src/assets/images/image2.svg",
+      "image": "https://picsum.photos/id/20/390/313",
       "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 3,
-      "image": "/src/assets/images/image3.svg",
+      "image": "https://picsum.photos/id/30/390/313",
       "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 4,
-      "image": "/src/assets/images/image4.svg",
+      "image": "https://picsum.photos/id/40/390/313",
       "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 5,
-      "image": "/src/assets/images/image5.svg",
+      "image": "https://picsum.photos/id/50/390/313",
       "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 6,
-      "image": "/src/assets/images/image6.svg",
+      "image": "https://picsum.photos/id/60/390/313",
       "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 7,
-      "image": "/src/assets/images/image7.svg",
+      "image": "https://picsum.photos/id/70/390/313",
       "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 8,
-      "image": "/src/assets/images/image8.svg",
+      "image": "https://picsum.photos/id/80/390/313",
       "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 9,
-      "image": "/src/assets/images/image9.svg",
+      "image": "https://picsum.photos/id/90/390/313",
       "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 10,
-      "image": "/src/assets/images/image9.svg",
+      "image": "https://picsum.photos/id/100/390/313",
       "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 11,
-      "image": "/src/assets/images/image8.svg",
+      "image": "https://picsum.photos/id/110/390/313",
       "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 12,
-      "image": "/src/assets/images/image7.svg",
+      "image": "https://picsum.photos/id/120/390/313",
       "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 13,
-      "image": "/src/assets/images/image6.svg",
+      "image": "https://picsum.photos/id/130/390/313",
       "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 14,
-      "image": "/src/assets/images/image5.svg",
+      "image": "https://picsum.photos/id/140/390/313",
       "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 15,
-      "image": "/src/assets/images/image4.svg",
+      "image": "https://picsum.photos/id/150/390/313",
       "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 16,
-      "image": "/src/assets/images/image3.svg",
+      "image": "https://picsum.photos/id/160/390/313",
       "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 17,
-      "image": "/src/assets/images/image2.svg",
+      "image": "https://picsum.photos/id/170/390/313",
       "link": "https://vk.com/wtorkanorka"
     },
     {
       "id": 18,
-      "image": "/src/assets/images/image1.svg",
+      "image": "https://picsum.photos/id/180/390/313",
       "link": "https://vk.com/wtorkanorka"
     },
     {

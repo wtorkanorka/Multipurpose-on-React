@@ -7,8 +7,8 @@
     "start": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "postinstall": "npm simple-git-hooks",
-    "start-server": "json-server --watch server/db.json --port 3004",
+    "postinstall": "npx simple-git-hooks",
+    "start-server": "npx json-server --watch server/db.json --port 3004",
     "dev": "concurrently \"npm run start-server\" \"npm run start"
   },
   "dependencies": {
@@ -28,6 +28,7 @@
     "postcss-nested": "^6.0.0",
     "prettier": "^2.7.1",
     "sass": "^1.55.0",
+    "simple-git-hooks": "^2.8.1",
     "stylelint": "^14.13.0",
     "stylelint-config-idiomatic-order": "^9.0.0",
     "stylelint-config-prettier": "^9.0.3",

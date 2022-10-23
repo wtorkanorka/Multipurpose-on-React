@@ -7,9 +7,16 @@
   justify-content: space-between;
   position: relative;
 }
-.logo img {
-  width: 186px;
-  height: 50px;
+.logo span {
+  color: var(--title-of-page);
+}
+.logo p {
+  font-size: 39.06px;
+  line-height: 46px;
+  color: black;
+}
+.logo a {
+  text-decoration: none;
 }
 .navigation {
   display: flex;
@@ -48,6 +55,11 @@
   display: none;
 }
 @media (max-width: 1200px) {
+  .logo p {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 123.6%;
+  }
   .nav-ul {
     display: none;
   }
@@ -96,6 +108,11 @@
   }
 }
 @media (max-width: 767px) {
+  .logo p {
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 123.6%;
+  }
   .nav-ul {
     display: flex;
     position: absolute;

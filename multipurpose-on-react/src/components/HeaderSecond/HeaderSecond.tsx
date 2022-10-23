@@ -5,6 +5,8 @@ import { useState } from 'react'
 import burger from '../../assets/images/burger.svg'
 import { Link } from 'react-router-dom'
 import sun from '../../assets/icons/light.svg'
+import SmartImage from '../SmartImage/SmartImage'
+import SmartButton from '../SmartButton/SmartButton'
 export default function HeaderSecond({ backgroundColorProps = 'white' }: any) {
   const [visible, setVisible] = useState(false)
   return (
@@ -22,7 +24,9 @@ export default function HeaderSecond({ backgroundColorProps = 'white' }: any) {
       >
         <div className={styles['logo']}>
           <Link to="/1">
-            <img src={logo} alt="" />
+            <p>
+              <span>Digi</span>ency
+            </p>
           </Link>
         </div>
         <div className={styles['navigation']}>
@@ -44,7 +48,11 @@ export default function HeaderSecond({ backgroundColorProps = 'white' }: any) {
         style={{ backgroundColor: backgroundColorProps }}
       >
         <div className={styles['logo']}>
-          <img src={logo} alt="" />
+          <Link to="/1">
+            <p>
+              <span>Digi</span>ency
+            </p>
+          </Link>
         </div>
         {backgroundColorProps !== 'white' && (
           <div className={styles['lets-talk']}>
@@ -54,12 +62,15 @@ export default function HeaderSecond({ backgroundColorProps = 'white' }: any) {
         {backgroundColorProps == 'white' && (
           <div className={styles['sun']}>
             <button>
-              <img src={sun} alt="sun" />
+              <SmartImage path="/src/assets/images/sun" />
             </button>
           </div>
         )}
-        <div className={styles['navigation']}>
-          <img src={burger} alt="burger" onClick={() => setVisible(!visible)} />
+        <div
+          className={styles['navigation']}
+          onClick={() => setVisible(!visible)}
+        >
+          <SmartImage path="/src/assets/images/burger" />
         </div>
       </div>
       {visible && (
