@@ -5,7 +5,7 @@ import GoUpButton from '../../../../components/GoUpButton/GoUpButton'
 import { useInView } from 'react-intersection-observer'
 export default function FooterSecond() {
   const { ref, inView, entry } = useInView({
-    threshold: 0.5,
+    threshold: 0.2,
   })
 
   return (

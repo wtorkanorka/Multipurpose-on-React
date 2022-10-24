@@ -1,6 +1,7 @@
 .about-us {
   display: flex;
   position: relative;
+  justify-content: center;
 }
 .about-us-ul {
   display: flex;

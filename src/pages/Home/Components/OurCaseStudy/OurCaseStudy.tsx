@@ -17,7 +17,7 @@ export default function OurCaseStudy() {
     fetcher,
   )
   const { ref, inView, entry } = useInView({
-    threshold: 0.3,
+    threshold: 0.1,
   })
   console.log(data)
   if (error) {

@@ -14,7 +14,7 @@ export default function OurBlog() {
     fetcher,
   )
   const { ref, inView, entry } = useInView({
-    threshold: 0.5,
+    threshold: 0.1,
   })
   if (error) {
     return <p>An error occurred while fetching the data.</p>

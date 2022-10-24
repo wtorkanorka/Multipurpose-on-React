@@ -18,7 +18,7 @@ export default function OurTestimonial() {
     fetcher,
   )
   const { ref, inView, entry } = useInView({
-    threshold: 0.5,
+    threshold: 0.2,
   })
   if (page < 1) {
     setPage(1)

@@ -61,7 +61,12 @@ export default function HeaderSecond({ backgroundColorProps = 'white' }: any) {
       </div>
       <div
         className={styles['header-second']}
-        style={{ backgroundColor: backgroundColorProps }}
+        style={{
+          backgroundColor: backgroundColorProps,
+          opacity: inView ? '1' : '0',
+          transition: '1s',
+          marginLeft: inView ? '0px' : '-20px',
+        }}
       >
         <div className={styles['logo']}>
           <Link to="/1">
