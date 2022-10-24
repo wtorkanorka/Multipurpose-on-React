@@ -15,7 +15,6 @@ export default function SecondHome() {
       <HeroSecond />
       <OurServices />
       <AboutUs />
-      {/* тут картинки с сервера приходят, как их через picture передавать */}
       <OurCaseStudy />
       <OurTestimonial />
       <OurCapabilities />

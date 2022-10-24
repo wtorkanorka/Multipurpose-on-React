@@ -7,10 +7,14 @@ import { Link } from 'react-router-dom'
 import sun from '../../assets/icons/light.svg'
 import SmartImage from '../SmartImage/SmartImage'
 import SmartButton from '../SmartButton/SmartButton'
+import { useInView } from 'react-intersection-observer'
 export default function HeaderSecond({ backgroundColorProps = 'white' }: any) {
   const [visible, setVisible] = useState(false)
+  const { ref, inView, entry } = useInView({
+    threshold: 0.5,
+  })
   return (
-    <div id="header">
+    <div ref={ref}>
       <div
         className={styles['header']}
         style={{
@@ -24,13 +28,25 @@ export default function HeaderSecond({ backgroundColorProps = 'white' }: any) {
       >
         <div className={styles['logo']}>
           <Link to="/1">
-            <p>
+            <p
+              style={{
+                opacity: inView ? '1' : '0',
+                transition: '1s',
+                marginLeft: inView ? '0px' : '-20px',
+              }}
+            >
               <span>Digi</span>ency
             </p>
           </Link>
         </div>
         <div className={styles['navigation']}>
-          <ul>
+          <ul
+            style={{
+              opacity: inView ? '1' : '0',
+              transition: '1s',
+              marginBottom: inView ? '0px' : '-20px',
+            }}
+          >
             <li>Home</li>
             <li>About Us</li>
             <li>Services</li>

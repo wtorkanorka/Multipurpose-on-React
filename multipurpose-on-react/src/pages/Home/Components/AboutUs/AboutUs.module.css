@@ -2,12 +2,16 @@
   display: flex;
   position: relative;
 }
-.about-us ul {
+.about-us-ul {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  opacity: 0;
+  transition: 1s;
+  margin-left: -20px;
 }
-.about-us ul li {
+
+.about-us-ul li {
   display: flex;
   height: 100%;
   align-items: center;
@@ -16,12 +20,43 @@
 .h2-style {
   margin-top: 15px;
   margin-bottom: 20px;
+  margin-left: -20px;
+  opacity: 0;
+  transition: 1s;
 }
 .paragraph {
   margin-bottom: 20px;
+  opacity: 0;
+  transition: 0.3s;
+  margin-left: -20px;
 }
 .second-title {
   display: none;
+}
+.visible {
+  opacity: 1;
+  transition: 1s;
+  margin-left: 0;
+}
+.visible-paragraph {
+  opacity: 1;
+  transition: 1s;
+  margin-left: 0px;
+}
+.visible-ul {
+  opacity: 1;
+  transition: 1s;
+  margin-left: 0px;
+}
+.container-for-img {
+  opacity: 0;
+  margin-right: -20px;
+  transition: 1s;
+}
+.visible-img {
+  opacity: 1;
+  transition: 1;
+  margin-right: 0px;
 }
 @media (max-width: 1200px) {
   .about-us {
