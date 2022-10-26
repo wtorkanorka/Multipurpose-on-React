@@ -89,4 +89,7 @@
   .nav {
     gap: 10px;
   }
+  .blog-post img {
+    width: 100%;
+  }
 }

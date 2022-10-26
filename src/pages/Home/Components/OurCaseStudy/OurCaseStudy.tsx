@@ -11,15 +11,17 @@ import cx from 'classnames'
 import { useInView } from 'react-intersection-observer'
 
 export default function OurCaseStudy() {
-  const [number, setNumber] = useState(1)
+  const [filter, setFilter] = useState('')
   const { data, error } = useSWR<OurCase[]>(
-    `http://localhost:3004/our_case_study?_limit=9&_page=${number}`,
+    filter == ''
+      ? `http://localhost:3004/our_case_study`
+      : `http://localhost:3004/our_case_study?type=${filter}`,
     fetcher,
   )
   const { ref, inView, entry } = useInView({
     threshold: 0.1,
   })
-  console.log(data)
+
   if (error) {
     return <div>Ошибка при запросе</div>
   }
@@ -41,80 +43,93 @@ export default function OurCaseStudy() {
           </h2>
 
           <ul className={styles['ul-burger']}>
-            <li
-              onClick={() => setNumber(1)}
-              className={cx(number == 1 ? styles['width-button'] : '')}
-            >
+            <li onClick={() => setFilter('')}>
               <button
                 style={{
-                  background: number == 1 ? 'var(--h3-orange)' : 'none',
-                  color: number == 1 ? 'white' : '#7B7B7B',
+                  background: filter == '' ? 'var(--h3-orange)' : 'none',
+                  color: filter == '' ? 'white' : '#7B7B7B',
                   borderRadius: '10px',
                   transition: '0.2s',
                 }}
+                className={cx(filter == '' ? styles['width-button'] : '')}
               >
                 All
               </button>
             </li>
-            <li onClick={() => setNumber(2)}>
+            <li onClick={() => setFilter('ux_design')}>
               <button
                 style={{
-                  background: number == 2 ? 'var(--h3-orange)' : 'none',
-                  color: number == 2 ? 'white' : '#7B7B7B',
+                  background:
+                    filter == 'ux_design' ? 'var(--h3-orange)' : 'none',
+                  color: filter == 'ux_design' ? 'white' : '#7B7B7B',
                   borderRadius: '10px',
                   transition: '0.2s',
                 }}
-                className={cx(number == 2 ? styles['width-button'] : '')}
+                className={cx(
+                  filter == 'ux_design' ? styles['width-button'] : '',
+                )}
               >
                 UX Design
               </button>
             </li>
-            <li onClick={() => setNumber(3)}>
+            <li onClick={() => setFilter('web_design')}>
               <button
                 style={{
-                  background: number == 3 ? 'var(--h3-orange)' : 'none',
-                  color: number == 3 ? 'white' : '#7B7B7B',
+                  background:
+                    filter == 'web_design' ? 'var(--h3-orange)' : 'none',
+                  color: filter == 'web_design' ? 'white' : '#7B7B7B',
                 }}
-                className={cx(number == 3 ? styles['width-button'] : '')}
+                className={cx(
+                  filter == 'web_design' ? styles['width-button'] : '',
+                )}
               >
                 Web Design
               </button>
             </li>
-            <li onClick={() => setNumber(4)}>
+            <li onClick={() => setFilter('app_development')}>
               <button
                 style={{
-                  background: number == 4 ? 'var(--h3-orange)' : 'none',
-                  color: number == 4 ? 'white' : '#7B7B7B',
+                  background:
+                    filter == 'app_development' ? 'var(--h3-orange)' : 'none',
+                  color: filter == 'app_development' ? 'white' : '#7B7B7B',
                   borderRadius: '10px',
                   transition: '0.2s',
                 }}
-                className={cx(number == 4 ? styles['width-button'] : '')}
+                className={cx(
+                  filter == 'app_development' ? styles['width-button'] : '',
+                )}
               >
                 App Development
               </button>
             </li>
-            <li onClick={() => setNumber(5)}>
+            <li onClick={() => setFilter('game_design')}>
               <button
                 style={{
-                  background: number == 5 ? 'var(--h3-orange)' : 'none',
-                  color: number == 5 ? 'white' : '#7B7B7B',
+                  background:
+                    filter == 'game_design' ? 'var(--h3-orange)' : 'none',
+                  color: filter == 'game_design' ? 'white' : '#7B7B7B',
                   borderRadius: '10px',
                   transition: '0.2s',
                 }}
-                className={cx(number == 5 ? styles['width-button'] : '')}
+                className={cx(
+                  filter == 'game_design' ? styles['width-button'] : '',
+                )}
               >
                 Game Design
               </button>
             </li>
-            <li onClick={() => setNumber(6)}>
+            <li onClick={() => setFilter('graphic_design')}>
               <button
                 style={{
-                  background: number == 6 ? 'var(--h3-orange)' : 'none',
-                  color: number == 6 ? 'white' : '#7B7B7B',
+                  background:
+                    filter == 'graphic_design' ? 'var(--h3-orange)' : 'none',
+                  color: filter == 'graphic_design' ? 'white' : '#7B7B7B',
                   borderRadius: '10px',
                   transition: '0.2s',
                 }}
-                className={cx(number == 6 ? styles['width-button'] : '')}
+                className={cx(
+                  filter == 'graphic_design' ? styles['width-button'] : '',
+                )}
               >
                 Graphic Design
               </button>
@@ -126,7 +141,7 @@ export default function OurCaseStudy() {
               {data?.map(i => {
                 return (
                   <div key={i.id}>
-                    <OurCaseStudyTextContent i={i} />
+                    <OurCaseStudyTextContent i={i} filter={filter} />
                   </div>
                 )
               })}

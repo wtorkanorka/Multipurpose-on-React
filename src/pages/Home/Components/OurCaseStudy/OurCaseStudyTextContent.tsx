@@ -4,7 +4,7 @@ import { useState } from 'react'
 import shareBox from '../../../../assets/icons/share-box-line.svg'
 import SmartImage from '../../../../components/SmartImage/SmartImage'
 import { useInView } from 'react-intersection-observer'
-export default function OurCaseStudyTextContent({ i }: any) {
+export default function OurCaseStudyTextContent({ i, filter }: any) {
   const [visible, setVisible] = useState(false)
   const { ref, inView, entry } = useInView({
     threshold: 0.5,

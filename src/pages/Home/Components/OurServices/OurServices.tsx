@@ -6,7 +6,7 @@ import SmartImage from '../../../../components/SmartImage/SmartImage'
 import { useInView } from 'react-intersection-observer'
 export default function OurServices() {
   const { ref, inView, entry } = useInView({
-    threshold: 0.1,
+    threshold: 0.2,
   })
 
   return (
