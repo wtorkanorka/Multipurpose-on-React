@@ -22,7 +22,7 @@ export default function OurBlog() {
 
   return (
     <div ref={ref}>
-      <Wrapper backgroundColor="#FFF7F4">
+      <Wrapper backgroundColor="var(--background-comp)">
         <TitleOfPage position="center">Our Blog</TitleOfPage>
 
         <h2
@@ -46,11 +46,7 @@ export default function OurBlog() {
             data?.map(i => {
               return (
                 <div className={styles['blog-post']} key={i.id}>
-                  <img
-                    src={i.cover}
-                    alt="first img"
-                    className={styles['blog-post-img']}
-                  />
+                  <SmartImage path={i.cover} />
                   <h3>{i.preview}</h3>
                   <nav className={styles['nav']}>
                     <div>

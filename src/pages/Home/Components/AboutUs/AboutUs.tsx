@@ -14,7 +14,7 @@ export default function AboutUs() {
   })
 
   return (
-    <Wrapper backgroundColor="#fff7f4">
+    <Wrapper backgroundColor="var(--background-comp)">
       <div className={styles['about-us']} id="aboutUs" ref={ref}>
         <div>
           <div className={styles['title-of-page']}>

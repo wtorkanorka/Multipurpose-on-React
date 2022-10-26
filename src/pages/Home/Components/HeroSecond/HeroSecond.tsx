@@ -10,7 +10,7 @@ export default function HeroSecond() {
   return (
     <div ref={ref}>
       <HeaderSecond backgroundColorProps={'none'} />
-      <Wrapper backgroundColor="#fff7f4">
+      <Wrapper backgroundColor="var(--background-comp)">
         <div className={styles['container']}>
           <div className={styles['content']}>
             <h1

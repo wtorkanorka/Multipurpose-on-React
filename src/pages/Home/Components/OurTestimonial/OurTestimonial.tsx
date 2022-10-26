@@ -33,7 +33,7 @@ export default function OurTestimonial() {
 
   return (
     <div ref={ref}>
-      <Wrapper backgroundColor="#FFF7F4">
+      <Wrapper backgroundColor="var(--background-comp)">
         <TitleOfPage position="center">Our Testimonial</TitleOfPage>
         <div>
           <h2
