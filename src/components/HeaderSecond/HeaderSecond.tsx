@@ -28,7 +28,7 @@ export default function HeaderSecond({ backgroundColorProps = 'white' }: any) {
         }}
       >
         <div className={styles['logo']}>
-          <Link to="/1">
+          <Link to="/">
             <p
               style={{
                 opacity: inView ? '1' : '0',

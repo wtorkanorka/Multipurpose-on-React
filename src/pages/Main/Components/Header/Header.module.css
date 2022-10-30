@@ -1,0 +1,114 @@
+.header-mobile {
+  height: 50px;
+  width: 100%;
+  background-color: var(--white);
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 13px 17px;
+  position: relative;
+  a {
+    text-decoration: none;
+  }
+  p {
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 123.6%;
+    text-align: center;
+    color: black;
+    span {
+      color: var(--title-of-page);
+    }
+    &:active {
+      color: var(--h3-orange);
+    }
+  }
+  .img-position {
+    margin-left: -12px;
+  }
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.header-pc {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  align-items: center;
+  padding: 27px 40px;
+  nav {
+    ul {
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+      li {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150.6%;
+        text-align: center;
+        color: var(--h2-gray);
+        @media (min-width: 1360px) {
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 123.6%;
+        }
+        &:active {
+          color: var(--h3-orange);
+        }
+      }
+      @media (min-width: 1360px) {
+        gap: 38px;
+      }
+    }
+  }
+  a {
+    text-decoration: none;
+
+    p {
+      color: black;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 123.6%;
+      span {
+        color: var(--h3-orange);
+      }
+
+      @media (min-width: 1360px) {
+        font-weight: 600;
+        font-size: 39.06px;
+        line-height: 123.6%;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    display: none;
+  }
+  @media (min-width: 1360px) {
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+    padding: 40px 135px;
+  }
+}
+
+.button-burger {
+  all: unset;
+  cursor: pointer;
+}
+
+.navigation-mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: white;
+  padding: 10px;
+  position: absolute;
+  right: 0;
+  top: 70px;
+  li:active {
+    color: var(--h3-orange);
+  }
+}
+
+.visible {
+  display: none;
+}
