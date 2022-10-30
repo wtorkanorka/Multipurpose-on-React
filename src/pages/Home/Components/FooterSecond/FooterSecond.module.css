@@ -120,4 +120,10 @@
     line-height: 150.6%;
     color: var(--white);
   }
+  .logo-footer p {
+    text-align: left;
+  }
+  .container p {
+    text-align: left;
+  }
 }

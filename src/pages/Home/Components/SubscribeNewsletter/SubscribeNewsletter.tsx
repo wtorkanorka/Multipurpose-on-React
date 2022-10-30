@@ -6,6 +6,7 @@ import styles from './SubscribeNewsletter.module.css'
 import { useInView } from 'react-intersection-observer'
 export default function SubscribeNewsletter() {
   const { ref, inView, entry } = useInView({
+    triggerOnce: true,
     threshold: 0.5,
   })
 

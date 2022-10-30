@@ -6,6 +6,7 @@ import SmartImage from '../../../../components/SmartImage/SmartImage'
 import { useInView } from 'react-intersection-observer'
 export default function OurCapabilities() {
   const { ref, inView, entry } = useInView({
+    triggerOnce: true,
     threshold: 0.1,
   })
 
@@ -102,7 +103,7 @@ export default function OurCapabilities() {
         >
           <div className={styles['content']}>
             <div className={styles['img-style']}>
-              <SmartImage path="/src/assets/images/man" />
+              <SmartImage path="images/man" />
             </div>
             <h3>120</h3>
             <h4>Top Experts</h4>
@@ -110,7 +111,7 @@ export default function OurCapabilities() {
           <div className={styles['vertical-line']}></div>
           <div className={styles['content']}>
             <div className={styles['img-style']}>
-              <SmartImage path="/src/assets/images/target" />
+              <SmartImage path="images/target" />
             </div>
             <h3>500</h3>
             <h4>Strategies</h4>
@@ -118,7 +119,7 @@ export default function OurCapabilities() {
           <div className={styles['vertical-line']}></div>
           <div className={styles['content']}>
             <div className={styles['img-style']}>
-              <SmartImage path="/src/assets/images/analysis" />
+              <SmartImage path="images/analysis" />
             </div>
             <h3>347</h3>
             <h4>Great Results</h4>
@@ -126,7 +127,7 @@ export default function OurCapabilities() {
           <div className={styles['vertical-line']}></div>
           <div className={styles['content']}>
             <div className={styles['img-style']}>
-              <SmartImage path="/src/assets/images/data-analytics" />
+              <SmartImage path="images/data-analytics" />
             </div>
             <h3>120</h3>
             <h4>Hight Rankings</h4>

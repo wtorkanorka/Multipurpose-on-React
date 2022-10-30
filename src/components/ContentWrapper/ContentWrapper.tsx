@@ -1,5 +1,6 @@
-import React, { ChildContextProvider, PropsWithChildren } from 'react'
+import React, { PropsWithChildren } from 'react'
 import styles from './ContentWrapper.module.scss'
-export default function ContentWrapper({ children }: any) {
+type children = PropsWithChildren
+export default function ContentWrapper({ children }: children) {
   return <div className={styles['wrapper']}>{children}</div>
 }

@@ -15,9 +15,13 @@ export default function OurTestimonial() {
   const [page, setPage] = useState(1)
   const { data, error } = useSWR<Reviews>(
     `http://localhost:3004/our_testimonial?_limit=3&_page=${page}`,
+
     fetcher,
   )
+
+  const res1 = useSWR<Reviews>(`http://localhost:3004/our_testimonial`, fetcher)
   const { ref, inView, entry } = useInView({
+    triggerOnce: true,
     threshold: 0.2,
   })
   if (page < 1) {
@@ -66,7 +70,27 @@ export default function OurTestimonial() {
                   />
                 </svg>
               </button>
-            ) : null}
+            ) : (
+              <button
+                className={cx(styles['nav-button-first'])}
+                style={{
+                  opacity: 0.1,
+                  pointerEvents: 'none',
+                }}
+              >
+                <svg
+                  width="10"
+                  height="16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.465 8 .278 1.812 2.045.045 10 8l-7.955 7.955-1.767-1.768L6.465 8Z"
+                    fill="#373737"
+                  />
+                </svg>
+              </button>
+            )}
             {!error ? (
               data?.map(i => {
                 return (
@@ -97,7 +121,7 @@ export default function OurTestimonial() {
                         </div>
                       </div>
                       <div>
-                        <SmartImage path="/src/assets/images/dots" />
+                        <SmartImage path="images/dots" />
                       </div>
                     </div>
                   </div>
@@ -106,10 +130,17 @@ export default function OurTestimonial() {
             ) : (
               <div>Ошибка при запросе</div>
             )}
-            {data?.length == 0 ? (
+            {!data ? (
+              <div className={styles['skeleton']}>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            ) : null}
+            {data?.length == 0 || data?.length < 3 ? (
               <div className={styles['comment']}>Ничего нет</div>
             ) : null}
-            {page !== 0 && data?.length == 3 ? (
+            {data?.length * page !== res1.data?.length ? (
               <button
                 className={cx(styles['nav-button-second'], styles['visible'])}
                 onClick={() => {
@@ -128,7 +159,24 @@ export default function OurTestimonial() {
                   />
                 </svg>
               </button>
-            ) : null}
+            ) : (
+              <button
+                className={cx(styles['nav-button-second'])}
+                style={{ opacity: 0.1, pointerEvents: 'none' }}
+              >
+                <svg
+                  width="10"
+                  height="16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.465 8 .278 1.812 2.045.045 10 8l-7.955 7.955-1.767-1.768L6.465 8Z"
+                    fill="#373737"
+                  />
+                </svg>
+              </button>
+            )}
           </div>
         </div>
       </Wrapper>

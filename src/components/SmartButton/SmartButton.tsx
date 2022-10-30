@@ -1,8 +1,16 @@
 import React from 'react'
+import {
+  DetailedHTMLProps,
+  ButtonHTMLAttributes,
+  PropsWithChildren,
+} from 'react'
 import styles from './SmartButton.module.css'
-export default function SmartButton({ children, type = 'button' }: any) {
+type Props = PropsWithChildren<
+  DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>
+>
+export default function SmartButton({ children, ...rest }: Props) {
   return (
-    <button className={styles['button']} type={type}>
+    <button className={styles['button']} {...rest}>
       {children}
     </button>
   )

@@ -10,6 +10,7 @@ import cx from 'classnames'
 
 export default function AboutUs() {
   const { ref, inView, entry } = useInView({
+    triggerOnce: true,
     threshold: 0.5,
   })
 
@@ -46,15 +47,15 @@ export default function AboutUs() {
             )}
           >
             <li>
-              <SmartImage path="/src/assets/images/checkbox" />
+              <SmartImage path="images/checkbox" />
               Innovative website design
             </li>
             <li>
-              <SmartImage path="/src/assets/images/checkbox" />
+              <SmartImage path="images/checkbox" />
               UI/UX design with global trends
             </li>
             <li>
-              <SmartImage path="/src/assets/images/checkbox" />
+              <SmartImage path="images/checkbox" />
               Web and email hosting service
             </li>
           </ul>

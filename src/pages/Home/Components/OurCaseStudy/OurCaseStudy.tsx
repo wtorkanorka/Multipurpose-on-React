@@ -8,7 +8,7 @@ import { fetcher } from '../../../../fetcher/fetcher'
 import { OurCase } from '../../../../Types/Types'
 import OurCaseStudyTextContent from './OurCaseStudyTextContent'
 import cx from 'classnames'
-import { useInView } from 'react-intersection-observer'
+import { InView, useInView } from 'react-intersection-observer'
 
 export default function OurCaseStudy() {
   const [filter, setFilter] = useState('')
@@ -19,13 +19,14 @@ export default function OurCaseStudy() {
     fetcher,
   )
   const { ref, inView, entry } = useInView({
+    triggerOnce: true,
     threshold: 0.1,
   })
 
   if (error) {
     return <div>Ошибка при запросе</div>
   }
-
+  console.log(inView)
   return (
     <div ref={ref}>
       <Wrapper>
@@ -45,13 +46,13 @@ export default function OurCaseStudy() {
           <ul className={styles['ul-burger']}>
             <li onClick={() => setFilter('')}>
               <button
+                className={cx(filter == '' ? styles['width-button'] : '')}
                 style={{
                   background: filter == '' ? 'var(--h3-orange)' : 'none',
                   color: filter == '' ? 'white' : '#7B7B7B',
                   borderRadius: '10px',
                   transition: '0.2s',
                 }}
-                className={cx(filter == '' ? styles['width-button'] : '')}
               >
                 All
               </button>

@@ -14,6 +14,7 @@ export default function OurBlog() {
     fetcher,
   )
   const { ref, inView, entry } = useInView({
+    triggerOnce: true,
     threshold: 0.1,
   })
   if (error) {
@@ -50,22 +51,22 @@ export default function OurBlog() {
                   <h3>{i.preview}</h3>
                   <nav className={styles['nav']}>
                     <div>
-                      <SmartImage path="/src/assets/images/timer" />
+                      <SmartImage path="images/timer" />
                       <h5>{i.created_at}</h5>
                     </div>
                     <div>
-                      <SmartImage path="/src/assets/images/person" />
+                      <SmartImage path="images/person" />
                       <h5>{i.author}</h5>
                     </div>
                     <div>
-                      <SmartImage path="/src/assets/images/message" />
+                      <SmartImage path="images/message" />
                       <h5>10 Comment</h5>
                     </div>
                   </nav>
                   <p className={styles['p-style']}>{i.full_content}</p>
-                  <SmartButton className={styles['smart-button']}>
-                    Read More
-                  </SmartButton>
+                  <div className={styles['smart-button']}>
+                    <SmartButton type="button">Read More</SmartButton>
+                  </div>
                 </div>
               )
             })

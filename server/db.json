@@ -157,7 +157,7 @@
   "blog_post": [
     {
       "id": 1,
-      "cover": "/src/assets/images/our-blog-1",
+      "cover": "images/our-blog-1",
       "preview": "35 Stellar Graphic Design Blogs to Keep YouEducated and Inspired",
       "created_at": "January 25, 2021",
       "author": "Cristofer Westervelt",
@@ -165,7 +165,7 @@
     },
     {
       "id": 2,
-      "cover": "/src/assets/images/our-blog-2",
+      "cover": "images/our-blog-2",
       "preview": "Ridiculously powerful 2021 iPad Pro may drop this month",
       "created_at": "February 11, 1072",
       "author": "Cristofer Westervelt",
@@ -173,7 +173,7 @@
     },
     {
       "id": 3,
-      "cover": "/src/assets/images/our-blog-3",
+      "cover": "images/our-blog-3",
       "preview": "Memphis Design: the defining look of the 1980s",
       "created_at": "January 25, 2021",
       "author": "Cristofer Westervelt",
@@ -183,55 +183,55 @@
   "our_case_study": [
     {
       "id": 1,
-      "image": "/src/assets/images/recent-project-1",
+      "image": "images/recent-project-1",
       "link": "https://vk.com/wtorkanorka",
       "type": "ux_design"
     },
     {
       "id": 2,
-      "image": "/src/assets/images/recent-project-2",
+      "image": "images/recent-project-2",
       "link": "https://vk.com/wtorkanorka",
       "type": "web_design"
     },
     {
       "id": 3,
-      "image": "/src/assets/images/recent-project-3",
+      "image": "images/recent-project-3",
       "link": "https://vk.com/wtorkanorka",
       "type": "app_development"
     },
     {
       "id": 4,
-      "image": "/src/assets/images/recent-project-4",
+      "image": "images/recent-project-4",
       "link": "https://vk.com/wtorkanorka",
       "type": "game_design"
     },
     {
       "id": 5,
-      "image": "/src/assets/images/recent-project-5",
+      "image": "images/recent-project-5",
       "link": "https://vk.com/wtorkanorka",
       "type": "graphic_design"
     },
     {
       "id": 6,
-      "image": "/src/assets/images/recent-project-6",
+      "image": "images/recent-project-6",
       "link": "https://vk.com/wtorkanorka",
       "type": "game_design"
     },
     {
       "id": 7,
-      "image": "/src/assets/images/recent-project-7",
+      "image": "images/recent-project-7",
       "link": "https://vk.com/wtorkanorka",
       "type": "app_development"
     },
     {
       "id": 8,
-      "image": "/src/assets/images/recent-project-8",
+      "image": "images/recent-project-8",
       "link": "https://vk.com/wtorkanorka",
       "type": "ux_design"
     },
     {
       "id": 9,
-      "image": "/src/assets/images/recent-project-9",
+      "image": "images/recent-project-9",
       "link": "https://vk.com/wtorkanorka",
       "type": "game_design"
     }

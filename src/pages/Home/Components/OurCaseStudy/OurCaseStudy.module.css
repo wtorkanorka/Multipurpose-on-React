@@ -7,12 +7,17 @@
   display: flex;
   justify-content: center;
 }
-.container-for-content ul li button {
-  all: unset;
+.ul-burger button {
+  background-color: none;
+  border: none;
+  outline: none;
   padding: 0 50px;
   height: 60px;
   font-weight: 500;
   line-height: 30px;
+
+  font-size: 17px;
+
   color: var(--p-color);
   text-align: center;
   transition: 0.2s;
@@ -68,6 +73,7 @@
   line-height: 38px;
   margin-top: 21.5px;
 }
+
 .orange-box img {
   width: 37.5px;
 }
@@ -78,6 +84,7 @@
   .orange-box h2 {
     font-size: 20px;
   }
+
   .orange-box img {
     width: 32px;
   }
@@ -100,6 +107,9 @@
   }
 }
 @media (max-width: 767px) {
+  .width-button {
+    width: 100%;
+  }
   .orange-box h2 {
     font-size: 16px;
     font-weight: 500;
@@ -133,10 +143,7 @@
     gap: 10px;
   }
 
-  .container-for-content ul li button {
+  .ul-burger button {
     padding: 0;
-  }
-  .width-button {
-    width: 100%;
   }
 }

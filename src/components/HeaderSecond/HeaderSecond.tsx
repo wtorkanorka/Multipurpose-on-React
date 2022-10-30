@@ -11,6 +11,7 @@ import { useInView } from 'react-intersection-observer'
 export default function HeaderSecond({ backgroundColorProps = 'white' }: any) {
   const [visible, setVisible] = useState(false)
   const { ref, inView, entry } = useInView({
+    triggerOnce: true,
     threshold: 0.5,
   })
   return (
@@ -83,7 +84,7 @@ export default function HeaderSecond({ backgroundColorProps = 'white' }: any) {
         {backgroundColorProps == 'white' && (
           <div className={styles['sun']}>
             <button>
-              <SmartImage path="/src/assets/images/sun" />
+              <SmartImage path="images/sun" />
             </button>
           </div>
         )}
@@ -91,7 +92,7 @@ export default function HeaderSecond({ backgroundColorProps = 'white' }: any) {
           className={styles['navigation']}
           onClick={() => setVisible(!visible)}
         >
-          <SmartImage path="/src/assets/images/burger" />
+          <SmartImage path="images/burger" />
         </div>
       </div>
       {visible && (

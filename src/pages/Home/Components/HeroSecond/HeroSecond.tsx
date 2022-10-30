@@ -5,6 +5,7 @@ import { Wrapper } from '../../../../components/Wrapper/Wrapper'
 import { useInView } from 'react-intersection-observer'
 export default function HeroSecond() {
   const { ref, inView, entry } = useInView({
+    triggerOnce: true,
     threshold: 0.5,
   })
   return (
@@ -36,7 +37,7 @@ export default function HeroSecond() {
               in digni ssim euismod purus donec mus vulputate habitant iaculis.
               Com odo enim ornare turpis tempus enim, nibh nulla. Rhoncus sed.
             </p>
-            <SmartButton>Get Start Now</SmartButton>
+            <SmartButton type="button">Get Start Now</SmartButton>
           </div>
           <div
             className={styles['image']}

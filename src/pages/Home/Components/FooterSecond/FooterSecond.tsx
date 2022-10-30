@@ -5,6 +5,7 @@ import GoUpButton from '../../../../components/GoUpButton/GoUpButton'
 import { useInView } from 'react-intersection-observer'
 export default function FooterSecond() {
   const { ref, inView, entry } = useInView({
+    triggerOnce: true,
     threshold: 0.2,
   })
 
@@ -82,7 +83,6 @@ export default function FooterSecond() {
           <h3>Follow Us</h3>
           <div className={styles['container-of-buttons']}>
             <button>
-              {/* <img src={facebook} alt="facebook" /> */}
               <svg
                 width="11"
                 height="20"
@@ -97,8 +97,6 @@ export default function FooterSecond() {
               </svg>
             </button>
             <button>
-              {/* ЗАМЕНИЛ НА СВГ ЧТОБЫ МенЯТЬ ЦВЕТ ПРИ КЛИКЕ
-               <img src={instagramm} alt="instagramm" />  */}
               <svg
                 width="24"
                 height="24"
@@ -113,7 +111,6 @@ export default function FooterSecond() {
               </svg>
             </button>
             <button>
-              {/* <img src={skype} alt="skype" /> */}
               <svg
                 width="20"
                 height="20"
@@ -128,7 +125,6 @@ export default function FooterSecond() {
               </svg>
             </button>
             <button>
-              {/* <img src={twitter} alt="twitter" /> */}
               <svg
                 width="22"
                 height="18"
