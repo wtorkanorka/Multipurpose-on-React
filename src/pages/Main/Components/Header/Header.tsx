@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import SmartImage from '../../../../components/SmartImage/SmartImage'
 import { useState } from 'react'
 import cx from 'classnames'
+
 export default function Header() {
   const [visible, setVisible] = useState(false)
   return (
@@ -33,12 +34,24 @@ export default function Header() {
             styles['navigation-mobile'],
           )}
         >
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Services</li>
-          <li>Portfolio</li>
-          <li>Blog</li>
-          <li>Contact Us</li>
+          <li>
+            <Link to="/home">Home</Link>
+          </li>
+          <li>
+            <Link to="/about-us">About Us</Link>
+          </li>
+          <li>
+            <Link to="/services">Services</Link>
+          </li>
+          <li>
+            <Link to="/portfolio">Portfolio</Link>
+          </li>
+          <li>
+            <Link to="/blog">Blog</Link>
+          </li>
+          <li>
+            <Link to="/contact-us">Contact Us</Link>
+          </li>
         </ul>
       </div>
       <div className={styles['header-pc']}>
@@ -50,12 +63,24 @@ export default function Header() {
         </Link>
         <nav>
           <ul>
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Services</li>
-            <li>Portfolio</li>
-            <li>Blog</li>
-            <li>Contact Us</li>
+            <li>
+              <Link to="/home">Home</Link>
+            </li>
+            <li>
+              <Link to="/about-us">About Us</Link>
+            </li>
+            <li>
+              <Link to="/services">Services</Link>
+            </li>
+            <li>
+              <Link to="/portfolio">Portfolio</Link>
+            </li>
+            <li>
+              <Link to="/blog">Blog</Link>
+            </li>
+            <li>
+              <Link to="/contact-us">Contact Us</Link>
+            </li>
           </ul>
         </nav>
         <img

@@ -4,12 +4,18 @@
 .wrapper-2 {
   padding: 153px 138px 153px 135px;
 }
+.boxShadow {
+  box-shadow: 1px 9px 8px -9px inset;
+}
 @media (max-width: 1360px) {
   .wrapper {
     padding: 80px 70px;
   }
   .wrapper-2 {
     padding: 73px 53px 73px 40px;
+  }
+  .boxShadow {
+    box-shadow: 1px 7px 8px -9px inset;
   }
 }
 @media (max-width: 767px) {
@@ -18,5 +24,8 @@
   }
   .wrapper-2 {
     padding: 50px 21px;
+  }
+  .boxShadow {
+    box-shadow: none;
   }
 }

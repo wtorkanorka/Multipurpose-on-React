@@ -4,19 +4,22 @@ import cx from 'classnames'
 interface Component {
   children: React.ReactNode
   backgroundColor?: string
-  boxShadowProps?: string
-  page: string
+  boxShadow?: boolean
+  page?: string
 }
 export function Wrapper({
   children,
   backgroundColor,
-  boxShadowProps,
+  boxShadow,
   page,
 }: Component) {
   return (
     <div
-      className={cx(page == '1' ? styles['wrapper'] : styles['wrapper-2'])}
-      style={{ background: backgroundColor, boxShadow: boxShadowProps }}
+      className={cx(
+        page == '1' ? styles['wrapper'] : styles['wrapper-2'],
+        boxShadow == true ? styles['boxShadow'] : '',
+      )}
+      style={{ background: backgroundColor }}
     >
       {children}
     </div>

@@ -53,8 +53,12 @@
           font-size: 20px;
           line-height: 123.6%;
         }
-        &:active {
-          color: var(--h3-orange);
+        a {
+          text-decoration: none;
+          color: black;
+          &:active {
+            color: var(--h3-orange);
+          }
         }
       }
       @media (min-width: 1360px) {
@@ -106,6 +110,16 @@
   top: 70px;
   li:active {
     color: var(--h3-orange);
+  }
+
+  li {
+    a {
+      text-decoration: none;
+      color: black;
+      &:active {
+        color: var(--h3-orange);
+      }
+    }
   }
 }
 

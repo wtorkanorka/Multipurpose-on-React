@@ -14,7 +14,7 @@ function App() {
           <Link to="/">Main</Link>
         </li>
         <li>
-          <Link to="/Home">Home</Link>
+          <Link to="/home">Home</Link>
         </li>
         <li>
           <Link to="/blog">Blog</Link>
@@ -26,7 +26,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/Home" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/blog/:id" element={<ArticlePage />} />
       </Routes>

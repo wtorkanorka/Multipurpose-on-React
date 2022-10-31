@@ -4,7 +4,7 @@ import { Wrapper } from '../../../../components/Wrapper/Wrapper'
 import styles from './Hero.module.css'
 export default function Hero() {
   return (
-    <Wrapper backgroundColor="var(--background-comp)" page="2">
+    <Wrapper backgroundColor="var(--background-comp)" page="2" boxShadow={true}>
       <div className={styles['hero']}>
         <img src="/src/assets/images/hero-image.svg" alt="hero-iamge" />
         <div className={styles['inner-block']}>

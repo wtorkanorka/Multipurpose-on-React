@@ -48,12 +48,24 @@ export default function HeaderSecond({ backgroundColorProps = 'white' }: any) {
               marginBottom: inView ? '0px' : '-20px',
             }}
           >
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Services</li>
-            <li>Portfolio</li>
-            <li>Blog</li>
-            <li>Contact Us</li>
+            <li>
+              <Link to="/home">Home</Link>
+            </li>
+            <li>
+              <Link to="/about-us">About Us</Link>
+            </li>
+            <li>
+              <Link to="/services">Services</Link>
+            </li>
+            <li>
+              <Link to="/portfolio">Portfolio</Link>
+            </li>
+            <li>
+              <Link to="/blog">Blog</Link>
+            </li>
+            <li>
+              <Link to="/contact-us">Contact Us</Link>
+            </li>
           </ul>
           <div className={styles['lets-talk']}>
             <button>Let`s Talk</button>
@@ -97,12 +109,24 @@ export default function HeaderSecond({ backgroundColorProps = 'white' }: any) {
       </div>
       {visible && (
         <ul className={styles['nav-ul']}>
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Services</li>
-          <li>Portfolio</li>
-          <li>Blog</li>
-          <li>Contact Us</li>
+          <li>
+            <Link to="/home">Home</Link>
+          </li>
+          <li>
+            <Link to="/about-us">About Us</Link>
+          </li>
+          <li>
+            <Link to="/services">Services</Link>
+          </li>
+          <li>
+            <Link to="/portfolio">Portfolio</Link>
+          </li>
+          <li>
+            <Link to="/blog">Blog</Link>
+          </li>
+          <li>
+            <Link to="/contact-us">Contact Us</Link>
+          </li>
         </ul>
       )}
     </div>
