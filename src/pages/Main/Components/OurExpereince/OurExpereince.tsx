@@ -9,11 +9,11 @@ export default function OurExpereince() {
         <p className={styles['title-of-page']}>OurExpereince</p>
         <h2>
           We Have
-          <br /> Completed{' '}
+          <br /> Completed
           <span>
             150+
             <br /> Projects
-          </span>{' '}
+          </span>
           Succesfully
         </h2>
         <div className={styles['visible-papragraph-1']}>
@@ -77,6 +77,38 @@ export default function OurExpereince() {
             <p>Our Company</p>
           </li>
         </ul>
+      </div>
+      <div className={styles['nex-container']}>
+        <div className={cx(styles['test-block'], styles['position-test-1'])}>
+          <div
+            className={cx(
+              styles['test-block-style'],
+              styles['margin-bottom-block'],
+            )}
+          >
+            <h3>250+</h3>
+            <p>Global Customer</p>
+          </div>
+          <div className={styles['test-block-style']}>
+            <h3>50+</h3>
+            <p>Team Member</p>
+          </div>
+        </div>
+        <div className={cx(styles['test-block'], styles['position-test-2'])}>
+          <div
+            className={cx(
+              styles['test-block-style'],
+              styles['margin-bottom-block'],
+            )}
+          >
+            <h3>156+</h3>
+            <p>Project Completed</p>
+          </div>
+          <div className={styles['test-block-style']}>
+            <h3>15+</h3>
+            <p>Our Company</p>
+          </div>
+        </div>
       </div>
     </div>
   )
