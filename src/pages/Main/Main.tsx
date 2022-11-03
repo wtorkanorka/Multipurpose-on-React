@@ -3,6 +3,7 @@ import AboutUsHome from './Components/AboutUsHome/AboutUsHome'
 import Header from './Components/Header/Header'
 import Hero from './Components/Hero/Hero'
 import OurExpereince from './Components/OurExpereince/OurExpereince'
+import TeamMember from './Components/TeamMember/TeamMember'
 
 export default function HomePage() {
   return (
@@ -11,6 +12,7 @@ export default function HomePage() {
       <Hero />
       <AboutUsHome />
       <OurExpereince />
+      <TeamMember />
     </>
   )
 }

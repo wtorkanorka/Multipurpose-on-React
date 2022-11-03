@@ -235,5 +235,31 @@
       "link": "https://vk.com/wtorkanorka",
       "type": "game_design"
     }
+  ],
+  "team_member": [
+    {
+      "id": 1,
+      "cover": "images/tommy",
+      "author": "Gustavo Herwitz",
+      "position": "UI/UX Designer"
+    },
+    {
+      "id": 2,
+      "cover": "images/philipp",
+      "author": "Phillip Curtis",
+      "position": "Graphic Designer"
+    },
+    {
+      "id": 3,
+      "cover": "images/tolik",
+      "author": "Talan Torff",
+      "position": "Web Developer"
+    },
+    {
+      "id": 4,
+      "cover": "images/linkoln",
+      "author": "Abram Vaccaro",
+      "position": "App Developer"
+    }
   ]
 }
