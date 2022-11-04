@@ -76,7 +76,13 @@
     flex-direction: column-reverse;
   }
   .about-us ul {
-    align-items: center;
+    display: flex;
+    height: 100%;
+    gap: 17px;
+    margin-left: calc(28%);
+    @media (max-width: 590px) {
+      margin-left: calc(6%);
+    }
   }
   .container-for-img img {
     width: 100%;

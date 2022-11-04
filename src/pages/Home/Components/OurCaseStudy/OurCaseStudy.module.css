@@ -21,12 +21,11 @@
 
   color: var(--p-color);
   text-align: center;
-  transition: 0.2s;
+  /* transition: 0.2s; */
   border-radius: 10px;
-  transition: 0.2s;
 }
 .container-for-content ul li button:active {
-  transition: 0.2s;
+  /* transition: 0.2s; */
 }
 .h2-styles {
   text-align: center;
@@ -111,13 +110,7 @@
   .width-button {
     width: 100%;
   }
-  .orange-box h2 {
-    font-size: 16px;
-    font-weight: 500;
-  }
-  .orange-box img {
-    width: 28px;
-  }
+
   .ul-burger {
     overflow-x: scroll;
   }
@@ -127,10 +120,7 @@
     flex-wrap: wrap;
     justify-content: center;
   }
-  .blocks ul li img {
-    height: 100%;
-    width: 100%;
-  }
+
   .burger {
     display: flex;
     justify-content: center;
@@ -140,10 +130,15 @@
   .ul-burger {
     display: flex;
     flex-direction: column;
-    transition: 0.2s;
     gap: 10px;
   }
-
+  .orange-box h2 {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .orange-box img {
+    width: 28px;
+  }
   .ul-burger button {
     padding: 0;
   }

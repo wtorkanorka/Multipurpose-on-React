@@ -43,7 +43,7 @@ export default function OurServices() {
                 <h5>Mobile App, Website</h5>
               </div>
               <div>
-                <p>
+                <p className={styles['paragraph']}>
                   Lorem ipsum dolor sit amet, consec tet ur adipiscing elit.
                   Accumsan sed faucibu s faucibus augue. Cras ut.
                 </p>
@@ -66,7 +66,7 @@ export default function OurServices() {
                 <h5>Mobile App, Website</h5>
               </div>
               <div>
-                <p>
+                <p className={styles['paragraph']}>
                   Lorem ipsum dolor sit amet, consec tet ur adipiscing elit.
                   Accumsan sed faucibu s faucibus augue. Cras ut.
                 </p>
@@ -89,7 +89,7 @@ export default function OurServices() {
                 <h5>Mobile App, Website</h5>
               </div>
               <div>
-                <p>
+                <p className={styles['paragraph']}>
                   Lorem ipsum dolor sit amet, consec tet ur adipiscing elit.
                   Accumsan sed faucibu s faucibus augue. Cras ut.
                 </p>
@@ -112,7 +112,7 @@ export default function OurServices() {
                 <h5>Mobile App, Website</h5>
               </div>
               <div>
-                <p>
+                <p className={styles['paragraph']}>
                   Lorem ipsum dolor sit amet, consec tet ur adipiscing elit.
                   Accumsan sed faucibu s faucibus augue. Cras ut.
                 </p>
@@ -135,7 +135,7 @@ export default function OurServices() {
                 <h5>Mobile App, Website</h5>
               </div>
               <div>
-                <p>
+                <p className={styles['paragraph']}>
                   Lorem ipsum dolor sit amet, consec tet ur adipiscing elit.
                   Accumsan sed faucibu s faucibus augue. Cras ut.
                 </p>

@@ -19,14 +19,18 @@
       margin-top: 25px;
     }
   }
+  .prfiles-container ul {
+    display: flex;
+    justify-content: space-between;
+  }
   .profiles {
     display: flex;
     gap: 15px;
     width: 100%;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
-    justify-content: center;
-
+    max-width: calc(270px * 4 + 30px * 3);
+    margin: 0 auto;
     @media (min-width: 768px) {
       gap: 24px;
     }

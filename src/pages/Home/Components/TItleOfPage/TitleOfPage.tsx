@@ -5,7 +5,7 @@ import { DetailedHTMLProps, HTMLAttributes, PropsWithChildren } from 'react'
 
 interface Types {
   children: React.ReactNode
-  position: string
+  position?: string
   color?: string
 }
 

@@ -39,7 +39,7 @@
   font-weight: 600;
   font-size: 64px;
   line-height: 73px;
-  color: var(--white);
+  color: #efefef;
 }
 .container-for-image {
   display: flex;
@@ -53,5 +53,8 @@
 @media (max-width: 767px) {
   .h2 {
     font-size: 30px;
+  }
+  .paragraph {
+    text-align: left;
   }
 }

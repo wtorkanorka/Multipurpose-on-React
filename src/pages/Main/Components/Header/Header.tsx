@@ -16,11 +16,13 @@ export default function Header() {
             ency
           </p>
         </Link>
-        <img
-          src="/src/assets/icons/light.svg"
-          alt="light"
-          className={styles['img-position']}
-        />
+        <div>
+          <img
+            src="/src/assets/icons/light.svg"
+            alt="light"
+            className={styles['img-position']}
+          />
+        </div>
 
         <button
           onClick={() => setVisible(!visible)}

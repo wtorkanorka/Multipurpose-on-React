@@ -7,8 +7,16 @@
   justify-content: space-between;
   padding: 13px 17px;
   position: relative;
+  .button-burger {
+    justify-content: flex-end;
+  }
+
   a {
     text-decoration: none;
+    p {
+      display: flex;
+      justify-content: flex-start;
+    }
   }
   p {
     font-weight: 500;
@@ -24,13 +32,18 @@
     }
   }
   .img-position {
-    margin-left: -12px;
+    display: flex;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
   }
   @media (min-width: 768px) {
     display: none;
   }
 }
-
+.header-mobile > * {
+  flex: 1;
+}
 .header-pc {
   display: flex;
   justify-content: space-between;

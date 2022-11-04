@@ -17,6 +17,7 @@ export default function TeamMember() {
         We Have
         <br /> <span>Some Awesome</span> People
       </h2>
+      {/* <div className={styles['prfiles-container']}> */}
       <ul className={styles['profiles']}>
         {data?.map(i => {
           return (
@@ -28,6 +29,7 @@ export default function TeamMember() {
           )
         })}
       </ul>
+      {/* </div> */}
     </div>
   )
 }

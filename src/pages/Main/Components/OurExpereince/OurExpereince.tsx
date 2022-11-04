@@ -57,7 +57,7 @@ export default function OurExpereince() {
           <SmartButton>Contact Us</SmartButton>
         </div>
       </div>
-      <div className={styles['blocks-container']}>
+      {/* <div className={styles['blocks-container']}>
         <ul className={cx(styles['blocks'], styles['blocks-first'])}>
           <li className={styles['block']}>
             <h3>250+</h3>
@@ -78,37 +78,24 @@ export default function OurExpereince() {
             <p>Our Company</p>
           </li>
         </ul>
-      </div>
-      <div className={styles['nex-container']}>
-        <div className={cx(styles['test-block'], styles['position-test-1'])}>
-          <div
-            className={cx(
-              styles['test-block-style'],
-              styles['margin-bottom-block'],
-            )}
-          >
-            <h3>250+</h3>
-            <p>Global Customer</p>
-          </div>
-          <div className={styles['test-block-style']}>
-            <h3>50+</h3>
-            <p>Team Member</p>
-          </div>
+      </div> */}
+      <div className={styles['blocks']}>
+        <div className={styles['block']}>
+          <h3>250+</h3>
+          <p>Global Customer</p>
         </div>
-        <div className={cx(styles['test-block'], styles['position-test-2'])}>
-          <div
-            className={cx(
-              styles['test-block-style'],
-              styles['margin-bottom-block'],
-            )}
-          >
-            <h3>156+</h3>
-            <p>Project Completed</p>
-          </div>
-          <div className={styles['test-block-style']}>
-            <h3>15+</h3>
-            <p>Our Company</p>
-          </div>
+        <div className={styles['block']}>
+          {' '}
+          <h3>50+</h3>
+          <p>Team Member</p>
+        </div>
+        <div className={styles['block']}>
+          <h3>156+</h3>
+          <p>Project Completed</p>
+        </div>
+        <div className={styles['block']}>
+          <h3>15+</h3>
+          <p>Our Company</p>
         </div>
       </div>
     </div>

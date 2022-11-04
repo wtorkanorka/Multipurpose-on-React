@@ -36,7 +36,7 @@ export default function OurCaseStudy() {
             className={styles['h2-styles']}
             style={{
               opacity: inView ? '1' : '0',
-              transition: '1s',
+              // transition: '1s',
               marginLeft: inView ? '0px' : '-20px',
             }}
           >
@@ -51,7 +51,7 @@ export default function OurCaseStudy() {
                   background: filter == '' ? 'var(--h3-orange)' : 'none',
                   color: filter == '' ? 'white' : '#7B7B7B',
                   borderRadius: '10px',
-                  transition: '0.2s',
+                  // transition: '0.2s',
                 }}
               >
                 All
@@ -64,7 +64,7 @@ export default function OurCaseStudy() {
                     filter == 'ux_design' ? 'var(--h3-orange)' : 'none',
                   color: filter == 'ux_design' ? 'white' : '#7B7B7B',
                   borderRadius: '10px',
-                  transition: '0.2s',
+                  // transition: '0.2s',
                 }}
                 className={cx(
                   filter == 'ux_design' ? styles['width-button'] : '',
@@ -94,7 +94,7 @@ export default function OurCaseStudy() {
                     filter == 'app_development' ? 'var(--h3-orange)' : 'none',
                   color: filter == 'app_development' ? 'white' : '#7B7B7B',
                   borderRadius: '10px',
-                  transition: '0.2s',
+                  // transition: '0.2s',
                 }}
                 className={cx(
                   filter == 'app_development' ? styles['width-button'] : '',
@@ -110,7 +110,7 @@ export default function OurCaseStudy() {
                     filter == 'game_design' ? 'var(--h3-orange)' : 'none',
                   color: filter == 'game_design' ? 'white' : '#7B7B7B',
                   borderRadius: '10px',
-                  transition: '0.2s',
+                  // transition: '0.2s',
                 }}
                 className={cx(
                   filter == 'game_design' ? styles['width-button'] : '',
@@ -126,7 +126,7 @@ export default function OurCaseStudy() {
                     filter == 'graphic_design' ? 'var(--h3-orange)' : 'none',
                   color: filter == 'graphic_design' ? 'white' : '#7B7B7B',
                   borderRadius: '10px',
-                  transition: '0.2s',
+                  // transition: '0.2s',
                 }}
                 className={cx(
                   filter == 'graphic_design' ? styles['width-button'] : '',
