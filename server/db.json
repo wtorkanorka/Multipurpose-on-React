@@ -261,5 +261,37 @@
       "author": "Abram Vaccaro",
       "position": "App Developer"
     }
+  ],
+  "our_work": [
+    {
+      "id": 1,
+      "cover": "images/our-work-1",
+      "type": "ui/ux_design"
+    },
+    {
+      "id": 2,
+      "cover": "images/our-work-2",
+      "type": "graphic_design"
+    },
+    {
+      "id": 3,
+      "cover": "images/our-work-3",
+      "type": "web_development"
+    },
+    {
+      "id": 4,
+      "cover": "images/our-work-4",
+      "type": "graphic_design"
+    },
+    {
+      "id": 5,
+      "cover": "images/our-work-5",
+      "type": "ui/ux_design"
+    },
+    {
+      "id": 6,
+      "cover": "images/our-work-6",
+      "type": "graphic_design"
+    }
   ]
 }

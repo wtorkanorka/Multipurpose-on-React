@@ -30,6 +30,10 @@ export interface OurCase {
   image: string
   link: string
 }
+export interface OurWorkTypes {
+  id: number
+  cover: string
+}
 export type Posts = Post[]
 // export type TeamMembers = Members[]
 export type Reviews = Review[]
