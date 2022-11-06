@@ -33,6 +33,14 @@ export interface OurCase {
 export interface OurWorkTypes {
   id: number
   cover: string
+  type: string
+}
+export interface ClientsFeedbackType {
+  id: number
+  cover: string
+  author: string
+  comment: string
+  position: string
 }
 export type Posts = Post[]
 // export type TeamMembers = Members[]

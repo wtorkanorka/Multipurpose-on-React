@@ -293,5 +293,70 @@
       "cover": "images/our-work-6",
       "type": "graphic_design"
     }
+  ],
+  "clients_feedback": [
+    {
+      "id": 1,
+      "cover": "images/client-feedback-1",
+      "author": "Justin Septimus",
+      "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit a laoreet libero dis eget maecenas bibendum. Morbi lacinia eu, etiam volutpat morbi et amet, sagittis adipiscing. ",
+      "position": "CEO,word yt"
+    },
+    {
+      "id": 2,
+      "cover": "images/client-feedback-2",
+      "author": "Ashlynn Gouse",
+      "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit a laoreet libero dis eget maecenas bibendum. Morbi lacinia eu, etiam volutpat morbi et amet, sagittis adipiscing. ",
+      "position": "Managing Director"
+    },
+    {
+      "id": 3,
+      "cover": "images/tommy",
+      "author": "Gustavo Herwitz",
+      "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit a laoreet libero dis eget maecenas bibendum. Morbi lacinia eu, etiam volutpat morbi et amet, sagittis adipiscing. ",
+      "position": "UI/UX Designer"
+    },
+    {
+      "id": 4,
+      "cover": "images/philipp",
+      "author": "Phillip Curtis",
+      "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit a laoreet libero dis eget maecenas bibendum. Morbi lacinia eu, etiam volutpat morbi et amet, sagittis adipiscing. ",
+      "position": "Graphic Designer"
+    },
+    {
+      "id": 5,
+      "cover": "images/tolik",
+      "author": "Talan Torff",
+      "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit a laoreet libero dis eget maecenas bibendum. Morbi lacinia eu, etiam volutpat morbi et amet, sagittis adipiscing. ",
+      "position": "Web Developer"
+    },
+    {
+      "id": 6,
+      "cover": "images/linkoln",
+      "author": "Abram Vaccaro",
+      "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit a laoreet libero dis eget maecenas bibendum. Morbi lacinia eu, etiam volutpat morbi et amet, sagittis adipiscing. ",
+      "position": "App Developer"
+    },
+    {
+      "id": 7,
+      "cover": "images/linkoln",
+      "author": "Abram Vaccaro",
+      "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit a laoreet libero dis eget maecenas bibendum. Morbi lacinia eu, etiam volutpat morbi et amet, sagittis adipiscing. ",
+      "position": "App Developer"
+    },
+    {
+      "id": 8,
+      "cover": "images/philipp",
+      "author": "Phillip Curtis",
+      "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit a laoreet libero dis eget maecenas bibendum. Morbi lacinia eu, etiam volutpat morbi et amet, sagittis adipiscing. ",
+      "position": "Graphic Designer"
+    },
+    {
+      "id": 9,
+      "cover": "images/tolik",
+      "author": "Talan Torff",
+      "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit a laoreet libero dis eget maecenas bibendum. Morbi lacinia eu, etiam volutpat morbi et amet, sagittis adipiscing. ",
+      "position": "Web Developer"
+    }
   ]
 }

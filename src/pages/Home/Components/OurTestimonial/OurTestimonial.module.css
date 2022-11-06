@@ -14,6 +14,12 @@
 .commentary button:active {
   border: 1px solid var(--border-orange);
 }
+.nav-button {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
 .commentary .nav-button-first {
   all: unset;
   border: 1px solid #373737;

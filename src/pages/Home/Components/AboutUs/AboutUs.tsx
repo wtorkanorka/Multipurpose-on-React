@@ -40,25 +40,27 @@ export default function AboutUs() {
             arcu in tincidunt sed imperdiet etiam fames. Tincidunt augue risus
             mattis eget sem habitant id ultrices augue. Sit rhoncus .
           </p>
-          <ul
-            className={cx(
-              styles['about-us-ul'],
-              inView == true ? styles['visible-ul'] : '',
-            )}
-          >
-            <li>
-              <SmartImage path="images/checkbox" />
-              Innovative website design
-            </li>
-            <li>
-              <SmartImage path="images/checkbox" />
-              UI/UX design with global trends
-            </li>
-            <li>
-              <SmartImage path="images/checkbox" />
-              Web and email hosting service
-            </li>
-          </ul>
+          <div className={styles['test']}>
+            <ul
+              className={cx(
+                styles['about-us-ul'],
+                inView == true ? styles['visible-ul'] : '',
+              )}
+            >
+              <li>
+                <SmartImage path="images/checkbox" />
+                Innovative website design
+              </li>
+              <li>
+                <SmartImage path="images/checkbox" />
+                UI/UX design with global trends
+              </li>
+              <li>
+                <SmartImage path="images/checkbox" />
+                Web and email hosting service
+              </li>
+            </ul>
+          </div>
         </div>
         <div
           className={cx(

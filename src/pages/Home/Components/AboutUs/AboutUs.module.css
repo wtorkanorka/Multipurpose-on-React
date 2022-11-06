@@ -75,14 +75,18 @@
     display: flex;
     flex-direction: column-reverse;
   }
+  .test {
+    display: flex;
+    justify-content: center;
+  }
   .about-us ul {
     display: flex;
     height: 100%;
     gap: 17px;
-    margin-left: calc(28%);
-    @media (max-width: 590px) {
+    /* margin-left: calc(28%); */
+    /* @media (max-width: 590px) {
       margin-left: calc(6%);
-    }
+    } */
   }
   .container-for-img img {
     width: 100%;

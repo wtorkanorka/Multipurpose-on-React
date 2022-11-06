@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  gap: 5px;
+  position: fixed;
+  flex-direction: column;
+  z-index: 20;
+  right: 0;
+  top: 317px;
+  @media (max-width: 768px) {
+    display: none;
+  }
+  li {
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &:active {
+      background-color: var(--background);
+    }
+    svg path {
+      fill: #ff5300;
+    }
+    &:active {
+      svg path {
+        fill: #fff;
+      }
+    }
+  }
+}

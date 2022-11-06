@@ -12,9 +12,11 @@ export default function OurExpereince() {
           We Have
           <br /> Completed
           <span>
+            {'\n'}
             150+
             <br /> Projects
           </span>
+          {'\n'}
           Succesfully
         </h2>
         <div className={styles['visible-papragraph-1']}>

@@ -53,7 +53,11 @@ export default function OurTestimonial() {
           <div className={styles['commentary']}>
             {page > 1 ? (
               <button
-                className={cx(styles['nav-button-first'], styles['visible'])}
+                className={cx(
+                  styles['nav-button-first'],
+                  styles['visible'],
+                  styles['nav-button'],
+                )}
                 onClick={() => {
                   setPage(() => page - 1)
                 }}
@@ -72,7 +76,7 @@ export default function OurTestimonial() {
               </button>
             ) : (
               <button
-                className={cx(styles['nav-button-first'])}
+                className={cx(styles['nav-button-first'], styles['nav-button'])}
                 style={{
                   opacity: 0.1,
                   pointerEvents: 'none',
@@ -130,19 +134,17 @@ export default function OurTestimonial() {
             ) : (
               <div>Ошибка при запросе</div>
             )}
-            {!data ? (
-              <div className={styles['skeleton']}>
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
-            ) : null}
+
             {data?.length == 0 || data?.length < 3 ? (
               <div className={styles['comment']}>Ничего нет</div>
             ) : null}
             {data?.length * page !== res1.data?.length ? (
               <button
-                className={cx(styles['nav-button-second'], styles['visible'])}
+                className={cx(
+                  styles['nav-button-second'],
+                  styles['visible'],
+                  styles['nav-button'],
+                )}
                 onClick={() => {
                   setPage(() => page + 1)
                 }}
@@ -161,7 +163,10 @@ export default function OurTestimonial() {
               </button>
             ) : (
               <button
-                className={cx(styles['nav-button-second'])}
+                className={cx(
+                  styles['nav-button-second'],
+                  styles['nav-button'],
+                )}
                 style={{ opacity: 0.1, pointerEvents: 'none' }}
               >
                 <svg
