@@ -37,7 +37,9 @@ p {
   font-size: 16px;
   line-height: 24px;
 }
-
+span {
+  color: var(--h3-orange);
+}
 @media (max-width: 767px) {
   p {
     text-align: center;

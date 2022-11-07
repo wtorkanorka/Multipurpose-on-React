@@ -2,6 +2,7 @@ import React from 'react'
 import SiteBlocks from '../../components/siteBlocks/SiteBlocks'
 import AboutUsHome from './Components/AboutUsHome/AboutUsHome'
 import ClientsFeedback from './Components/ClientsFeedback/ClientsFeedback'
+import ContactUs from './Components/ContactUs/ContactUs'
 import Header from './Components/Header/Header'
 import Hero from './Components/Hero/Hero'
 import OurBlog from './Components/OurBlog/OurBlog'
@@ -21,6 +22,7 @@ export default function HomePage() {
       <OurWork />
       <ClientsFeedback />
       <OurBlog />
+      <ContactUs />
     </>
   )
 }

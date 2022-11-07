@@ -455,6 +455,18 @@
         "full_name": "Abram Vaccaro",
         "photo": "images/linkoln"
       }
+    },
+    {
+      "id": 9,
+      "position": "Developer",
+      "preview": "35 Stellar Graphic Design Blogs to Keep You Educated and Inspired",
+      "cover": "https://picsum.photos/id/238/80",
+      "author": {
+        "date": "January 25, 2021",
+        "time": "5 min Read",
+        "full_name": "Abram Vaccaro",
+        "photo": "images/linkoln"
+      }
     }
   ]
 }
