@@ -358,5 +358,103 @@
       "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit a laoreet libero dis eget maecenas bibendum. Morbi lacinia eu, etiam volutpat morbi et amet, sagittis adipiscing. ",
       "position": "Web Developer"
     }
+  ],
+  "our_blog": [
+    {
+      "id": 1,
+      "position": "Graphic Design",
+      "preview": "35 Stellar Graphic Design Blogs to Keep You Educated and Inspired",
+      "cover": "https://picsum.photos/id/231/80",
+      "author": {
+        "date": "January 25, 2021",
+        "time": "5 min Read",
+        "full_name": "Cristofer Westervelt",
+        "photo": "images/cristofer-westervelt"
+      }
+    },
+    {
+      "id": 2,
+      "position": "Managing Director",
+      "preview": "Ridiculously powerful 2021 iPad Pro may drop this month",
+      "cover": "https://picsum.photos/id/232/80",
+      "author": {
+        "date": "January 25, 2021",
+        "time": "5 min Read",
+        "full_name": "Haylie Mango",
+        "photo": "images/haylie-mango"
+      }
+    },
+    {
+      "id": 3,
+      "position": "Managing Director",
+      "preview": "Ridiculously powerful 2021 iPad Pro may drop this month",
+      "cover": "https://picsum.photos/id/233/80",
+      "author": {
+        "date": "January 25, 2021",
+        "time": "5 min Read",
+        "full_name": "Ashlynn Gouse",
+        "photo": "images/client-feedback-2"
+      }
+    },
+    {
+      "id": 4,
+      "position": "CEO,word yt",
+      "preview": "35 Stellar Graphic Design Blogs to Keep You Educated and Inspired",
+      "cover": "https://picsum.photos/id/234/80",
+      "author": {
+        "date": "January 25, 2021",
+        "time": "5 min Read",
+        "full_name": "Justin Septimus",
+        "photo": "images/client-feedback-1"
+      }
+    },
+    {
+      "id": 5,
+      "position": "Graphic Design",
+      "preview": "Ridiculously powerful 2021 iPad Pro may drop this month",
+      "cover": "https://picsum.photos/id/235/80",
+      "author": {
+        "date": "January 25, 2021",
+        "time": "5 min Read",
+        "full_name": "Phillip Curtis",
+        "photo": "images/philipp"
+      }
+    },
+    {
+      "id": 6,
+      "position": "UI/UX Design",
+      "preview": "35 Stellar Graphic Design Blogs to Keep You Educated and Inspired",
+      "cover": "https://picsum.photos/id/236/80",
+      "author": {
+        "date": "January 25, 2021",
+        "time": "5 min Read",
+        "full_name": "Gustavo Herwitz",
+        "photo": "images/tommy"
+      }
+    },
+    {
+      "id": 7,
+      "position": "Web Development",
+      "preview": "Ridiculously powerful 2021 iPad Pro may drop this month",
+      "cover": "https://picsum.photos/id/237/80",
+      "author": {
+        "date": "January 25, 2021",
+        "time": "5 min Read",
+        "full_name": "Talan Torff",
+        "photo": "images/tolik"
+      }
+    },
+    {
+      "id": 8,
+      "position": "App Developer",
+      "preview": "35 Stellar Graphic Design Blogs to Keep You Educated and Inspired",
+      "cover": "https://picsum.photos/id/238/80",
+      "author": {
+        "date": "January 25, 2021",
+        "time": "5 min Read",
+        "full_name": "Abram Vaccaro",
+        "photo": "images/linkoln"
+      }
+    }
   ]
 }

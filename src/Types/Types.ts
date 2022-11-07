@@ -42,6 +42,20 @@ export interface ClientsFeedbackType {
   comment: string
   position: string
 }
+interface AuthorOurBlog {
+  date: string
+  time: string
+  full_name: string
+  photo: string
+}
+export interface OurBLogType {
+  id: number
+  position: string
+  preview: string
+  cover: string
+  author: AuthorOurBlog
+}
+
 export type Posts = Post[]
 // export type TeamMembers = Members[]
 export type Reviews = Review[]
