@@ -1,4 +1,6 @@
 import React from 'react'
+import Form from '../Form/Form'
+
 import styles from './ContactUs.module.css'
 export default function ContactUs() {
   return (
@@ -63,7 +65,8 @@ export default function ContactUs() {
             </div>
           </li>
         </ul>
-      </div>
+      </div>{' '}
+      <Form />
     </div>
   )
 }

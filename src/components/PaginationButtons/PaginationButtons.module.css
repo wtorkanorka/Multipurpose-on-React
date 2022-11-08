@@ -1,0 +1,24 @@
+.pagination-button {
+  width: 15px;
+  height: 15px;
+  border-radius: 7.5px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  &:hover {
+    opacity: 0.5;
+  }
+  &:nth-child(1n) {
+    background: var(--background);
+  }
+  &:nth-child(2n) {
+    background: var(--border-gray);
+  }
+  &:nth-child(3n) {
+    background: var(--p-color);
+  }
+}
+.pagination {
+  display: flex;
+  gap: 4px;
+  margin-top: 60px;
+}

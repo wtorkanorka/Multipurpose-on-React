@@ -5,31 +5,16 @@ import useSWR from 'swr'
 import { fetcher } from '../../../../fetcher/fetcher'
 import { useState } from 'react'
 import SmartImage from '../../../../components/SmartImage/SmartImage'
+import PaginationButtons from '../../../../components/PaginationButtons/PaginationButtons'
 export default function OurBlog() {
   const [page, setPage] = useState(1)
-  const [width, setWidth] = useState(1)
+
   const res1 = useSWR<[]>(
     `http://localhost:3004/our_blog?_limit=2&_page=${page}`,
     fetcher,
   )
   const dataLength = useSWR<any>('http://localhost:3004/our_blog', fetcher)
-  function getButtons() {
-    if (dataLength?.data?.length % 2 == 0) {
-      const arr = []
-      for (let i = 0; i < dataLength?.data?.length; i++) {
-        arr.push(i)
-      }
-      arr.splice(dataLength?.data?.length / 2, dataLength.data?.length)
-      return arr
-    } else {
-      const arr = []
-      for (let i = 0; i < dataLength?.data?.length; i++) {
-        arr.push(i)
-      }
-      arr.splice(dataLength?.data?.length / 2 + 1, dataLength.data?.length)
-      return arr
-    }
-  }
+
   return (
     <div className={styles['our-blog-container']}>
       <div className={styles['heading']}>
@@ -77,19 +62,11 @@ export default function OurBlog() {
         {res1.error && <div>Ошибка при запросе</div>}
       </div>
       <ul className={styles['pagination']}>
-        {getButtons().map((index: number) => {
-          return (
-            <li
-              className={styles['pagination-button']}
-              key={index}
-              style={{ width: width == index + 1 ? '49px' : '' }}
-              onClick={() => {
-                setPage(index + 1)
-                setWidth(index + 1)
-              }}
-            ></li>
-          )
-        })}
+        <PaginationButtons
+          setPage={setPage}
+          page={page}
+          dataLength={dataLength}
+        />
       </ul>
     </div>
   )

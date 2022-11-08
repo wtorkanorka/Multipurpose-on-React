@@ -82,8 +82,8 @@ export default function OurWork() {
         </div>
       </div>
       <div className={styles['images-container']}>
-        {data?.map((i: OurWorkTypes) => {
-          return <OurWorkContent i={i} />
+        {data?.map((i: OurWorkTypes, index: number) => {
+          return <OurWorkContent i={i} key={index} />
         })}
 
         {error ? <div>ошибка при запросе</div> : null}

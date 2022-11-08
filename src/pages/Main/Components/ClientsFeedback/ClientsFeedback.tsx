@@ -5,6 +5,7 @@ import useSWR from 'swr'
 import { fetcher } from '../../../../fetcher/fetcher'
 import { ClientsFeedbackType } from '../../../../Types/Types'
 import { useState } from 'react'
+import PaginationButtons from '../../../../components/PaginationButtons/PaginationButtons'
 
 export default function ClientsFeedback() {
   const [page, setPage] = useState(1)
@@ -63,19 +64,11 @@ export default function ClientsFeedback() {
         })}
       </div>
       <ul className={styles['pagination']}>
-        {getButtons().map((index: number) => {
-          return (
-            <li
-              className={styles['pagination-button']}
-              key={index}
-              style={{ width: width == index + 1 ? '49px' : '' }}
-              onClick={() => {
-                setPage(index + 1)
-                setWidth(index + 1)
-              }}
-            ></li>
-          )
-        })}
+        <PaginationButtons
+          setPage={setPage}
+          page={page}
+          dataLength={dataLength}
+        />
       </ul>
     </div>
   )
