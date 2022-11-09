@@ -67,6 +67,33 @@ export default function ContactUs() {
         </ul>
       </div>{' '}
       <Form />
+      <div className={styles['map']}>Сюда карту, ток она платная</div>
+      <ul className={styles['clients-logo']}>
+        <li>
+          <img
+            src="/src/assets/images/clients-logos-1.svg"
+            alt="clients-logos"
+          />
+        </li>
+        <li>
+          <img
+            src="/src/assets/images/clients-logos-2.svg"
+            alt="clients-logos"
+          />
+        </li>
+        <li>
+          <img
+            src="/src/assets/images/clients-logos-3.svg"
+            alt="clients-logos"
+          />
+        </li>
+        <li>
+          <img
+            src="/src/assets/images/clients-logos-4.svg"
+            alt="clients-logos"
+          />
+        </li>
+      </ul>
     </div>
   )
 }

@@ -27,6 +27,7 @@
   --border-orange: #ff5300;
   --h2-gray: #373737;
   --aqua: #00acff;
+  --footer-background: #373737;
 }
 html {
   scroll-behavior: smooth;

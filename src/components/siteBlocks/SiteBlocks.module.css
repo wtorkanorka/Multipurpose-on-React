@@ -1,11 +1,10 @@
 .container {
   display: flex;
   gap: 5px;
-  position: fixed;
+
   flex-direction: column;
   z-index: 20;
-  right: 0;
-  top: 317px;
+
   @media (max-width: 768px) {
     display: none;
   }

@@ -1,5 +1,11 @@
 .contact-us-container {
   padding: 25px 16px 50px 16px;
+  @media (min-width: 768px) {
+    padding: 40px 40px 120px 40px;
+  }
+  @media (min-width: 1360px) {
+    padding: 60px 135px 124px 135px;
+  }
 }
 .ul-container {
   display: flex;
@@ -160,5 +166,45 @@
     font-weight: 600;
     font-size: 31.25px;
     line-height: 123.6%;
+  }
+}
+
+.map {
+  margin-top: 51px;
+  margin-bottom: 50px;
+  width: 100%;
+  @media (min-width: 768px) {
+    margin-top: 60px;
+    margin-bottom: 120px;
+  }
+}
+.clients-logo {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+
+  gap: 29px;
+  li {
+    img {
+      height: 53px;
+    }
+  }
+  @media (min-width: 768px) {
+    gap: 54px;
+    li {
+      img {
+        height: 109px;
+      }
+    }
+  }
+  @media (min-width: 1360px) {
+    gap: 120px;
+    li {
+      img {
+        height: 167px;
+      }
+    }
   }
 }

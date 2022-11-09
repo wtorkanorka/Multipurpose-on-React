@@ -3,6 +3,7 @@ import SiteBlocks from '../../components/siteBlocks/SiteBlocks'
 import AboutUsHome from './Components/AboutUsHome/AboutUsHome'
 import ClientsFeedback from './Components/ClientsFeedback/ClientsFeedback'
 import ContactUs from './Components/ContactUs/ContactUs'
+import FooterMain from './Components/FooterMain/FooterMain'
 import Header from './Components/Header/Header'
 import Hero from './Components/Hero/Hero'
 import OurBlog from './Components/OurBlog/OurBlog'
@@ -13,7 +14,7 @@ import TeamMember from './Components/TeamMember/TeamMember'
 export default function HomePage() {
   return (
     <>
-      <SiteBlocks />
+      <SiteBlocks style={{ top: '317px', right: '0', position: 'fixed' }} />
       <Header />
       <Hero />
       <AboutUsHome />
@@ -23,6 +24,7 @@ export default function HomePage() {
       <ClientsFeedback />
       <OurBlog />
       <ContactUs />
+      <FooterMain />
     </>
   )
 }

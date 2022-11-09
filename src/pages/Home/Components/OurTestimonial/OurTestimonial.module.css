@@ -30,6 +30,13 @@
   height: 50px;
   text-align: center;
   margin-left: -75px;
+  @media (max-width: 1360px) {
+    left: 50%;
+
+    margin-right: -75px;
+    top: 0;
+    margin-top: -70px;
+  }
 }
 .commentary .nav-button-first:active svg path {
   fill: var(--svg-color);
@@ -48,6 +55,13 @@
   height: 50px;
   text-align: center;
   margin-right: -75px;
+  @media (max-width: 1360px) {
+    right: 50%;
+
+    margin-right: -75px;
+    top: 0;
+    margin-top: -70px;
+  }
 }
 .commentary .nav-button-second:active svg path {
   fill: var(--svg-color);
