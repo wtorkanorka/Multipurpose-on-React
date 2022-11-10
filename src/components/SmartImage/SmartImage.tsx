@@ -1,13 +1,13 @@
-import React from 'react'
+import React, { PropsWithChildren } from 'react'
 import { DetailedHTMLProps, HTMLAttributes } from 'react'
-// type props = DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement>
+
 interface Types {
   path?: string
-  children?: React.ReactNode
 }
-export default function SmartImage({ path }: Types) {
+type Props = Types & PropsWithChildren<HTMLAttributes<HTMLPictureElement>>
+export default function SmartImage({ path, children, ...rest }: Props) {
   return (
-    <picture>
+    <picture {...rest}>
       <source srcSet={`/src/assets/${path}.avif`} type="image/avif" />
       <source srcSet={`/src/assets/${path}.jpg`} type="image/jpg" />
       <source srcSet={`/src/assets/${path}.webp`} type="image/webp" />

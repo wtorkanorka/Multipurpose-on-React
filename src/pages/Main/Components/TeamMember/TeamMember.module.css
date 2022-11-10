@@ -41,6 +41,7 @@
   .profile {
     scroll-snap-align: center;
     width: 270px;
+    position: relative;
     height: 350px;
     background: #ffffff;
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
@@ -66,4 +67,21 @@
   @media (min-width: 1360px) {
     padding: 120px 135px;
   }
+}
+
+.site-blocks {
+  ul {
+    display: flex;
+    position: absolute;
+    flex-derction: column;
+    top: 0;
+    right: 0;
+    li {
+      cursor: pointer;
+    }
+  }
+}
+
+.not-visible {
+  display: none;
 }
