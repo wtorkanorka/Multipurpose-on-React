@@ -32,7 +32,7 @@ export default function Header() {
         </button>
         <ul
           className={cx(
-            !visible ? styles['visible'] : '',
+            !visible ? styles['visible'] : styles['animated'],
             styles['navigation-mobile'],
           )}
         >

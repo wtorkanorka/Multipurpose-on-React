@@ -151,3 +151,29 @@
     padding: 18px 135px;
   }
 }
+
+.go-up {
+  display: none;
+  position: relative;
+  @media (min-width: 1360px) {
+    button {
+      all: unset;
+      position: absolute;
+      cursor: pointer;
+      animation: slide-up 1.5s infinite ease-in-out;
+    }
+    display: flex;
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: -20px;
+  }
+  100% {
+    top: 0px;
+  }
+}

@@ -139,3 +139,17 @@
 .visible {
   display: none;
 }
+
+.animated {
+  animation: animated-burger 0.5s ease-in-out;
+  animation-duration: 0.5s;
+}
+
+@keyframes animated-burger {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -65,6 +65,15 @@ export default function FooterMain() {
       </div>
       <div className={styles['footer-bottom']}>
         <p>© Copyright 2021. All Right Reserved By Ojjomedia</p>
+        <div className={styles['go-up']}>
+          <button
+            onClick={() => {
+              scrollTo(0, 0)
+            }}
+          >
+            <img src="/src/assets/icons/go-up.svg" alt="go-up" />
+          </button>
+        </div>
       </div>
     </div>
   )
