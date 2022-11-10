@@ -1,7 +1,8 @@
 import React from 'react'
 import Form from '../Form/Form'
-
 import styles from './ContactUs.module.css'
+import MapComponent from '../../../../components/Map/MapComponent'
+
 export default function ContactUs() {
   return (
     <div className={styles['contact-us-container']}>
@@ -65,9 +66,11 @@ export default function ContactUs() {
             </div>
           </li>
         </ul>
-      </div>{' '}
+      </div>
       <Form />
-      <div className={styles['map']}>Сюда карту, ток она платная</div>
+
+      <MapComponent />
+
       <ul className={styles['clients-logo']}>
         <li>
           <img

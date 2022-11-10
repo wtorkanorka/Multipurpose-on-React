@@ -173,6 +173,8 @@
   margin-top: 51px;
   margin-bottom: 50px;
   width: 100%;
+  /* overflow-x: hidden;
+  overflow-y: hidden; */
   @media (min-width: 768px) {
     margin-top: 60px;
     margin-bottom: 120px;
