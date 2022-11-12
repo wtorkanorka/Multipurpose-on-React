@@ -2,7 +2,7 @@ import { TitleOfPage } from '../TItleOfPage/TitleOfPage'
 import styles from './OurServices.module.css'
 import ux from '../../../..//assets/images/ux-interface.svg'
 import { Wrapper } from '../../../../components/Wrapper/Wrapper'
-import SmartImage from '../../../../components/SmartImage/SmartImage'
+import SmartImage from '../../../../components/Image/Image'
 import { useInView } from 'react-intersection-observer'
 export default function OurServices() {
   const { ref, inView, entry } = useInView({

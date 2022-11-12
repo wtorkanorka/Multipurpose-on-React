@@ -1,6 +1,6 @@
 import HeaderSecond from '../../../../components/HeaderSecond/HeaderSecond'
 import styles from './HeroSecond.module.css'
-import SmartButton from '../../../../components/SmartButton/SmartButton'
+import SmartButton from '../../../../components/Button/Button'
 import { Wrapper } from '../../../../components/Wrapper/Wrapper'
 import { useInView } from 'react-intersection-observer'
 export default function HeroSecond() {

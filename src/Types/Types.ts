@@ -53,9 +53,10 @@ export interface OurBLogType {
   position: string
   preview: string
   cover: string
+  comment: string
   author: AuthorOurBlog
 }
 
-export type Posts = Post[]
+export type PostsType = Post[]
 // export type TeamMembers = Members[]
 export type Reviews = Review[]

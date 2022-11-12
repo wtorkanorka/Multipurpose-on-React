@@ -5,8 +5,8 @@ import { useState } from 'react'
 import burger from '../../assets/images/burger.svg'
 import { Link } from 'react-router-dom'
 import sun from '../../assets/icons/light.svg'
-import SmartImage from '../SmartImage/SmartImage'
-import SmartButton from '../SmartButton/SmartButton'
+import SmartImage from '../Image/Image'
+import SmartButton from '../Button/Button'
 import { useInView } from 'react-intersection-observer'
 export default function HeaderSecond({ backgroundColorProps = 'white' }: any) {
   const [visible, setVisible] = useState(false)

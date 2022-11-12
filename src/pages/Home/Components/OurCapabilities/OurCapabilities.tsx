@@ -2,7 +2,7 @@ import React from 'react'
 import { Wrapper } from '../../../../components/Wrapper/Wrapper'
 import styles from './OurCapabilities.module.css'
 import { TitleOfPage } from '../TItleOfPage/TitleOfPage'
-import SmartImage from '../../../../components/SmartImage/SmartImage'
+import SmartImage from '../../../../components/Image/Image'
 import { useInView } from 'react-intersection-observer'
 export default function OurCapabilities() {
   const { ref, inView, entry } = useInView({

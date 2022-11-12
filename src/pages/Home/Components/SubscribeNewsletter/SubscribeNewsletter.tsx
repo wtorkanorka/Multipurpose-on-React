@@ -1,5 +1,5 @@
 import React from 'react'
-import SmartButton from '../../../../components/SmartButton/SmartButton'
+import SmartButton from '../../../../components/Button/Button'
 import { TitleOfPage } from '../TItleOfPage/TitleOfPage'
 import { Wrapper } from '../../../../components/Wrapper/Wrapper'
 import styles from './SubscribeNewsletter.module.css'

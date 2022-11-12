@@ -1,5 +1,5 @@
 import React from 'react'
-import SmartImage from '../../../../components/SmartImage/SmartImage'
+import SmartImage from '../../../../components/Image/Image'
 import styles from './ClientsFeedback.module.css'
 import useSWR from 'swr'
 

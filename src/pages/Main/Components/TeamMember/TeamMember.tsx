@@ -1,5 +1,5 @@
 import React from 'react'
-import SmartImage from '../../../../components/SmartImage/SmartImage'
+import SmartImage from '../../../../components/Image/Image'
 import styles from './TeamMember.module.css'
 import useSWR from 'swr'
 
@@ -8,8 +8,9 @@ import TeamMemberContent from './TeamMemberContent'
 import { HOST, ENDPOINTS } from '../../../../constants/endpoints'
 export default function TeamMember() {
   const { data, error } = useSWR<TeamMembers[]>(HOST + ENDPOINTS.TEAM_MEMBER)
-  console.log(data)
-
+  if (error) {
+    return <div>ERROR</div>
+  }
   return (
     <div className={styles['team-member-container']}>
       <p>Team Member</p>

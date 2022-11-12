@@ -161,7 +161,7 @@
       "preview": "35 Stellar Graphic Design Blogs to Keep YouEducated and Inspired",
       "created_at": "January 25, 2021",
       "author": "Cristofer Westervelt",
-      "full_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget nunc, sed sed sed. Sit integer at dui at non ipsum tellus ac. Est."
+      "full_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices facilisi sed tincidunt mauris duis pulvinar convallis eu. Lobortis scelerisque aliquam massa arcu, eget. Sociis odio quis eget lacus. Dolor at enim viverra laoreet molestie amet cursus et. Sed lacus, viverra lacinia scelerisque cras aliquam blandit."
     },
     {
       "id": 2,
@@ -169,7 +169,7 @@
       "preview": "Ridiculously powerful 2021 iPad Pro may drop this month",
       "created_at": "February 11, 1072",
       "author": "Cristofer Westervelt",
-      "full_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget nunc, sed sed sed. Sit integer at dui at non ipsum tellus ac. Est."
+      "full_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices facilisi sed tincidunt mauris duis pulvinar convallis eu. Lobortis scelerisque aliquam massa arcu, eget. Sociis odio quis eget lacus. Dolor at enim viverra laoreet molestie amet cursus et. Sed lacus, viverra lacinia scelerisque cras aliquam blandit."
     },
     {
       "id": 3,
@@ -177,7 +177,23 @@
       "preview": "Memphis Design: the defining look of the 1980s",
       "created_at": "January 25, 2021",
       "author": "Cristofer Westervelt",
-      "full_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget nunc, sed sed sed. Sit integer at dui at non ipsum tellus ac. Est."
+      "full_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices facilisi sed tincidunt mauris duis pulvinar convallis eu. Lobortis scelerisque aliquam massa arcu, eget. Sociis odio quis eget lacus. Dolor at enim viverra laoreet molestie amet cursus et. Sed lacus, viverra lacinia scelerisque cras aliquam blandit."
+    },
+    {
+      "id": 4,
+      "cover": "images/our-blog-4",
+      "preview": "These 3 tips helped RollWorks find the perfect designer on 99designs",
+      "created_at": "January 25, 2021",
+      "author": "Cristofer Westervelt",
+      "full_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices facilisi sed tincidunt mauris duis pulvinar convallis eu. Lobortis scelerisque aliquam massa arcu, eget. Sociis odio quis eget lacus. Dolor at enim viverra laoreet molestie amet cursus et. Sed lacus, viverra lacinia scelerisque cras aliquam blandit."
+    },
+    {
+      "id": 5,
+      "cover": "images/our-blog-5",
+      "preview": "What is Design Thinking and how does it create innovation?",
+      "created_at": "January 25, 2021",
+      "author": "Cristofer Westervelt",
+      "full_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices facilisi sed tincidunt mauris duis pulvinar convallis eu. Lobortis scelerisque aliquam massa arcu, eget. Sociis odio quis eget lacus. Dolor at enim viverra laoreet molestie amet cursus et. Sed lacus, viverra lacinia scelerisque cras aliquam blandit."
     }
   ],
   "our_case_study": [
@@ -402,7 +418,7 @@
     {
       "id": 3,
       "position": "Managing Director",
-      "preview": "Ridiculously powerful 2021 iPad Pro may drop this month",
+      "preview": "How to set up Square Online store: a step-by-step guide",
       "cover": "https://picsum.photos/id/233/80",
       "author": {
         "date": "January 25, 2021",
@@ -414,7 +430,7 @@
     {
       "id": 4,
       "position": "CEO,word yt",
-      "preview": "35 Stellar Graphic Design Blogs to Keep You Educated and Inspired",
+      "preview": "Memphis Design: the defining look of the 1980s",
       "cover": "https://picsum.photos/id/234/80",
       "author": {
         "date": "January 25, 2021",
@@ -426,8 +442,9 @@
     {
       "id": 5,
       "position": "Graphic Design",
-      "preview": "Ridiculously powerful 2021 iPad Pro may drop this month",
+      "preview": "These 3 tips helped RollWorks find the perfect designer on 99designs",
       "cover": "https://picsum.photos/id/235/80",
+
       "author": {
         "date": "January 25, 2021",
         "time": "5 min Read",
@@ -438,7 +455,7 @@
     {
       "id": 6,
       "position": "UI/UX Design",
-      "preview": "35 Stellar Graphic Design Blogs to Keep You Educated and Inspired",
+      "preview": "What is Design Thinking and how does it create innovation?",
       "cover": "https://picsum.photos/id/236/80",
       "author": {
         "date": "January 25, 2021",

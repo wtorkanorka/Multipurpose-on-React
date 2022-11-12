@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './Header.module.css'
 import { Link } from 'react-router-dom'
-import SmartImage from '../../../../components/SmartImage/SmartImage'
+import SmartImage from '../Image/Image'
 import { useState } from 'react'
 import cx from 'classnames'
 

@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './OurCaseStudy.module.css'
 import { useState, useEffect } from 'react'
 import shareBox from '../../../../assets/icons/share-box-line.svg'
-import SmartImage from '../../../../components/SmartImage/SmartImage'
+import SmartImage from '../../../../components/Image/Image'
 import { useInView } from 'react-intersection-observer'
 export default function OurCaseStudyTextContent({ i, filter }: any) {
   const [visible, setVisible] = useState(false)

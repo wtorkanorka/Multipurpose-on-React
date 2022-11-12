@@ -4,7 +4,7 @@ import { OurBLogType } from '../../../../Types/Types'
 import useSWR from 'swr'
 
 import { useState } from 'react'
-import SmartImage from '../../../../components/SmartImage/SmartImage'
+import SmartImage from '../../../../components/Image/Image'
 import PaginationButtons from '../../../../components/PaginationButtons/PaginationButtons'
 import { chunkify } from '../../../../functions/functions'
 import { HOST, ENDPOINTS } from '../../../../constants/endpoints'

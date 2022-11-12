@@ -1,5 +1,5 @@
 import React from 'react'
-import SmartButton from '../../../../components/SmartButton/SmartButton'
+import SmartButton from '../../../../components/Button/Button'
 import { Wrapper } from '../../../../components/Wrapper/Wrapper'
 import styles from './Hero.module.css'
 export default function Hero() {

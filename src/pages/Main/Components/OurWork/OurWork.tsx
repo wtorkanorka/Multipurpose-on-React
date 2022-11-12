@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './OurWork.module.css'
 import { useState } from 'react'
-import SmartImage from '../../../../components/SmartImage/SmartImage'
+import SmartImage from '../../../../components/Image/Image'
 import useSWR from 'swr'
 
 import { OurWorkTypes } from '../../../../Types/Types'
@@ -17,7 +17,6 @@ export default function OurWork() {
       ? HOST + ENDPOINTS.OUR_WORK
       : HOST + ENDPOINTS.OUR_WORK + `?type=${filter}`,
   )
-  console.log(data)
 
   return (
     <div className={styles['our-work-container']}>

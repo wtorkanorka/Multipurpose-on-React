@@ -5,7 +5,7 @@ interface Types {
   path?: string
 }
 type Props = Types & PropsWithChildren<HTMLAttributes<HTMLPictureElement>>
-export default function SmartImage({ path, children, ...rest }: Props) {
+export default function Image({ path, children, ...rest }: Props) {
   return (
     <picture {...rest}>
       <source srcSet={`/src/assets/${path}.avif`} type="image/avif" />

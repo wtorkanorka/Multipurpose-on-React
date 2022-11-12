@@ -1,5 +1,5 @@
 import React from 'react'
-import SmartImage from '../../../../components/SmartImage/SmartImage'
+import SmartImage from '../../../../components/Image/Image'
 import styles from './OurWork.module.css'
 import { useState } from 'react'
 import { OurWorkTypes } from '../../../../Types/Types'

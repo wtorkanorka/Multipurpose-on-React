@@ -4,7 +4,7 @@ import { TitleOfPage } from '../TItleOfPage/TitleOfPage'
 import styles from './AboutUs.module.css'
 
 import { Wrapper } from '../../../../components/Wrapper/Wrapper'
-import SmartImage from '../../../../components/SmartImage/SmartImage'
+import SmartImage from '../../../../components/Image/Image'
 import { useInView } from 'react-intersection-observer'
 import cx from 'classnames'
 

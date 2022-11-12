@@ -1,8 +1,8 @@
 import React from 'react'
-import SmartButton from '../../../../components/SmartButton/SmartButton'
+import SmartButton from '../../../../components/Button/Button'
 import styles from './Form.module.css'
 import { useForm } from 'react-hook-form'
-import { object } from 'yup'
+
 export default function Form() {
   const {
     register,

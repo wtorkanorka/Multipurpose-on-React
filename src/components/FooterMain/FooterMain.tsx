@@ -1,5 +1,5 @@
 import React from 'react'
-import SiteBlocks from '../../../../components/siteBlocks/SiteBlocks'
+import SiteBlocks from '../siteBlocks/SiteBlocks'
 import styles from './FooterMain.module.css'
 import cx from 'classnames'
 export default function FooterMain() {

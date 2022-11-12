@@ -5,7 +5,7 @@ import {
   ButtonHTMLAttributes,
   PropsWithChildren,
 } from 'react'
-import styles from './SmartButton.module.css'
+import styles from './Button.module.css'
 interface Test {
   style?: string
 }
@@ -17,7 +17,7 @@ type Props = Test &
     >
   >
 
-export default function SmartButton({ style, children, ...rest }: Props) {
+export default function Button({ style, children, ...rest }: Props) {
   return (
     <button className={cx(styles['button'], style)} {...rest}>
       {children}

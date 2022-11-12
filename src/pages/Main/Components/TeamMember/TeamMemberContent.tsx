@@ -1,7 +1,7 @@
 import React, { DetailedHTMLProps } from 'react'
 import styles from './TeamMember.module.css'
 import { useState } from 'react'
-import SmartImage from '../../../../components/SmartImage/SmartImage'
+import SmartImage from '../../../../components/Image/Image'
 import SiteBlocks from '../../../../components/siteBlocks/SiteBlocks'
 import cx from 'classnames'
 type Props = DetailedHTMLProps<

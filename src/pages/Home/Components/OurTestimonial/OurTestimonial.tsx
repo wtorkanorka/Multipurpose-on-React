@@ -9,7 +9,7 @@ import { Reviews } from '../../../../Types/Types'
 
 import { useState, useEffect } from 'react'
 import cx from 'classnames'
-import SmartImage from '../../../../components/SmartImage/SmartImage'
+import SmartImage from '../../../../components/Image/Image'
 import { useInView } from 'react-intersection-observer'
 import { HOST, ENDPOINTS } from '../../../../constants/endpoints'
 export default function OurTestimonial() {

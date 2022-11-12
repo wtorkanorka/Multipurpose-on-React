@@ -1,5 +1,5 @@
 import React from 'react'
-import SmartButton from '../../../../components/SmartButton/SmartButton'
+import SmartButton from '../../../../components/Button/Button'
 import styles from './OurExpereince.module.css'
 import cx from 'classnames'
 
