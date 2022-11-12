@@ -21,3 +21,9 @@
   filter: drop-shadow(4px 5px 5px rgba(255, 83, 0, 0.4));
   transition: 0.1s;
 }
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}

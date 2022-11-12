@@ -2,19 +2,24 @@ import React from 'react'
 import styles from './OurBlog.module.css'
 import { OurBLogType } from '../../../../Types/Types'
 import useSWR from 'swr'
-import { fetcher } from '../../../../fetcher/fetcher'
+
 import { useState } from 'react'
 import SmartImage from '../../../../components/SmartImage/SmartImage'
 import PaginationButtons from '../../../../components/PaginationButtons/PaginationButtons'
+import { chunkify } from '../../../../functions/functions'
+import { HOST, ENDPOINTS } from '../../../../constants/endpoints'
 export default function OurBlog() {
   const [page, setPage] = useState(1)
 
-  const res1 = useSWR<[]>(
-    `http://localhost:3004/our_blog?_limit=2&_page=${page}`,
-    fetcher,
-  )
-  const dataLength = useSWR<any>('http://localhost:3004/our_blog', fetcher)
+  const { data, error } = useSWR<[]>(HOST + ENDPOINTS.OUR_BLOG)
 
+  if (error) {
+    return <div>ERROR</div>
+  }
+  if (!data) {
+    return <div>LAODING...</div>
+  }
+  const sliced = chunkify(data)
   return (
     <div className={styles['our-blog-container']}>
       <div className={styles['heading']}>
@@ -30,7 +35,7 @@ export default function OurBlog() {
         </h2>
       </div>
       <div className={styles['blog-posts']}>
-        {res1.data?.map((i: OurBLogType) => {
+        {sliced[page - 1].map((i: OurBLogType) => {
           return (
             <div className={styles['post']} key={i.id}>
               <div className={styles['title']}>
@@ -59,14 +64,10 @@ export default function OurBlog() {
           )
         })}
 
-        {res1.error && <div>Ошибка при запросе</div>}
+        {error && <div>Ошибка при запросе</div>}
       </div>
       <ul className={styles['pagination']}>
-        <PaginationButtons
-          setPage={setPage}
-          page={page}
-          dataLength={dataLength}
-        />
+        <PaginationButtons setPage={setPage} page={page} data={data} />
       </ul>
     </div>
   )

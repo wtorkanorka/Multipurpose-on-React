@@ -4,19 +4,18 @@ import styles from './OurCaseStudy.module.css'
 import { useState } from 'react'
 import { Wrapper } from '../../../../components/Wrapper/Wrapper'
 import useSWR from 'swr'
-import { fetcher } from '../../../../fetcher/fetcher'
+
 import { OurCase } from '../../../../Types/Types'
 import OurCaseStudyTextContent from './OurCaseStudyTextContent'
 import cx from 'classnames'
 import { InView, useInView } from 'react-intersection-observer'
-
+import { HOST, ENDPOINTS } from '../../../../constants/endpoints'
 export default function OurCaseStudy() {
   const [filter, setFilter] = useState('')
   const { data, error } = useSWR<OurCase[]>(
     filter == ''
-      ? `http://localhost:3004/our_case_study`
-      : `http://localhost:3004/our_case_study?type=${filter}`,
-    fetcher,
+      ? HOST + ENDPOINTS.OUR_CASE_STUDY
+      : HOST + ENDPOINTS.OUR_CASE_STUDY + `?type=${filter}`,
   )
   const { ref, inView, entry } = useInView({
     triggerOnce: true,
@@ -26,7 +25,7 @@ export default function OurCaseStudy() {
   if (error) {
     return <div>Ошибка при запросе</div>
   }
-  console.log(inView)
+
   return (
     <div ref={ref}>
       <Wrapper>
@@ -36,7 +35,7 @@ export default function OurCaseStudy() {
             className={styles['h2-styles']}
             style={{
               opacity: inView ? '1' : '0',
-              // transition: '1s',
+
               marginLeft: inView ? '0px' : '-20px',
             }}
           >
@@ -51,7 +50,6 @@ export default function OurCaseStudy() {
                   background: filter == '' ? 'var(--h3-orange)' : 'none',
                   color: filter == '' ? 'white' : '#7B7B7B',
                   borderRadius: '10px',
-                  // transition: '0.2s',
                 }}
               >
                 All
@@ -64,7 +62,6 @@ export default function OurCaseStudy() {
                     filter == 'ux_design' ? 'var(--h3-orange)' : 'none',
                   color: filter == 'ux_design' ? 'white' : '#7B7B7B',
                   borderRadius: '10px',
-                  // transition: '0.2s',
                 }}
                 className={cx(
                   filter == 'ux_design' ? styles['width-button'] : '',
@@ -94,7 +91,6 @@ export default function OurCaseStudy() {
                     filter == 'app_development' ? 'var(--h3-orange)' : 'none',
                   color: filter == 'app_development' ? 'white' : '#7B7B7B',
                   borderRadius: '10px',
-                  // transition: '0.2s',
                 }}
                 className={cx(
                   filter == 'app_development' ? styles['width-button'] : '',
@@ -110,7 +106,6 @@ export default function OurCaseStudy() {
                     filter == 'game_design' ? 'var(--h3-orange)' : 'none',
                   color: filter == 'game_design' ? 'white' : '#7B7B7B',
                   borderRadius: '10px',
-                  // transition: '0.2s',
                 }}
                 className={cx(
                   filter == 'game_design' ? styles['width-button'] : '',
@@ -126,7 +121,6 @@ export default function OurCaseStudy() {
                     filter == 'graphic_design' ? 'var(--h3-orange)' : 'none',
                   color: filter == 'graphic_design' ? 'white' : '#7B7B7B',
                   borderRadius: '10px',
-                  // transition: '0.2s',
                 }}
                 className={cx(
                   filter == 'graphic_design' ? styles['width-button'] : '',

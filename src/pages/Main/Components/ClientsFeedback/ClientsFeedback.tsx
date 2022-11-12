@@ -2,40 +2,24 @@ import React from 'react'
 import SmartImage from '../../../../components/SmartImage/SmartImage'
 import styles from './ClientsFeedback.module.css'
 import useSWR from 'swr'
-import { fetcher } from '../../../../fetcher/fetcher'
+
 import { ClientsFeedbackType } from '../../../../Types/Types'
 import { useState } from 'react'
 import PaginationButtons from '../../../../components/PaginationButtons/PaginationButtons'
-
+import { chunkify } from '../../../../functions/functions'
+import { HOST, ENDPOINTS } from '../../../../constants/endpoints'
 export default function ClientsFeedback() {
   const [page, setPage] = useState(1)
-  const [width, setWidth] = useState(1)
-  const res1 = useSWR<[]>(
-    `http://localhost:3004/clients_feedback?_limit=2&_page=${page}`,
-    fetcher,
-  )
-  const dataLength = useSWR<any>(
-    `http://localhost:3004/clients_feedback`,
-    fetcher,
-  )
 
-  function getButtons() {
-    if (dataLength?.data?.length % 2 == 0) {
-      const arr = []
-      for (let i = 0; i < dataLength?.data?.length; i++) {
-        arr.push(i)
-      }
-      arr.splice(dataLength?.data?.length / 2, dataLength.data?.length)
-      return arr
-    } else {
-      const arr = []
-      for (let i = 0; i < dataLength?.data?.length; i++) {
-        arr.push(i)
-      }
-      arr.splice(dataLength?.data?.length / 2 + 1, dataLength.data?.length)
-      return arr
-    }
+  const { data, error } = useSWR<[]>(HOST + ENDPOINTS.CLIENTS_FEEDBACK)
+  if (error) {
+    return <div>ERROR</div>
   }
+  if (!data) {
+    return <div>LOADING ...</div>
+  }
+  const sliced = chunkify(data)
+
   return (
     <div className={styles['clients-feedback-container']}>
       <p>Clients Feedback</p>
@@ -50,7 +34,7 @@ export default function ClientsFeedback() {
       </h2>
 
       <div className={styles['commentary-container']}>
-        {res1.data?.map((i: ClientsFeedbackType) => {
+        {sliced[page - 1].map((i: ClientsFeedbackType) => {
           return (
             <div className={styles['review']} key={i.id}>
               <div className={styles['cover']}>
@@ -64,11 +48,7 @@ export default function ClientsFeedback() {
         })}
       </div>
       <ul className={styles['pagination']}>
-        <PaginationButtons
-          setPage={setPage}
-          page={page}
-          dataLength={dataLength}
-        />
+        <PaginationButtons setPage={setPage} page={page} data={data} />
       </ul>
     </div>
   )

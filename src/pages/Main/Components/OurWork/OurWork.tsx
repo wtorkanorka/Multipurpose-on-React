@@ -3,19 +3,19 @@ import styles from './OurWork.module.css'
 import { useState } from 'react'
 import SmartImage from '../../../../components/SmartImage/SmartImage'
 import useSWR from 'swr'
-import { fetcher } from '../../../../fetcher/fetcher'
+
 import { OurWorkTypes } from '../../../../Types/Types'
-import cx from 'classnames'
+
 import OurWorkContent from './OurWorkContent'
+import { HOST, ENDPOINTS } from '../../../../constants/endpoints'
 export default function OurWork() {
   const [active, setActive] = useState(1)
   const [filter, setFilter] = useState('all')
 
   const { data, error } = useSWR<[]>(
     filter == 'all'
-      ? 'http://localhost:3004/our_work'
-      : `http://localhost:3004/our_work?type=${filter}`,
-    fetcher,
+      ? HOST + ENDPOINTS.OUR_WORK
+      : HOST + ENDPOINTS.OUR_WORK + `?type=${filter}`,
   )
   console.log(data)
 

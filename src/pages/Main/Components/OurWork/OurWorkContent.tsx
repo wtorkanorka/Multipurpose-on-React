@@ -12,6 +12,7 @@ export default function OurWorkContent({ i }: any) {
   const handleMouseOut = () => {
     setIsHovering(false)
   }
+
   return (
     <div
       key={i.id}
@@ -33,7 +34,7 @@ export default function OurWorkContent({ i }: any) {
               <h5>Latest work</h5>
             </li>
             <li>
-              <h6>{i.type}</h6>
+              <h6>{i.title}</h6>
             </li>
           </ul>
         </div>

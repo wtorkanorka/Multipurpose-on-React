@@ -4,15 +4,13 @@ import { Wrapper } from '../../../../components/Wrapper/Wrapper'
 import styles from './OurBlog.module.css'
 import SmartButton from '../../../../components/SmartButton/SmartButton'
 import useSWR from 'swr'
-import { fetcher } from '../../../../fetcher/fetcher'
 import { Posts } from '../../../../Types/Types'
 import SmartImage from '../../../../components/SmartImage/SmartImage'
 import { useInView } from 'react-intersection-observer'
+import { HOST, ENDPOINTS } from '../../../../constants/endpoints'
+
 export default function OurBlog() {
-  const { data, error } = useSWR<Posts>(
-    'http://localhost:3004/blog_post',
-    fetcher,
-  )
+  const { data, error } = useSWR<Posts>(HOST + ENDPOINTS.BLOG_POST)
   const { ref, inView, entry } = useInView({
     triggerOnce: true,
     threshold: 0.1,

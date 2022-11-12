@@ -44,7 +44,7 @@ export default function OurCaseStudyTextContent({ i, filter }: any) {
           <a href={i.link}>
             <img src={shareBox} alt="link" />
           </a>
-          <h2>{i.type}</h2>
+          <h2>{i.title}</h2>
         </div>
       )}
     </li>

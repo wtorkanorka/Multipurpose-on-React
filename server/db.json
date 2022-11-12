@@ -185,55 +185,64 @@
       "id": 1,
       "image": "images/recent-project-1",
       "link": "https://vk.com/wtorkanorka",
-      "type": "ux_design"
+      "type": "ux_design",
+      "title": "UX Design"
     },
     {
       "id": 2,
       "image": "images/recent-project-2",
       "link": "https://vk.com/wtorkanorka",
-      "type": "web_design"
+      "type": "web_design",
+      "title": "Web Design"
     },
     {
       "id": 3,
       "image": "images/recent-project-3",
       "link": "https://vk.com/wtorkanorka",
-      "type": "app_development"
+      "type": "app_development",
+      "title": "App Development"
     },
     {
       "id": 4,
       "image": "images/recent-project-4",
       "link": "https://vk.com/wtorkanorka",
-      "type": "game_design"
+      "type": "game_design",
+      "title": "Game Design"
     },
     {
       "id": 5,
       "image": "images/recent-project-5",
       "link": "https://vk.com/wtorkanorka",
-      "type": "graphic_design"
+      "type": "graphic_design",
+      "title": "Graphic Design"
     },
     {
       "id": 6,
       "image": "images/recent-project-6",
       "link": "https://vk.com/wtorkanorka",
-      "type": "game_design"
+      "type": "game_design",
+      "title": "Game Design"
     },
     {
       "id": 7,
       "image": "images/recent-project-7",
       "link": "https://vk.com/wtorkanorka",
-      "type": "app_development"
+      "type": "app_development",
+      "title": "App Development"
     },
     {
       "id": 8,
       "image": "images/recent-project-8",
       "link": "https://vk.com/wtorkanorka",
-      "type": "ux_design"
+      "type": "ux_design",
+      "title": "UX Design"
     },
     {
       "id": 9,
       "image": "images/recent-project-9",
       "link": "https://vk.com/wtorkanorka",
-      "type": "game_design"
+      "type": "game_design",
+      "title": "Game Design"
     }
   ],
   "team_member": [
@@ -266,32 +275,38 @@
     {
       "id": 1,
       "cover": "images/our-work-1",
-      "type": "ui/ux_design"
+      "type": "ui/ux_design",
+      "title": "UI/UX Design"
     },
     {
       "id": 2,
       "cover": "images/our-work-2",
-      "type": "graphic_design"
+      "type": "graphic_design",
+      "title": "Graphic Design"
     },
     {
       "id": 3,
       "cover": "images/our-work-3",
-      "type": "web_development"
+      "type": "web_development",
+      "title": "Web Development"
     },
     {
       "id": 4,
       "cover": "images/our-work-4",
-      "type": "graphic_design"
+      "type": "graphic_design",
+      "title": "Graphic Design"
     },
     {
       "id": 5,
       "cover": "images/our-work-5",
-      "type": "ui/ux_design"
+      "type": "ui/ux_design",
+      "title": "UI/UX Design"
     },
     {
       "id": 6,
       "cover": "images/our-work-6",
-      "type": "graphic_design"
+      "type": "graphic_design",
+      "title": "Graphic Design"
     }
   ],
   "clients_feedback": [

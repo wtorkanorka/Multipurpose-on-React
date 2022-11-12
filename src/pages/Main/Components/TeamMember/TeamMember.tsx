@@ -2,14 +2,12 @@ import React from 'react'
 import SmartImage from '../../../../components/SmartImage/SmartImage'
 import styles from './TeamMember.module.css'
 import useSWR from 'swr'
-import { fetcher } from '../../../../fetcher/fetcher'
+
 import { TeamMembers } from '../../../../Types/Types'
 import TeamMemberContent from './TeamMemberContent'
+import { HOST, ENDPOINTS } from '../../../../constants/endpoints'
 export default function TeamMember() {
-  const { data, error } = useSWR<TeamMembers[]>(
-    'http://localhost:3004/team_member',
-    fetcher,
-  )
+  const { data, error } = useSWR<TeamMembers[]>(HOST + ENDPOINTS.TEAM_MEMBER)
   console.log(data)
 
   return (

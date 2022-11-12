@@ -7,6 +7,11 @@
     width: 100%;
     align-items: flex-end;
   }
+  @media (max-width: 924px) {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
 }
 
 .form-image {
@@ -108,4 +113,18 @@
 
 .input {
   max-width: 330px;
+}
+
+.smart-button {
+  max-width: 190px;
+  text-align: center;
+}
+
+.incorrect {
+  color: red;
+  margin-top: 8px;
+}
+
+.container-of-incorrect {
+  min-height: 34px;
 }

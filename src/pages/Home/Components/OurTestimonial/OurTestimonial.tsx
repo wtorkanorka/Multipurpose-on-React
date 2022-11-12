@@ -1,6 +1,6 @@
 import React from 'react'
 import useSWR from 'swr'
-import { fetcher } from '../../../../fetcher/fetcher'
+
 import { TitleOfPage } from '../TItleOfPage/TitleOfPage'
 import { Wrapper } from '../../../../components/Wrapper/Wrapper'
 import styles from './OurTestimonial.module.css'
@@ -11,15 +11,14 @@ import { useState, useEffect } from 'react'
 import cx from 'classnames'
 import SmartImage from '../../../../components/SmartImage/SmartImage'
 import { useInView } from 'react-intersection-observer'
+import { HOST, ENDPOINTS } from '../../../../constants/endpoints'
 export default function OurTestimonial() {
   const [page, setPage] = useState(1)
   const { data, error } = useSWR<Reviews>(
-    `http://localhost:3004/our_testimonial?_limit=3&_page=${page}`,
-
-    fetcher,
+    HOST + ENDPOINTS.OUR_TESTIMONIAL + `?_limit=3&_page=${page}`,
   )
 
-  const res1 = useSWR<Reviews>(`http://localhost:3004/our_testimonial`, fetcher)
+  const res1 = useSWR<Reviews>(HOST + ENDPOINTS.OUR_TESTIMONIAL)
   const { ref, inView, entry } = useInView({
     triggerOnce: true,
     threshold: 0.2,

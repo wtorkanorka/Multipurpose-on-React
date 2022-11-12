@@ -2,6 +2,7 @@ import React from 'react'
 import SmartButton from '../../../../components/SmartButton/SmartButton'
 import styles from './Form.module.css'
 import { useForm } from 'react-hook-form'
+import { object } from 'yup'
 export default function Form() {
   const {
     register,
@@ -10,7 +11,6 @@ export default function Form() {
     formState: { errors },
   } = useForm()
 
-  //Шириная инпутов не меняется, и вылезает за страницу, как исправить
   return (
     <>
       <div className={styles['form-container']}>
@@ -44,7 +44,11 @@ export default function Form() {
                     })}
                     className={styles['input']}
                   />
-                  {errors.name && <span>Name is required</span>}
+                  <div className={styles['container-of-incorrect']}>
+                    {errors.name && (
+                      <p className={styles['incorrect']}>Name is required</p>
+                    )}
+                  </div>
                 </div>
                 <div className={styles['input-with-error']}>
                   <input
@@ -57,7 +61,11 @@ export default function Form() {
                     })}
                     className={styles['input']}
                   />
-                  {errors.email && <span>Email is required</span>}
+                  <div className={styles['container-of-incorrect']}>
+                    {errors.email && (
+                      <p className={styles['incorrect']}>Email is required</p>
+                    )}
+                  </div>
                 </div>
               </div>
               <div className={styles['two-input-container']}>
@@ -72,7 +80,13 @@ export default function Form() {
                     })}
                     className={styles['input']}
                   />
-                  {errors.mobile && <span>Mobile No is required</span>}
+                  <div className={styles['container-of-incorrect']}>
+                    {errors.mobile && (
+                      <p className={styles['incorrect']}>
+                        Mobile No is required
+                      </p>
+                    )}
+                  </div>
                 </div>
                 <div className={styles['input-with-error']}>
                   <input
@@ -81,7 +95,11 @@ export default function Form() {
                     {...register('subject', { required: true })}
                     className={styles['input']}
                   />
-                  {errors.subject && <span>Subject is required</span>}
+                  <div className={styles['container-of-incorrect']}>
+                    {errors.subject && (
+                      <p className={styles['incorrect']}>Subject is required</p>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
@@ -93,31 +111,18 @@ export default function Form() {
                 rows={1}
                 cols={10}
               />
-              {errors.sendMassage && <span>Send Massage is required</span>}
+              <div className={styles['container-of-incorrect']}>
+                {errors.sendMassage && (
+                  <p className={styles['incorrect']}>
+                    Send Massage is required
+                  </p>
+                )}
+              </div>
             </div>
             <SmartButton
-              style={{
-                maxWidth: '190px',
-                textAlign: 'center',
-                pointerEvents:
-                  errors.mobile &&
-                  errors.sendMassage &&
-                  errors.subject &&
-                  errors.email &&
-                  errors.name
-                    ? 'none'
-                    : 'auto',
-              }}
               type="submit"
-              disabled={
-                errors.mobile &&
-                errors.sendMassage &&
-                errors.subject &&
-                errors.email &&
-                errors.name
-                  ? true
-                  : false
-              }
+              style={styles['smart-button']}
+              disabled={Object.keys(errors).length > 0}
             >
               Send Massage
             </SmartButton>
