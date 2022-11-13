@@ -1,21 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './Posts.module.css'
 import useSWR from 'swr'
 import { HOST, ENDPOINTS } from '../../../../constants/endpoints'
 import SmartImage from '../../../../components/Image/Image'
 import Button from '../../../../components/Button/Button'
-import { PostsType } from '../../../../Types/Types'
+import { Post } from '../../../../Types/Types'
+import Pagination from '../Pagination/Pagination'
+import { chunkify } from '../../../../functions/functions'
 export default function Posts() {
-  const { data, error } = useSWR<PostsType>(HOST + ENDPOINTS.BLOG_POST)
+  const [page, setPage] = useState<number>(1)
+  const { data, error } = useSWR<[]>(HOST + ENDPOINTS.BLOG_POST)
   if (error) {
     return <div>ERROR</div>
   }
   if (!data) {
     return <div>Loading ...</div>
   }
+  const sliced = chunkify(data, 5)
   return (
     <div className={styles['posts-container']}>
-      {data.map(i => {
+      {sliced[page - 1].map((i: Post) => {
         return (
           <div className={styles['post']} key={i.id}>
             <SmartImage path={i.cover} />
@@ -39,6 +43,7 @@ export default function Posts() {
           </div>
         )
       })}
+      <Pagination data={data} setPage={setPage} />
     </div>
   )
 }

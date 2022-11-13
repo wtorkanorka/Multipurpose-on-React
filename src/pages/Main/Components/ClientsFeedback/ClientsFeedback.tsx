@@ -19,7 +19,7 @@ export default function ClientsFeedback() {
     return <div>LOADING ...</div>
   }
   const sliced = chunkify(data)
-
+  console.log(sliced, 'SLICED')
   return (
     <div className={styles['clients-feedback-container']}>
       <p>Clients Feedback</p>

@@ -2,7 +2,8 @@ import React from 'react'
 import SmartButton from '../../../../components/Button/Button'
 import styles from './Form.module.css'
 import { useForm } from 'react-hook-form'
-
+import ReactInputMask from 'react-input-mask'
+import Button from '../../../../components/Button/Button'
 export default function Form() {
   const {
     register,
@@ -70,7 +71,7 @@ export default function Form() {
               </div>
               <div className={styles['two-input-container']}>
                 <div className={styles['input-with-error']}>
-                  <input
+                  {/* <input
                     type="text"
                     placeholder="Mobile No"
                     {...register('mobile', {
@@ -79,7 +80,18 @@ export default function Form() {
                         /^\+?(\d{1,3})?[- .]?\(?(?:\d{2,3})\)?[- .]?\d\d\d[- .]?\d\d\d\d$/,
                     })}
                     className={styles['input']}
-                  />
+                  /> */}
+                  <ReactInputMask
+                    mask="+7 (999)-999-9999"
+                    type="text"
+                    placeholder="Mobile No"
+                    {...register('mobile', {
+                      required: true,
+                      pattern:
+                        /^\+?(\d{1,3})?[- .]?\(?(?:\d{2,3})\)?[- .]?\d\d\d[- .]?\d\d\d\d$/,
+                    })}
+                    className={styles['input']}
+                  ></ReactInputMask>
                   <div className={styles['container-of-incorrect']}>
                     {errors.mobile && (
                       <p className={styles['incorrect']}>
@@ -119,13 +131,13 @@ export default function Form() {
                 )}
               </div>
             </div>
-            <SmartButton
+            <Button
               type="submit"
               style={styles['smart-button']}
               disabled={Object.keys(errors).length > 0}
             >
               Send Massage
-            </SmartButton>
+            </Button>
           </form>
         </div>
       </div>

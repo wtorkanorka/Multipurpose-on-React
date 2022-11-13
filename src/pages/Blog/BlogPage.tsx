@@ -1,7 +1,7 @@
 import React from 'react'
 import FooterMain from '../../components/FooterMain/FooterMain'
 import Header from '../../components/Header/Header'
-import Container from './Components/Container/COntainer'
+import Container from './Components/Container/Container'
 import Posts from './Components/Posts/Posts'
 import TitleBlog from './Components/TitleBlog/TitleBlog'
 

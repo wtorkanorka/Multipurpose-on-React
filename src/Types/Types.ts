@@ -11,7 +11,7 @@ interface Review {
   author: ReviewAuthor
 }
 
-interface Post {
+export interface Post {
   cover: string
   author: string
   preview: string
