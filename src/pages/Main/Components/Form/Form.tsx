@@ -71,7 +71,7 @@ export default function Form() {
               </div>
               <div className={styles['two-input-container']}>
                 <div className={styles['input-with-error']}>
-                  {/* <input
+                  <input
                     type="text"
                     placeholder="Mobile No"
                     {...register('mobile', {
@@ -80,8 +80,9 @@ export default function Form() {
                         /^\+?(\d{1,3})?[- .]?\(?(?:\d{2,3})\)?[- .]?\d\d\d[- .]?\d\d\d\d$/,
                     })}
                     className={styles['input']}
-                  /> */}
-                  <ReactInputMask
+                  />
+                  {/* маска вызывает ошибку */}
+                  {/* <ReactInputMask
                     mask="+7 (999)-999-9999"
                     type="text"
                     placeholder="Mobile No"
@@ -91,7 +92,7 @@ export default function Form() {
                         /^\+?(\d{1,3})?[- .]?\(?(?:\d{2,3})\)?[- .]?\d\d\d[- .]?\d\d\d\d$/,
                     })}
                     className={styles['input']}
-                  ></ReactInputMask>
+                  ></ReactInputMask> */}
                   <div className={styles['container-of-incorrect']}>
                     {errors.mobile && (
                       <p className={styles['incorrect']}>

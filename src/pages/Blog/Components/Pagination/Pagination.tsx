@@ -16,6 +16,7 @@ export default function Pagination({ setPage, data }: Pagination) {
             className={styles['button']}
             onClick={() => {
               setPage(index + 1)
+              scrollTo(0, 400)
             }}
             key={index}
           >

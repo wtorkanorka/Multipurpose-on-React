@@ -77,3 +77,30 @@
   text-align: left;
   margin-bottom: 30px;
 }
+
+.container {
+  display: flex;
+
+  flex-direction: column;
+  gap: 50px;
+
+  justify-content: center;
+  @media (min-width: 768px) {
+    flex-direction: row;
+    gap: 24px;
+  }
+  @media (min-width: 1360px) {
+    gap: 30px;
+  }
+}
+
+.no-posts {
+  width: 451px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  button {
+    width: 100%;
+    text-align: center;
+  }
+}

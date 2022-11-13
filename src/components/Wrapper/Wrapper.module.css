@@ -5,7 +5,7 @@
   padding: 153px 138px 153px 135px;
 }
 .boxShadow {
-  box-shadow: 1px 9px 8px -9px inset;
+  box-shadow: 1px 5px 8px -9px inset;
 }
 @media (max-width: 1360px) {
   .wrapper {
@@ -15,7 +15,7 @@
     padding: 73px 53px 73px 40px;
   }
   .boxShadow {
-    box-shadow: 1px 7px 8px -9px inset;
+    box-shadow: 1px 5px 8px -9px inset;
   }
 }
 @media (max-width: 767px) {
