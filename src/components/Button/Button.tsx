@@ -8,6 +8,7 @@ import {
 import styles from './Button.module.css'
 interface Test {
   style?: string
+  Link?: string
 }
 type Props = Test &
   PropsWithChildren<
@@ -17,7 +18,7 @@ type Props = Test &
     >
   >
 
-export default function Button({ style, children, ...rest }: Props) {
+export default function Button({ Link, style, children, ...rest }: Props) {
   return (
     <button className={cx(styles['button'], style)} {...rest}>
       {children}

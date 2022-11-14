@@ -22,7 +22,7 @@ export default function Posts() {
   }
 
   const sliced = chunkify(data, 5)
-  console.log(data, 'DATA')
+
   return (
     <div className={styles['container']}>
       <div className={styles['posts-container']}>
@@ -39,15 +39,15 @@ export default function Posts() {
           </div>
         ) : null}
         {data.length !== 0 &&
-          sliced[page - 1].map((i: Post) => {
+          sliced[page - 1]?.map((i: Post) => {
             return (
               <div className={styles['post']} key={i.id}>
                 <SmartImage path={i.cover} />
-                <div className={styles['data-author-comment']}>
-                  <div className={styles['dac-content']}>
+                <ul className={styles['data-author-comment']}>
+                  <li className={styles['dac-content']}>
                     <img src="/src/assets/icons/timer.svg" alt="timer" />
                     <p>{i.created_at}</p>
-                  </div>
+                  </li>
                   <div className={styles['dac-content']}>
                     <img src="/src/assets/icons/person.svg" alt="person" />
                     <p>{i.author}</p>
@@ -59,7 +59,7 @@ export default function Posts() {
                     />
                     <p>10 Comment</p>
                   </div>
-                </div>
+                </ul>
                 <h3>{i.preview}</h3>
                 <p className={styles['paragraph']}>{i.full_content}</p>
                 <Button>Read More</Button>
