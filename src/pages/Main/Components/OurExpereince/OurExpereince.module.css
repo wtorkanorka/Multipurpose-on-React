@@ -159,6 +159,6 @@
   }
   @media (min-width: 1360px) {
     padding: 83px 135px;
-    justify-content: space-between;
+    justify-content: center;
   }
 }

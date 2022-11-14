@@ -66,7 +66,7 @@ export default function Posts() {
               </div>
             )
           })}
-        <Pagination data={data} setPage={setPage} />
+        <Pagination data={data} setPage={setPage} page={page} />
       </div>
       <BlogArticle setFilter={setFilter} />
     </div>

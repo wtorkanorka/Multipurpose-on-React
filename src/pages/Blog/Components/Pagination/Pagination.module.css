@@ -26,3 +26,8 @@
     color: white;
   }
 }
+
+.active-button {
+  background: #ff5300;
+  color: white;
+}
