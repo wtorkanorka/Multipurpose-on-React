@@ -10,6 +10,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 .go-up img {
   animation: go-up 1.5s ease-out infinite;

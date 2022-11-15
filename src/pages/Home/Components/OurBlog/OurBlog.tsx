@@ -42,7 +42,7 @@ export default function OurBlog() {
           }}
         >
           {data?.length !== 0 ? (
-            data?.map(i => {
+            data?.slice(0, 3).map(i => {
               return (
                 <div className={styles['blog-post']} key={i.id}>
                   <div className={styles['image']}>

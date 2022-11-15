@@ -72,8 +72,9 @@ export default function Form() {
               <div className={styles['two-input-container']}>
                 <div className={styles['input-with-error']}>
                   <input
-                    type="text"
+                    type="tel"
                     placeholder="Mobile No"
+                    // value="+_(___)-___-____"
                     {...register('mobile', {
                       required: true,
                       pattern:
