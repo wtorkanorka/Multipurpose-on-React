@@ -9,9 +9,13 @@ import Pagination from '../Pagination/Pagination'
 import { chunkify } from '../../../../functions/functions'
 import BlogArticle from '../BlogArticle/BlogArticle'
 import PostsContent from './PostsContent'
-export default function Posts() {
+interface Comp {
+  setFilter(value: string): void
+  filter: string
+}
+export default function Posts({ filter, setFilter }: Comp) {
   const [page, setPage] = useState<number>(1)
-  const [filter, setFilter] = useState('')
+
   const { data, error } = useSWR<[]>(
     ENDPOINTS.BLOG_POST + `?preview_like=${filter}`,
   )
@@ -25,7 +29,7 @@ export default function Posts() {
   const sliced = chunkify(data, 5)
 
   return (
-    <div className={styles['container']}>
+    <>
       <div className={styles['posts-container']}>
         <PostsContent
           dataLength={data?.length}
@@ -35,7 +39,6 @@ export default function Posts() {
         />
         <Pagination data={data} setPage={setPage} page={page} />
       </div>
-      <BlogArticle setFilter={setFilter} />
-    </div>
+    </>
   )
 }

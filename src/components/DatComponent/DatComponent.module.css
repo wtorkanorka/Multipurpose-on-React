@@ -1,0 +1,32 @@
+.data-author-comment {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.dac-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  img {
+    width: 18px;
+    height: 18px;
+  }
+  p {
+    font-weight: 400;
+    font-size: 12.8px;
+    line-height: 123.6%;
+    @media (min-width: 768px) {
+      font-size: 16px;
+      line-height: 150.6%;
+    }
+    @media (min-width: 1360px) {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 123.6%;
+    }
+  }
+}
