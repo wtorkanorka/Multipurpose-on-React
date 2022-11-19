@@ -154,86 +154,96 @@
     }
   ],
 
-  "blog_post": [
+  "blog_posts": [
     {
       "id": 1,
-      "cover": "images/our-blog-1",
+      "cover": "https://picsum.photos/id/181/770/400",
       "preview": "35 Stellar Graphic Design Blogs to Keep YouEducated and Inspired",
       "created_at": "January 25, 2021",
       "author": "Cristofer Westervelt",
-      "full_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices facilisi sed tincidunt mauris duis pulvinar convallis eu. Lobortis scelerisque aliquam massa arcu, eget. Sociis odio quis eget lacus. Dolor at enim viverra laoreet molestie amet cursus et. Sed lacus, viverra lacinia scelerisque cras aliquam blandit."
+      "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices facilisi sed tincidunt mauris duis pulvinar convallis eu. Lobortis scelerisque aliquam massa arcu, eget. Sociis odio quis eget lacus. Dolor at enim viverra laoreet molestie amet cursus et. Sed lacus, viverra lacinia scelerisque cras aliquam blandit.",
+      "full_content": ""
     },
     {
       "id": 2,
-      "cover": "images/our-blog-2",
+      "cover": "https://picsum.photos/id/282/770/400",
       "preview": "Ridiculously powerful 2021 iPad Pro may drop this month",
       "created_at": "February 11, 1072",
       "author": "Cristofer Westervelt",
-      "full_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices facilisi sed tincidunt mauris duis pulvinar convallis eu. Lobortis scelerisque aliquam massa arcu, eget. Sociis odio quis eget lacus. Dolor at enim viverra laoreet molestie amet cursus et. Sed lacus, viverra lacinia scelerisque cras aliquam blandit."
+      "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices facilisi sed tincidunt mauris duis pulvinar convallis eu. Lobortis scelerisque aliquam massa arcu, eget. Sociis odio quis eget lacus. Dolor at enim viverra laoreet molestie amet cursus et. Sed lacus, viverra lacinia scelerisque cras aliquam blandit.",
+      "full_content": ""
     },
     {
       "id": 3,
-      "cover": "images/our-blog-3",
+      "cover": "https://picsum.photos/id/383/770/400",
       "preview": "Memphis Design: the defining look of the 1980s",
       "created_at": "January 25, 2021",
       "author": "Cristofer Westervelt",
-      "full_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices facilisi sed tincidunt mauris duis pulvinar convallis eu. Lobortis scelerisque aliquam massa arcu, eget. Sociis odio quis eget lacus. Dolor at enim viverra laoreet molestie amet cursus et. Sed lacus, viverra lacinia scelerisque cras aliquam blandit."
+      "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices facilisi sed tincidunt mauris duis pulvinar convallis eu. Lobortis scelerisque aliquam massa arcu, eget. Sociis odio quis eget lacus. Dolor at enim viverra laoreet molestie amet cursus et. Sed lacus, viverra lacinia scelerisque cras aliquam blandit.",
+      "full_content": ""
     },
     {
       "id": 4,
-      "cover": "images/our-blog-4",
+      "cover": "https://picsum.photos/id/484/770/400",
       "preview": "These 3 tips helped RollWorks find the perfect designer on 99designs",
       "created_at": "January 25, 2021",
       "author": "Cristofer Westervelt",
-      "full_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices facilisi sed tincidunt mauris duis pulvinar convallis eu. Lobortis scelerisque aliquam massa arcu, eget. Sociis odio quis eget lacus. Dolor at enim viverra laoreet molestie amet cursus et. Sed lacus, viverra lacinia scelerisque cras aliquam blandit."
+      "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices facilisi sed tincidunt mauris duis pulvinar convallis eu. Lobortis scelerisque aliquam massa arcu, eget. Sociis odio quis eget lacus. Dolor at enim viverra laoreet molestie amet cursus et. Sed lacus, viverra lacinia scelerisque cras aliquam blandit.",
+      "full_content": ""
     },
     {
       "id": 5,
-      "cover": "images/our-blog-5",
+      "cover": "https://picsum.photos/id/585/770/400",
       "preview": "What is Design Thinking and how does it create innovation?",
       "created_at": "January 25, 2021",
       "author": "Cristofer Westervelt",
-      "full_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices facilisi sed tincidunt mauris duis pulvinar convallis eu. Lobortis scelerisque aliquam massa arcu, eget. Sociis odio quis eget lacus. Dolor at enim viverra laoreet molestie amet cursus et. Sed lacus, viverra lacinia scelerisque cras aliquam blandit."
+      "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices facilisi sed tincidunt mauris duis pulvinar convallis eu. Lobortis scelerisque aliquam massa arcu, eget. Sociis odio quis eget lacus. Dolor at enim viverra laoreet molestie amet cursus et. Sed lacus, viverra lacinia scelerisque cras aliquam blandit.",
+      "full_content": ""
     },
     {
       "id": 6,
-      "cover": "images/our-blog-5",
+      "cover": "https://picsum.photos/id/686/770/400",
       "preview": "35 Stellar Graphic Design Blogs to Keep YouEducated and Inspired",
       "created_at": "January 25, 2021",
       "author": "Cristofer Westervelt",
-      "full_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices facilisi sed tincidunt mauris duis pulvinar convallis eu. Lobortis scelerisque aliquam massa arcu, eget. Sociis odio quis eget lacus. Dolor at enim viverra laoreet molestie amet cursus et. Sed lacus, viverra lacinia scelerisque cras aliquam blandit."
+      "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices facilisi sed tincidunt mauris duis pulvinar convallis eu. Lobortis scelerisque aliquam massa arcu, eget. Sociis odio quis eget lacus. Dolor at enim viverra laoreet molestie amet cursus et. Sed lacus, viverra lacinia scelerisque cras aliquam blandit.",
+      "full_content": ""
     },
     {
       "id": 7,
-      "cover": "images/our-blog-4",
+      "cover": "https://picsum.photos/id/787/770/400",
       "preview": "Ridiculously powerful 2021 iPad Pro may drop this month",
       "created_at": "February 11, 1072",
       "author": "Cristofer Westervelt",
-      "full_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices facilisi sed tincidunt mauris duis pulvinar convallis eu. Lobortis scelerisque aliquam massa arcu, eget. Sociis odio quis eget lacus. Dolor at enim viverra laoreet molestie amet cursus et. Sed lacus, viverra lacinia scelerisque cras aliquam blandit."
+      "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices facilisi sed tincidunt mauris duis pulvinar convallis eu. Lobortis scelerisque aliquam massa arcu, eget. Sociis odio quis eget lacus. Dolor at enim viverra laoreet molestie amet cursus et. Sed lacus, viverra lacinia scelerisque cras aliquam blandit.",
+      "full_content": ""
     },
     {
       "id": 8,
-      "cover": "images/our-blog-3",
+      "cover": "https://picsum.photos/id/888/770/400",
       "preview": "Memphis Design: the defining look of the 1980s",
       "created_at": "January 25, 2021",
       "author": "Cristofer Westervelt",
-      "full_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices facilisi sed tincidunt mauris duis pulvinar convallis eu. Lobortis scelerisque aliquam massa arcu, eget. Sociis odio quis eget lacus. Dolor at enim viverra laoreet molestie amet cursus et. Sed lacus, viverra lacinia scelerisque cras aliquam blandit."
+      "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices facilisi sed tincidunt mauris duis pulvinar convallis eu. Lobortis scelerisque aliquam massa arcu, eget. Sociis odio quis eget lacus. Dolor at enim viverra laoreet molestie amet cursus et. Sed lacus, viverra lacinia scelerisque cras aliquam blandit.",
+      "full_content": ""
     },
     {
       "id": 9,
-      "cover": "images/our-blog-2",
+      "cover": "https://picsum.photos/id/989/770/400",
       "preview": "These 3 tips helped RollWorks find the perfect designer on 99designs",
       "created_at": "January 25, 2021",
       "author": "Cristofer Westervelt",
-      "full_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices facilisi sed tincidunt mauris duis pulvinar convallis eu. Lobortis scelerisque aliquam massa arcu, eget. Sociis odio quis eget lacus. Dolor at enim viverra laoreet molestie amet cursus et. Sed lacus, viverra lacinia scelerisque cras aliquam blandit."
+      "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices facilisi sed tincidunt mauris duis pulvinar convallis eu. Lobortis scelerisque aliquam massa arcu, eget. Sociis odio quis eget lacus. Dolor at enim viverra laoreet molestie amet cursus et. Sed lacus, viverra lacinia scelerisque cras aliquam blandit.",
+      "full_content": ""
     },
     {
       "id": 10,
-      "cover": "images/our-blog-1",
+      "cover": "https://picsum.photos/id/181/770/400",
       "preview": "What is Design Thinking and how does it create innovation?",
       "created_at": "January 25, 2021",
       "author": "Cristofer Westervelt",
-      "full_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices facilisi sed tincidunt mauris duis pulvinar convallis eu. Lobortis scelerisque aliquam massa arcu, eget. Sociis odio quis eget lacus. Dolor at enim viverra laoreet molestie amet cursus et. Sed lacus, viverra lacinia scelerisque cras aliquam blandit."
+      "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices facilisi sed tincidunt mauris duis pulvinar convallis eu. Lobortis scelerisque aliquam massa arcu, eget. Sociis odio quis eget lacus. Dolor at enim viverra laoreet molestie amet cursus et. Sed lacus, viverra lacinia scelerisque cras aliquam blandit.",
+      "full_content": ""
     }
   ],
   "our_case_study": [

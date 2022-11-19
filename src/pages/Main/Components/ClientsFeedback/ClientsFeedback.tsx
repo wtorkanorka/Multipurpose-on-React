@@ -7,11 +7,11 @@ import { ClientsFeedbackType } from '../../../../Types/Types'
 import { useState } from 'react'
 import PaginationButtons from '../../../../components/PaginationButtons/PaginationButtons'
 import { chunkify } from '../../../../functions/functions'
-import { HOST, ENDPOINTS } from '../../../../constants/endpoints'
+import { ENDPOINTS } from '../../../../constants/endpoints'
 export default function ClientsFeedback() {
   const [page, setPage] = useState(1)
 
-  const { data, error } = useSWR<[]>(HOST + ENDPOINTS.CLIENTS_FEEDBACK)
+  const { data, error } = useSWR<[]>(ENDPOINTS.CLIENTS_FEEDBACK)
   if (error) {
     return <div>ERROR</div>
   }
@@ -19,7 +19,7 @@ export default function ClientsFeedback() {
     return <div>LOADING ...</div>
   }
   const sliced = chunkify(data)
-  console.log(sliced, 'SLICED')
+
   return (
     <div className={styles['clients-feedback-container']}>
       <p>Clients Feedback</p>
@@ -34,18 +34,19 @@ export default function ClientsFeedback() {
       </h2>
 
       <div className={styles['commentary-container']}>
-        {sliced[page - 1].map((i: ClientsFeedbackType) => {
-          return (
-            <div className={styles['review']} key={i.id}>
-              <div className={styles['cover']}>
-                <SmartImage path={i.cover} />
+        {sliced !== undefined &&
+          sliced[page - 1].map((i: ClientsFeedbackType) => {
+            return (
+              <div className={styles['review']} key={i.id}>
+                <div className={styles['cover']}>
+                  <SmartImage path={i.cover} />
+                </div>
+                <h3 className={styles['author']}>{i.author}</h3>
+                <p className={styles['position']}>{i.position}</p>
+                <p className={styles['comment']}>{i.comment}</p>
               </div>
-              <h3 className={styles['author']}>{i.author}</h3>
-              <p className={styles['position']}>{i.position}</p>
-              <p className={styles['comment']}>{i.comment}</p>
-            </div>
-          )
-        })}
+            )
+          })}
       </div>
       <ul className={styles['pagination']}>
         <PaginationButtons setPage={setPage} page={page} data={data} />

@@ -7,11 +7,11 @@ import { useState } from 'react'
 import SmartImage from '../../../../components/Image/Image'
 import PaginationButtons from '../../../../components/PaginationButtons/PaginationButtons'
 import { chunkify } from '../../../../functions/functions'
-import { HOST, ENDPOINTS } from '../../../../constants/endpoints'
+import { ENDPOINTS } from '../../../../constants/endpoints'
 export default function OurBlog() {
   const [page, setPage] = useState(1)
 
-  const { data, error } = useSWR<[]>(HOST + ENDPOINTS.OUR_BLOG)
+  const { data, error } = useSWR<[]>(ENDPOINTS.OUR_BLOG)
 
   if (error) {
     return <div>ERROR</div>
@@ -35,34 +35,35 @@ export default function OurBlog() {
         </h2>
       </div>
       <div className={styles['blog-posts']}>
-        {sliced[page - 1].map((i: OurBLogType) => {
-          return (
-            <div className={styles['post']} key={i.id}>
-              <div className={styles['title']}>
-                <div className={styles['title-content']}>
-                  <p className={styles['position']}>{i.position}</p>
-                  <h3 className={styles['h3-style']}>{i.preview}</h3>
+        {sliced !== undefined &&
+          sliced[page - 1].map((i: OurBLogType) => {
+            return (
+              <div className={styles['post']} key={i.id}>
+                <div className={styles['title']}>
+                  <div className={styles['title-content']}>
+                    <p className={styles['position']}>{i.position}</p>
+                    <h3 className={styles['h3-style']}>{i.preview}</h3>
+                  </div>
+                  <div className={styles['title-image']}>
+                    <img src={i.cover} alt="title-image" />
+                  </div>
                 </div>
-                <div className={styles['title-image']}>
-                  <img src={i.cover} alt="title-image" />
-                </div>
-              </div>
-              <div className={styles['author']}>
-                <div className={styles['author-photo']}>
-                  <SmartImage path={i.author.photo} />
-                </div>
-                <div className={styles['author-content']}>
-                  <h2 className={styles['name']}>{i.author.full_name}</h2>
-                  <div className={styles['date']}>
-                    <p>{i.author.date}</p>
-                    <p>•</p>
-                    <p>{i.author.time}</p>
+                <div className={styles['author']}>
+                  <div className={styles['author-photo']}>
+                    <SmartImage path={i.author.photo} />
+                  </div>
+                  <div className={styles['author-content']}>
+                    <h2 className={styles['name']}>{i.author.full_name}</h2>
+                    <div className={styles['date']}>
+                      <p>{i.author.date}</p>
+                      <p>•</p>
+                      <p>{i.author.time}</p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          )
-        })}
+            )
+          })}
 
         {error && <div>Ошибка при запросе</div>}
       </div>

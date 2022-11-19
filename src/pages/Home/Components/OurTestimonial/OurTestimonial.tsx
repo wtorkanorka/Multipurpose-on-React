@@ -11,14 +11,14 @@ import { useState, useEffect } from 'react'
 import cx from 'classnames'
 import SmartImage from '../../../../components/Image/Image'
 import { useInView } from 'react-intersection-observer'
-import { HOST, ENDPOINTS } from '../../../../constants/endpoints'
+import { ENDPOINTS } from '../../../../constants/endpoints'
 export default function OurTestimonial() {
   const [page, setPage] = useState(1)
   const { data, error } = useSWR<Reviews>(
-    HOST + ENDPOINTS.OUR_TESTIMONIAL + `?_limit=3&_page=${page}`,
+    ENDPOINTS.OUR_TESTIMONIAL + `?_limit=3&_page=${page}`,
   )
 
-  const res1 = useSWR<Reviews>(HOST + ENDPOINTS.OUR_TESTIMONIAL)
+  const res1 = useSWR<Reviews>(ENDPOINTS.OUR_TESTIMONIAL)
   const { ref, inView, entry } = useInView({
     triggerOnce: true,
     threshold: 0.2,
@@ -134,10 +134,10 @@ export default function OurTestimonial() {
               <div>Ошибка при запросе</div>
             )}
 
-            {data?.length == 0 || data?.length < 3 ? (
+            {data?.length == 0 || (data !== undefined && data?.length) < 3 ? (
               <div className={styles['comment']}>Ничего нет</div>
             ) : null}
-            {data?.length * page !== res1.data?.length ? (
+            {data !== undefined && data?.length * page !== res1.data?.length ? (
               <button
                 className={cx(
                   styles['nav-button-second'],

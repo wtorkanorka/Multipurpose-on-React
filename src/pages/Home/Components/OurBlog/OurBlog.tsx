@@ -7,10 +7,11 @@ import useSWR from 'swr'
 import { PostsType } from '../../../../Types/Types'
 import SmartImage from '../../../../components/Image/Image'
 import { useInView } from 'react-intersection-observer'
-import { HOST, ENDPOINTS } from '../../../../constants/endpoints'
+import { ENDPOINTS } from '../../../../constants/endpoints'
+import Image from '../../../../components/Image/Image'
 
 export default function OurBlog() {
-  const { data, error } = useSWR<PostsType>(HOST + ENDPOINTS.BLOG_POST)
+  const { data, error } = useSWR<PostsType>(ENDPOINTS.BLOG_POST)
   const { ref, inView, entry } = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -46,20 +47,20 @@ export default function OurBlog() {
               return (
                 <div className={styles['blog-post']} key={i.id}>
                   <div className={styles['image']}>
-                    <SmartImage path={i.cover} />
+                    <img src={i.cover} alt={i.cover} />
                   </div>
                   <h3>{i.preview}</h3>
                   <nav className={styles['nav']}>
                     <div>
-                      <SmartImage path="images/timer" />
+                      <Image path="images/timer" />
                       <h5>{i.created_at}</h5>
                     </div>
                     <div>
-                      <SmartImage path="images/person" />
+                      <Image path="images/person" />
                       <h5>{i.author}</h5>
                     </div>
                     <div>
-                      <SmartImage path="images/message" />
+                      <Image path="images/message" />
                       <h5>10 Comment</h5>
                     </div>
                   </nav>

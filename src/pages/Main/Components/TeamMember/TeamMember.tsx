@@ -5,9 +5,9 @@ import useSWR from 'swr'
 
 import { TeamMembers } from '../../../../Types/Types'
 import TeamMemberContent from './TeamMemberContent'
-import { HOST, ENDPOINTS } from '../../../../constants/endpoints'
+import { ENDPOINTS } from '../../../../constants/endpoints'
 export default function TeamMember() {
-  const { data, error } = useSWR<TeamMembers[]>(HOST + ENDPOINTS.TEAM_MEMBER)
+  const { data, error } = useSWR<TeamMembers[]>(ENDPOINTS.TEAM_MEMBER)
   if (error) {
     return <div>ERROR</div>
   }

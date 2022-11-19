@@ -1,10 +1,10 @@
 import React from 'react'
-import styles from './BlogHero.module.css'
+import styles from './TitleBlogHero.module.css'
 interface Blog {
   title: string
   path: string
 }
-export default function BlogHero({ title, path }: Blog) {
+export default function TitleBlogHero({ title, path }: Blog) {
   return (
     <div className={styles['title-container']}>
       <h1>{title}</h1>

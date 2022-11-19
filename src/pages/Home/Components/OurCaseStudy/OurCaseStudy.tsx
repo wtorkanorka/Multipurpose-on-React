@@ -9,13 +9,13 @@ import { OurCase } from '../../../../Types/Types'
 import OurCaseStudyTextContent from './OurCaseStudyTextContent'
 import cx from 'classnames'
 import { InView, useInView } from 'react-intersection-observer'
-import { HOST, ENDPOINTS } from '../../../../constants/endpoints'
+import { ENDPOINTS } from '../../../../constants/endpoints'
 export default function OurCaseStudy() {
   const [filter, setFilter] = useState('')
   const { data, error } = useSWR<OurCase[]>(
     filter == ''
-      ? HOST + ENDPOINTS.OUR_CASE_STUDY
-      : HOST + ENDPOINTS.OUR_CASE_STUDY + `?type=${filter}`,
+      ? ENDPOINTS.OUR_CASE_STUDY
+      : ENDPOINTS.OUR_CASE_STUDY + `?type=${filter}`,
   )
   const { ref, inView, entry } = useInView({
     triggerOnce: true,

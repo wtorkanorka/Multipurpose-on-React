@@ -1,13 +1,8 @@
-import React from 'react'
 import styles from './HeaderSecond.module.css'
-import logo from '../../assets/images/logo.svg'
 import { useState } from 'react'
-import burger from '../../assets/images/burger.svg'
 import { Link } from 'react-router-dom'
-import sun from '../../assets/icons/light.svg'
-import SmartImage from '../Image/Image'
-import SmartButton from '../Button/Button'
 import { useInView } from 'react-intersection-observer'
+import Image from '../Image/Image'
 export default function HeaderSecond({ backgroundColorProps = 'white' }: any) {
   const [visible, setVisible] = useState(false)
   const { ref, inView, entry } = useInView({
@@ -96,7 +91,7 @@ export default function HeaderSecond({ backgroundColorProps = 'white' }: any) {
         {backgroundColorProps == 'white' && (
           <div className={styles['sun']}>
             <button>
-              <SmartImage path="images/sun" />
+              <Image path="images/sun" />
             </button>
           </div>
         )}
@@ -104,7 +99,7 @@ export default function HeaderSecond({ backgroundColorProps = 'white' }: any) {
           className={styles['navigation']}
           onClick={() => setVisible(!visible)}
         >
-          <SmartImage path="images/burger" />
+          <Image path="images/burger" />
         </div>
       </div>
       {visible && (

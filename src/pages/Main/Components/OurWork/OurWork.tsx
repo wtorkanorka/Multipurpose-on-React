@@ -7,15 +7,15 @@ import useSWR from 'swr'
 import { OurWorkTypes } from '../../../../Types/Types'
 
 import OurWorkContent from './OurWorkContent'
-import { HOST, ENDPOINTS } from '../../../../constants/endpoints'
+import { ENDPOINTS } from '../../../../constants/endpoints'
 export default function OurWork() {
   const [active, setActive] = useState(1)
   const [filter, setFilter] = useState('all')
 
   const { data, error } = useSWR<[]>(
     filter == 'all'
-      ? HOST + ENDPOINTS.OUR_WORK
-      : HOST + ENDPOINTS.OUR_WORK + `?type=${filter}`,
+      ? ENDPOINTS.OUR_WORK
+      : ENDPOINTS.OUR_WORK + `?type=${filter}`,
   )
 
   return (

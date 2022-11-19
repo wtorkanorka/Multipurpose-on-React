@@ -15,7 +15,7 @@ export interface Post {
   cover: string
   author: string
   preview: string
-  full_content: string
+  review: string
   created_at: string
   id: number
 }
