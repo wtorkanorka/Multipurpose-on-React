@@ -13,7 +13,6 @@ export default function Pagination({ setPage, data, page }: Pagination) {
   return (
     <div className={styles['buttons-container']}>
       {lengthData?.map((_, index: number) => {
-        console.log(index, 'INDEX')
         return (
           <button
             className={cx(

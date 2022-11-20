@@ -1,15 +1,9 @@
 .posts-container {
-  padding: 50px 16px;
+  /* padding: 50px 16px; */
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 60px;
-  @media (min-width: 768px) {
-    padding: 60px 0px 120px 50px;
-  }
-  @media (min-width: 1360px) {
-    padding: 120px 0px 120px 135px;
-  }
 }
 
 .post {

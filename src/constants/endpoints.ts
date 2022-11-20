@@ -8,4 +8,5 @@ export const ENDPOINTS = {
   TEAM_MEMBER: HOST + '/team_member',
   OUR_WORK: HOST + '/our_work',
   OUR_BLOG: HOST + '/our_blog',
+  ARTICLES: HOST + '/articles',
 }
