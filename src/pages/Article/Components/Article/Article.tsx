@@ -1,32 +1,34 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import styles from './Articles.module.css'
+import styles from './Article.module.css'
 import useSWR from 'swr'
 import { ENDPOINTS } from '../../../../constants/endpoints'
 import Button from '../../../../components/Button/Button'
+import DatComponent from '../../../../components/DatComponent/DatComponent'
+import cx from 'classnames'
+import '../../../../global.css'
 interface Props {
   id: number
 }
-export default function Articles({ id }: Props) {
-  const { data, error } = useSWR(ENDPOINTS.ARTICLES)
+interface Data {
+  id: number
+  content?: string
+}
+export default function Article({ id }: Props) {
+  const { data, error } = useSWR<Data>(ENDPOINTS.ARTICLES + '/' + id)
   if (!data) {
     return <div>Loading...</div>
   }
   if (error) {
     return <div>ERROR</div>
   }
-
-  const filtered = data.filter((i: any) => {
-    if (i.id === id) {
-      return true
-    } else {
-      return false
-    }
-  })
-
+  console.log(data, 'DATADATA')
+  function createMarkup() {
+    return { __html: `${data?.content}` }
+  }
   return (
     <>
-      {filtered.length == 0 && (
+      {Object.keys(data).length === 0 && (
         <div>
           <p>Нет данных о статье на сервере</p>
           <Button
@@ -38,9 +40,8 @@ export default function Articles({ id }: Props) {
           </Button>
         </div>
       )}
-      {filtered.map((i: any) => {
-        return <div key={i.id}>{i.text}</div>
-      })}
+
+      <div dangerouslySetInnerHTML={createMarkup()} />
     </>
   )
 }

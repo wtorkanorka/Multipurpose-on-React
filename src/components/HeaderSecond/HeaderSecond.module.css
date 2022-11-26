@@ -225,9 +225,6 @@
   0% {
     transform: rotate3d(1, 0, 0, 90deg);
   }
-  50% {
-    opacity: 0.5;
-  }
 
   100% {
     transform: rotate3d(1, 0, 0, 0deg);

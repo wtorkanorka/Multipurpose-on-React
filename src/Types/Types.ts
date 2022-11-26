@@ -18,6 +18,7 @@ export interface Post {
   review: string
   created_at: string
   id: number
+  number_of_article: number
 }
 export interface TeamMembers {
   id: number

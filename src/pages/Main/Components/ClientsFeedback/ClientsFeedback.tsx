@@ -2,13 +2,18 @@ import React from 'react'
 import SmartImage from '../../../../components/Image/Image'
 import styles from './ClientsFeedback.module.css'
 import useSWR from 'swr'
-
+import cx from 'classnames'
 import { ClientsFeedbackType } from '../../../../Types/Types'
 import { useState } from 'react'
 import PaginationButtons from '../../../../components/PaginationButtons/PaginationButtons'
 import { chunkify } from '../../../../functions/functions'
 import { ENDPOINTS } from '../../../../constants/endpoints'
+import { useInView } from 'react-intersection-observer'
 export default function ClientsFeedback() {
+  const { ref, inView, entry } = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  })
   const [page, setPage] = useState(1)
 
   const { data, error } = useSWR<[]>(ENDPOINTS.CLIENTS_FEEDBACK)
@@ -48,7 +53,13 @@ export default function ClientsFeedback() {
             )
           })}
       </div>
-      <ul className={styles['pagination']}>
+      <ul
+        className={cx(
+          styles['pagination'],
+          inView ? styles['animated'] : styles['non-animated'],
+        )}
+        ref={ref}
+      >
         <PaginationButtons setPage={setPage} page={page} data={data} />
       </ul>
     </div>

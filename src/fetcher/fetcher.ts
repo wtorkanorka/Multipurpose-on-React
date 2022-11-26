@@ -1,5 +1,6 @@
 export async function fetcher<Tres>(url: string): Promise<Tres> {
   const res = await fetch(url)
+
   if (!res.ok) {
     const error = new Error(
       'An error occurred while fetching the data.',

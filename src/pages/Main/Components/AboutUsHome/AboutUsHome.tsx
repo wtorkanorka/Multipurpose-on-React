@@ -3,15 +3,23 @@ import SmartButton from '../../../../components/Button/Button'
 import { Wrapper } from '../../../../components/Wrapper/Wrapper'
 import styles from './AboutUsHome.module.css'
 import cx from 'classnames'
+import { useInView } from 'react-intersection-observer'
 export default function AboutUsHome() {
+  const { ref, inView, entry } = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  })
   return (
     <Wrapper page="2">
-      <div className={styles['about-us']}>
+      <div className={styles['about-us']} ref={ref}>
         <div className={styles['container']}>
           <img
             src="/src/assets/images/about-us-image-2.svg"
             alt="/src/assets/images/about-us-image-2.svg"
-            className={styles['about-us-image']}
+            className={cx(
+              styles['about-us-image'],
+              inView ? styles['animated'] : styles['non-animated'],
+            )}
           />
           <div>
             <p>About Us</p>
@@ -33,7 +41,12 @@ export default function AboutUsHome() {
           </div>
         </div>
         <ul className={styles['blocks']}>
-          <li className={styles['block']}>
+          <li
+            className={cx(
+              styles['block'],
+              inView ? styles['animated'] : styles['non-animated'],
+            )}
+          >
             <div className={cx(styles['block-cover'], styles['cover-color-1'])}>
               <img
                 src="/src/assets/icons/icon-file.svg"
@@ -44,7 +57,12 @@ export default function AboutUsHome() {
               World leader in consulting and finance
             </p>
           </li>
-          <li className={styles['block']}>
+          <li
+            className={cx(
+              styles['block'],
+              inView ? styles['animated'] : styles['non-animated'],
+            )}
+          >
             <div className={cx(styles['block-cover'], styles['cover-color-2'])}>
               <img
                 src="/src/assets/icons/more-less.svg"
@@ -55,7 +73,12 @@ export default function AboutUsHome() {
               A focused team with a specialized skill
             </p>
           </li>
-          <li className={styles['block']}>
+          <li
+            className={cx(
+              styles['block'],
+              inView ? styles['animated'] : styles['non-animated'],
+            )}
+          >
             <div className={cx(styles['block-cover'], styles['cover-color-3'])}>
               <img
                 src="/src/assets/icons/gear.svg"
@@ -66,7 +89,12 @@ export default function AboutUsHome() {
               Trusted and professional advisors for you
             </p>
           </li>
-          <li className={styles['block']}>
+          <li
+            className={cx(
+              styles['block'],
+              inView ? styles['animated'] : styles['non-animated'],
+            )}
+          >
             <div className={cx(styles['block-cover'], styles['cover-color-4'])}>
               <img
                 src="/src/assets/icons/share-box-line.svg"

@@ -85,3 +85,13 @@
 .not-visible {
   display: none;
 }
+.non-animated {
+  opacity: 0;
+  margin-right: -20px;
+  transition: 1s;
+}
+.animated {
+  opacity: 1;
+  transition: 1s;
+  margin-right: 0px;
+}

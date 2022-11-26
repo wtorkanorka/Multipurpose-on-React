@@ -12,7 +12,14 @@ import BlogArticle from '../../pages/Blog/Components/BlogArticle/BlogArticle'
 import Posts from '../../pages/Blog/Components/Posts/Posts'
 import styles from './Layout.module.css'
 
-export function Layout({ children, setFilter, title, pathTitle }: any) {
+interface Props {
+  setFilter(value: string): void
+  title: string
+  pathTitle: string
+  filter: string
+}
+type TypeProps = Props & PropsWithChildren
+export function Layout({ children, setFilter, title, pathTitle }: TypeProps) {
   return (
     <>
       <Header />

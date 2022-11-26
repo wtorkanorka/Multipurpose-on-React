@@ -1,7 +1,9 @@
 import React from 'react'
 import styles from './Pagination.module.css'
-import { chunkify } from '../../../../functions/functions'
+import { chunkify, parseLinkHeader } from '../../../../functions/functions'
 import cx from 'classnames'
+import useSWR from 'swr'
+import { ENDPOINTS } from '../../../../constants/endpoints'
 interface Pagination {
   setPage(value: number): void
   data: any

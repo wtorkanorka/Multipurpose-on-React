@@ -4,9 +4,11 @@ import { Link } from 'react-router-dom'
 import SmartImage from '../Image/Image'
 import { useState } from 'react'
 import cx from 'classnames'
+import { useInView } from 'react-intersection-observer'
 
 export default function Header() {
   const [visible, setVisible] = useState(false)
+
   return (
     <>
       <div className={styles['header-mobile']}>

@@ -113,3 +113,11 @@
   gap: 4px;
   margin-top: 60px;
 }
+.non-animated {
+  transform: rotate3d(1, 0, 0, -90deg);
+  transition: 1s;
+}
+.animated {
+  transform: rotate3d(1, 0, 0, 0deg);
+  transition: 1s;
+}

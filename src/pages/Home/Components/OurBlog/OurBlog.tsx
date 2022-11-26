@@ -64,7 +64,7 @@ export default function OurBlog() {
                       <h5>10 Comment</h5>
                     </div>
                   </nav>
-                  <p className={styles['p-style']}>{i.full_content}</p>
+                  <p className={styles['p-style']}>{i.review}</p>
                   <div className={styles['smart-button']}>
                     <SmartButton type="button">Read More</SmartButton>
                   </div>
