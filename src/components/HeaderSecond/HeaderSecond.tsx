@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useInView } from 'react-intersection-observer'
 import Image from '../Image/Image'
+import cx from 'classnames'
 export default function HeaderSecond({ backgroundColorProps = 'white' }: any) {
   const [visible, setVisible] = useState(false)
   const { ref, inView, entry } = useInView({
@@ -102,28 +103,32 @@ export default function HeaderSecond({ backgroundColorProps = 'white' }: any) {
           <Image path="images/burger" />
         </div>
       </div>
-      {visible && (
-        <ul className={styles['nav-ul']}>
-          <li>
-            <Link to="/home">Home</Link>
-          </li>
-          <li>
-            <Link to="/about-us">About Us</Link>
-          </li>
-          <li>
-            <Link to="/services">Services</Link>
-          </li>
-          <li>
-            <Link to="/portfolio">Portfolio</Link>
-          </li>
-          <li>
-            <Link to="/blog">Blog</Link>
-          </li>
-          <li>
-            <Link to="/contact-us">Contact Us</Link>
-          </li>
-        </ul>
-      )}
+
+      <ul
+        className={cx(
+          visible ? styles['animated'] : styles['visible'],
+          styles['nav-ul'],
+        )}
+      >
+        <li>
+          <Link to="/home">Home</Link>
+        </li>
+        <li>
+          <Link to="/about-us">About Us</Link>
+        </li>
+        <li>
+          <Link to="/services">Services</Link>
+        </li>
+        <li>
+          <Link to="/portfolio">Portfolio</Link>
+        </li>
+        <li>
+          <Link to="/blog">Blog</Link>
+        </li>
+        <li>
+          <Link to="/contact-us">Contact Us</Link>
+        </li>
+      </ul>
     </div>
   )
 }

@@ -1,7 +1,9 @@
 import React from 'react'
 import styles from './Pagination.module.css'
-import { chunkify } from '../../../../functions/functions'
+import { chunkify, parseLinkHeader } from '../../../../functions/functions'
 import cx from 'classnames'
+import useSWR from 'swr'
+import { ENDPOINTS } from '../../../../constants/endpoints'
 interface Pagination {
   setPage(value: number): void
   data: any
@@ -13,7 +15,6 @@ export default function Pagination({ setPage, data, page }: Pagination) {
   return (
     <div className={styles['buttons-container']}>
       {lengthData?.map((_, index: number) => {
-        console.log(index, 'INDEX')
         return (
           <button
             className={cx(

@@ -137,7 +137,7 @@
     display: flex;
     position: absolute;
     background-color: var(--white);
-    box-shadow: 1px 1px 10px black;
+
     flex-direction: column;
     gap: 10px;
     font-weight: 500;
@@ -146,13 +146,31 @@
     line-height: 150.6%;
     right: 0;
     padding: 20px;
+    width: 100%;
+    text-align: center;
+    z-index: 100;
   }
   .nav-ul li {
+    height: 50px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &:hover {
+      background-color: var(--h3-orange);
+      a {
+        color: white;
+      }
+    }
     a {
       text-decoration: none;
       color: black;
+      &:active {
+        color: var(--h3-orange);
+      }
     }
   }
+
   .nav-ul li:hover {
     color: var(--h3-orange);
   }
@@ -188,5 +206,27 @@
     all: unset;
     height: 24px;
     align-items: center;
+  }
+}
+
+.visible {
+  transform: rotate3d(1, 0, 0, 90deg);
+  transform-origin: top;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.animated {
+  animation: animated-burger 0.5s ease-in-out;
+  transform-origin: top;
+}
+
+@keyframes animated-burger {
+  0% {
+    transform: rotate3d(1, 0, 0, 90deg);
+  }
+
+  100% {
+    transform: rotate3d(1, 0, 0, 0deg);
   }
 }

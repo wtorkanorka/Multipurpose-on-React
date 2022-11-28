@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Button from '../../../../components/Button/Button'
 import DatComponent from '../../../../components/DatComponent/DatComponent'
 import { Post } from '../../../../Types/Types'
@@ -31,14 +32,16 @@ export default function PostsContent({
       ) : null}
       {dataLength !== 0 &&
         sliced !== undefined &&
-        sliced[page - 1].map((i: Post) => {
+        sliced[page - 1]?.map((i: Post, index: number) => {
           return (
             <div className={styles['post']} key={i.id}>
               <img src={i.cover} alt={i.cover} />
               <DatComponent i={i} />
               <h3>{i.preview}</h3>
               <p className={styles['paragraph']}>{i.review}</p>
-              <Button>Read More</Button>
+              <Link to={`/blog/${i.number_of_article}`}>
+                <Button onClick={() => {}}>Read More</Button>
+              </Link>
             </div>
           )
         })}

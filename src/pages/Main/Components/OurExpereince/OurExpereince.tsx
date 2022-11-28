@@ -2,10 +2,15 @@ import React from 'react'
 import SmartButton from '../../../../components/Button/Button'
 import styles from './OurExpereince.module.css'
 import cx from 'classnames'
+import { useInView } from 'react-intersection-observer'
 
 export default function OurExpereince() {
+  const { ref, inView, entry } = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  })
   return (
-    <div className={styles['our-expereince-container']}>
+    <div className={styles['our-expereince-container']} ref={ref}>
       <div className={styles['first-container']}>
         <p className={styles['title-of-page']}>OurExpereince</p>
         <h2>
@@ -59,43 +64,42 @@ export default function OurExpereince() {
           <SmartButton>Contact Us</SmartButton>
         </div>
       </div>
-      {/* <div className={styles['blocks-container']}>
-        <ul className={cx(styles['blocks'], styles['blocks-first'])}>
-          <li className={styles['block']}>
-            <h3>250+</h3>
-            <p>Global Customer</p>
-          </li>
-          <li className={styles['block']}>
-            <h3>50+</h3>
-            <p>Team Member</p>
-          </li>
-        </ul>
-        <ul className={cx(styles['blocks'], styles['blocks-second'])}>
-          <li className={styles['block']}>
-            <h3>156+</h3>
-            <p>Project Completed</p>
-          </li>
-          <li className={styles['block']}>
-            <h3>15+</h3>
-            <p>Our Company</p>
-          </li>
-        </ul>
-      </div> */}
+
       <div className={styles['blocks']}>
-        <div className={styles['block']}>
+        <div
+          className={cx(
+            styles['block'],
+            inView ? styles['animated'] : styles['non-animated'],
+          )}
+        >
           <h3>250+</h3>
           <p>Global Customer</p>
         </div>
-        <div className={styles['block']}>
+        <div
+          className={cx(
+            styles['block'],
+            inView ? styles['animated'] : styles['non-animated'],
+          )}
+        >
           {' '}
           <h3>50+</h3>
           <p>Team Member</p>
         </div>
-        <div className={styles['block']}>
+        <div
+          className={cx(
+            styles['block'],
+            inView ? styles['animated'] : styles['non-animated'],
+          )}
+        >
           <h3>156+</h3>
           <p>Project Completed</p>
         </div>
-        <div className={styles['block']}>
+        <div
+          className={cx(
+            styles['block'],
+            inView ? styles['animated'] : styles['non-animated'],
+          )}
+        >
           <h3>15+</h3>
           <p>Our Company</p>
         </div>
