@@ -2,14 +2,10 @@ import React, { useState } from 'react'
 import styles from './Posts.module.css'
 import useSWR from 'swr'
 import { ENDPOINTS } from '../../../../constants/endpoints'
-import SmartImage from '../../../../components/Image/Image'
-import Button from '../../../../components/Button/Button'
-import { Post } from '../../../../Types/Types'
 import Pagination from '../Pagination/Pagination'
 import { chunkify } from '../../../../functions/functions'
-import BlogArticle from '../BlogArticle/BlogArticle'
 import PostsContent from './PostsContent'
-import { parseLinkHeader } from '../../../../functions/functions'
+import cx from 'classnames'
 interface Comp {
   setFilter(value: string): void
   filter: string
@@ -18,7 +14,7 @@ export default function Posts({ filter, setFilter }: Comp) {
   const [page, setPage] = useState<number>(1)
 
   const { data, error } = useSWR<[]>(
-    ENDPOINTS.BLOG_POSTS + `?preview_like=${filter}`,
+    ENDPOINTS.BLOG_POSTS + `?_limit=5&_page=${page}&preview_like=${filter}`,
   )
   console.log(data, 'BLOG DATA')
   if (error) {
@@ -39,6 +35,7 @@ export default function Posts({ filter, setFilter }: Comp) {
           page={page}
           setFilter={setFilter}
         />
+        {/* Не получается сделать среверную пагинацию, эта функция ломает весь запрос */}
         <Pagination data={data} setPage={setPage} page={page} />
       </div>
     </>
