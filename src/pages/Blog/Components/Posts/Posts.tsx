@@ -10,13 +10,17 @@ interface Comp {
   setFilter(value: string): void
   filter: string
 }
+interface Data {
+  pagination: {}
+  data: []
+}
 export default function Posts({ filter, setFilter }: Comp) {
   const [page, setPage] = useState<number>(1)
 
-  const { data, error } = useSWR<[]>(
+  const { data, error } = useSWR<Data[]>(
     ENDPOINTS.BLOG_POSTS + `?_limit=5&_page=${page}&preview_like=${filter}`,
   )
-  console.log(data, 'BLOG DATA')
+
   if (error) {
     return <div>ERROR</div>
   }
@@ -24,19 +28,18 @@ export default function Posts({ filter, setFilter }: Comp) {
     return <div>Loading ...</div>
   }
   console.log(data)
-  const sliced = chunkify(data, 5)
 
   return (
     <>
       <div className={styles['posts-container']}>
         <PostsContent
           dataLength={data?.length}
-          sliced={sliced}
+          data={data}
           page={page}
           setFilter={setFilter}
         />
-        {/* Не получается сделать среверную пагинацию, эта функция ломает весь запрос */}
-        <Pagination data={data} setPage={setPage} page={page} />
+
+        <Pagination data={data.pagination} setPage={setPage} page={page} />
       </div>
     </>
   )

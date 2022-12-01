@@ -11,7 +11,7 @@ import { ENDPOINTS } from '../../../../constants/endpoints'
 import Image from '../../../../components/Image/Image'
 
 export default function OurBlog() {
-  const { data, error } = useSWR<PostsType>(ENDPOINTS.BLOG_POST)
+  const { data, error } = useSWR<PostsType>(ENDPOINTS.BLOG_POSTS)
   const { ref, inView, entry } = useInView({
     triggerOnce: true,
     threshold: 0.1,

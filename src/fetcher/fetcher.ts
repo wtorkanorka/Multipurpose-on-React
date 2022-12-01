@@ -1,3 +1,5 @@
+import { parseLinkHeader } from '../functions/functions'
+
 export async function fetcher<Tres>(url: string): Promise<Tres> {
   const res = await fetch(url)
 
@@ -10,5 +12,12 @@ export async function fetcher<Tres>(url: string): Promise<Tres> {
     throw error
   }
   const data = await res.json()
+  if (res.headers.get('Link')) {
+    return {
+      list: [...data],
+      pagination: { ...parseLinkHeader(res.headers.get('Link')) },
+    }
+  }
+
   return data
 }

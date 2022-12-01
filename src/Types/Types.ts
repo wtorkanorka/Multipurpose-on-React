@@ -9,6 +9,7 @@ interface Review {
   review: string
   rating: number
   author: ReviewAuthor
+  list: any
 }
 
 export interface Post {
