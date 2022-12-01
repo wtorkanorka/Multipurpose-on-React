@@ -10,14 +10,11 @@ interface Comp {
   setFilter(value: string): void
   filter: string
 }
-interface Data {
-  pagination: {}
-  data: []
-}
+
 export default function Posts({ filter, setFilter }: Comp) {
   const [page, setPage] = useState<number>(1)
 
-  const { data, error } = useSWR<Data[]>(
+  const { data, error } = useSWR(
     ENDPOINTS.BLOG_POSTS + `?_limit=5&_page=${page}&preview_like=${filter}`,
   )
 
@@ -27,7 +24,6 @@ export default function Posts({ filter, setFilter }: Comp) {
   if (!data) {
     return <div>Loading ...</div>
   }
-  console.log(data)
 
   return (
     <>
@@ -39,7 +35,14 @@ export default function Posts({ filter, setFilter }: Comp) {
           setFilter={setFilter}
         />
 
-        <Pagination data={data.pagination} setPage={setPage} page={page} />
+        {data !== undefined && (
+          <Pagination
+            data={filter == '' ? data?.pagination : data}
+            setPage={setPage}
+            page={page}
+            boolean={filter == '' ? true : false}
+          />
+        )}
       </div>
     </>
   )

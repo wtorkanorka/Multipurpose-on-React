@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './Pagination.module.css'
 import {
   chunkify,
@@ -12,14 +12,29 @@ interface Pagination {
   setPage(value: number): void
   data: any
   page: number
+  boolean: boolean
 }
-export default function Pagination({ setPage, data, page }: Pagination) {
-  const lastPage = new URL(data.last).searchParams.get('_page')
-  const arr = getButtons(2)
+export default function Pagination({
+  setPage,
+  data,
+  page,
+  boolean,
+}: Pagination) {
+  const [array, setArray] = useState<number[]>([])
+  useEffect(() => {
+    if (boolean) {
+      const lastPage = Number(new URL(data?.last).searchParams.get('_page'))
+
+      const arr = getButtons(lastPage)
+      setArray(arr)
+    } else {
+      setArray(data)
+    }
+  }, [])
 
   return (
     <div className={styles['buttons-container']}>
-      {arr?.map((_, index: number) => {
+      {array?.map((_, index: number) => {
         return (
           <button
             className={cx(

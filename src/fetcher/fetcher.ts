@@ -1,6 +1,7 @@
 import { parseLinkHeader } from '../functions/functions'
 
 export async function fetcher<Tres>(url: string): Promise<Tres> {
+  console.log(url)
   const res = await fetch(url)
 
   if (!res.ok) {
