@@ -19,6 +19,7 @@ export default function ArticlePage() {
     return <div>Loading...</div>
   }
   console.log(data, 'DATADATADATADTADTADTA')
+
   return (
     <Layout
       title={data[0]?.title}
