@@ -21,17 +21,23 @@ export default function Pagination({
   boolean,
 }: Pagination) {
   const [array, setArray] = useState<number[]>([])
+  const [lastPage, setLastPage] = useState<number>(2)
+  console.log(data, 'DATA')
+
   useEffect(() => {
     if (boolean) {
-      const lastPage = Number(new URL(data?.last).searchParams.get('_page'))
+      const lastPageNumber = Number(
+        new URL(data?.last).searchParams.get('_page'),
+      )
+      setLastPage(lastPage)
 
-      const arr = getButtons(lastPage)
+      const arr = getButtons(lastPageNumber)
       setArray(arr)
     } else {
       setArray(data)
     }
   }, [])
-
+  console.log(array)
   return (
     <div className={styles['buttons-container']}>
       {array?.map((_, index: number) => {

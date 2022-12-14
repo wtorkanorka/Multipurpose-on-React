@@ -18,7 +18,6 @@ export default function ArticlePage() {
   if (!data) {
     return <div>Loading...</div>
   }
-  console.log(data, 'DATADATADATADTADTADTA')
 
   return (
     <Layout

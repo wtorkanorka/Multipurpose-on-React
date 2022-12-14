@@ -22,7 +22,7 @@ export default function Article({ id }: Props) {
   if (error) {
     return <div>ERROR</div>
   }
-  console.log(data, 'DATADATA')
+
   function createMarkup() {
     return { __html: `${data?.content}` }
   }

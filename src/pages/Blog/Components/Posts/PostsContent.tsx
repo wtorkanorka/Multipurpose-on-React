@@ -16,7 +16,6 @@ export default function PostsContent({
   page,
   setFilter,
 }: Component) {
-  console.log(data, 'DATA')
   return (
     <>
       {dataLength == 0 ? (

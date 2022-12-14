@@ -15,7 +15,6 @@ export default function Posts({ filter, setFilter }: Comp) {
   const [page, setPage] = useState<number>(1)
   const [array, setArray] = useState<[]>([])
   const { data, error } = useSWR(
-    // ENDPOINTS.BLOG_POSTS + `?_limit=5&_page=${page}&preview_like=${filter}`,
     ENDPOINTS.BLOG_POSTS + `?_limit=5&_page=${page}`,
   )
 
