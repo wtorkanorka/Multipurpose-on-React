@@ -95,7 +95,7 @@ export default function OurTestimonial() {
               </button>
             )}
             {!error ? (
-              data?.map(i => {
+              data?.list?.map(i => {
                 return (
                   <div
                     className={styles['comment']}

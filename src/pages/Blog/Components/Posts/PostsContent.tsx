@@ -7,15 +7,16 @@ import styles from './Posts.module.css'
 interface Component {
   page: number
   dataLength: number
-  sliced: any
+  data: any
   setFilter(value: string): void
 }
 export default function PostsContent({
   dataLength,
-  sliced,
+  data,
   page,
   setFilter,
 }: Component) {
+  console.log(data, 'DATADATRA')
   return (
     <>
       {dataLength == 0 ? (
@@ -31,8 +32,9 @@ export default function PostsContent({
         </div>
       ) : null}
       {dataLength !== 0 &&
-        sliced !== undefined &&
-        sliced[page - 1]?.map((i: Post, index: number) => {
+        data !== undefined &&
+        data &&
+        data?.list?.map((i: Post, index: number) => {
           return (
             <div className={styles['post']} key={i.id}>
               <img src={i.cover} alt={i.cover} />

@@ -2,25 +2,25 @@ import React, { useState } from 'react'
 import styles from './Posts.module.css'
 import useSWR from 'swr'
 import { ENDPOINTS } from '../../../../constants/endpoints'
-import SmartImage from '../../../../components/Image/Image'
-import Button from '../../../../components/Button/Button'
-import { Post } from '../../../../Types/Types'
 import Pagination from '../Pagination/Pagination'
 import { chunkify } from '../../../../functions/functions'
-import BlogArticle from '../BlogArticle/BlogArticle'
 import PostsContent from './PostsContent'
-import { parseLinkHeader } from '../../../../functions/functions'
+import cx from 'classnames'
 interface Comp {
   setFilter(value: string): void
   filter: string
 }
+interface Data {
+  pagination: {}
+  data: []
+}
 export default function Posts({ filter, setFilter }: Comp) {
   const [page, setPage] = useState<number>(1)
 
-  const { data, error } = useSWR<[]>(
-    ENDPOINTS.BLOG_POSTS + `?preview_like=${filter}`,
+  const { data, error } = useSWR<Data[]>(
+    ENDPOINTS.BLOG_POSTS + `?_limit=5&_page=${page}&preview_like=${filter}`,
   )
-  console.log(data, 'BLOG DATA')
+
   if (error) {
     return <div>ERROR</div>
   }
@@ -28,18 +28,18 @@ export default function Posts({ filter, setFilter }: Comp) {
     return <div>Loading ...</div>
   }
   console.log(data)
-  const sliced = chunkify(data, 5)
 
   return (
     <>
       <div className={styles['posts-container']}>
         <PostsContent
           dataLength={data?.length}
-          sliced={sliced}
+          data={data}
           page={page}
           setFilter={setFilter}
         />
-        <Pagination data={data} setPage={setPage} page={page} />
+
+        <Pagination data={data.pagination} setPage={setPage} page={page} />
       </div>
     </>
   )
