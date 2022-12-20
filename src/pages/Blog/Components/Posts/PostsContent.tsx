@@ -13,9 +13,10 @@ interface Component {
 export default function PostsContent({
   dataLength,
   data,
-  page,
+
   setFilter,
 }: Component) {
+  console.log(data, 'VVVVvv')
   return (
     <>
       {dataLength == 0 ? (
@@ -30,9 +31,7 @@ export default function PostsContent({
           </Button>
         </div>
       ) : null}
-      {dataLength !== 0 &&
-        data !== undefined &&
-        data &&
+      {data?.list &&
         data?.list?.map((i: Post, index: number) => {
           return (
             <div className={styles['post']} key={i.id}>
@@ -40,8 +39,22 @@ export default function PostsContent({
               <DatComponent i={i} />
               <h3>{i.preview}</h3>
               <p className={styles['paragraph']}>{i.review}</p>
-              <Link to={`/blog/${i.number_of_article}`}>
-                <Button onClick={() => {}}>Read More</Button>
+              <Link to={`/blog/${i.id}`}>
+                <Button>Read More</Button>
+              </Link>
+            </div>
+          )
+        })}
+      {!data?.list &&
+        data?.map((i: Post, index: number) => {
+          return (
+            <div className={styles['post']} key={i.id}>
+              <img src={i.cover} alt={i.cover} />
+              <DatComponent i={i} />
+              <h3>{i.preview}</h3>
+              <p className={styles['paragraph']}>{i.review}</p>
+              <Link to={`/blog/${i.id}`}>
+                <Button>Read More</Button>
               </Link>
             </div>
           )

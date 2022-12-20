@@ -9,6 +9,7 @@ export default function ArticlePage() {
   const { id } = useParams()
   const [filter, setFilter] = useState('')
   const { data, error } = useSWR(ENDPOINTS.ARTICLES + `?id_like=${id}`)
+
   useEffect(() => {
     scrollTo(0, 0)
   }, [])

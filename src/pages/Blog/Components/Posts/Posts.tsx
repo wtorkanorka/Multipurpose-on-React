@@ -3,9 +3,7 @@ import styles from './Posts.module.css'
 import useSWR from 'swr'
 import { ENDPOINTS } from '../../../../constants/endpoints'
 import Pagination from '../Pagination/Pagination'
-import { chunkify } from '../../../../functions/functions'
 import PostsContent from './PostsContent'
-import cx from 'classnames'
 interface Comp {
   setFilter(value: string): void
   filter: string
@@ -13,9 +11,8 @@ interface Comp {
 
 export default function Posts({ filter, setFilter }: Comp) {
   const [page, setPage] = useState<number>(1)
-  const [array, setArray] = useState<[]>([])
   const { data, error } = useSWR(
-    ENDPOINTS.BLOG_POSTS + `?_limit=5&_page=${page}`,
+    ENDPOINTS.BLOG_POSTS + `?_limit=5&_page=${page}&preview_like=${filter}`,
   )
 
   if (error) {
@@ -24,7 +21,7 @@ export default function Posts({ filter, setFilter }: Comp) {
   if (!data) {
     return <div>Loading ...</div>
   }
-
+  console.log(data)
   return (
     <>
       <div className={styles['posts-container']}>
@@ -34,12 +31,12 @@ export default function Posts({ filter, setFilter }: Comp) {
           page={page}
           setFilter={setFilter}
         />
-        {data !== undefined && (
+        {data && (
           <Pagination
             data={filter == '' ? data?.pagination : data}
             setPage={setPage}
             page={page}
-            boolean={filter == '' ? true : false}
+            isFilter={filter == '' ? true : false}
           />
         )}
       </div>

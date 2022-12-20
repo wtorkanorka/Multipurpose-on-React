@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import styles from './Pagination.module.css'
 import {
   chunkify,
-  getButtons,
+  getIndexesOfPages,
   parseLinkHeader,
 } from '../../../../functions/functions'
 import cx from 'classnames'
@@ -12,48 +12,50 @@ interface Pagination {
   setPage(value: number): void
   data: any
   page: number
-  boolean: boolean
+  isFilter: boolean
 }
 export default function Pagination({
   setPage,
   data,
   page,
-  boolean,
+  isFilter,
 }: Pagination) {
-  const [array, setArray] = useState<number[]>([])
-  const [lastPage, setLastPage] = useState<number>(2)
-  console.log(data, 'DATA')
+  const [arrayOfPages, setArrayOfPages] = useState<number[]>([])
+  const [lastPage, setLastPage] = useState<number>(0)
+  console.log(arrayOfPages)
 
   useEffect(() => {
-    if (boolean) {
+    if (isFilter) {
       const lastPageNumber = Number(
         new URL(data?.last).searchParams.get('_page'),
       )
       setLastPage(lastPage)
 
-      const arr = getButtons(lastPageNumber)
-      setArray(arr)
+      const arr = getIndexesOfPages(lastPageNumber)
+      setArrayOfPages(arr)
     } else {
-      setArray(data)
+      setArrayOfPages(data)
     }
   }, [])
-  console.log(array)
+  console.log(data, 'AAAAAAa')
+
   return (
     <div className={styles['buttons-container']}>
-      {array?.map((_, index: number) => {
+      {arrayOfPages?.map((_, index: number) => {
+        const pageNumber = index + 1
         return (
           <button
             className={cx(
               styles['button'],
-              index + 1 == page ? styles['active-button'] : '',
+              pageNumber == page ? styles['active-button'] : '',
             )}
             onClick={() => {
-              setPage(index + 1)
+              setPage(pageNumber)
               scrollTo(0, 400)
             }}
             key={index}
           >
-            {index + 1 < 10 ? '0' + (index + 1) : index + 1}
+            {pageNumber < 10 ? '0' + pageNumber : pageNumber}
           </button>
         )
       })}
