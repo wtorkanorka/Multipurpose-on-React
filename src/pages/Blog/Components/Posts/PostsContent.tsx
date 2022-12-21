@@ -4,10 +4,26 @@ import Button from '../../../../components/Button/Button'
 import DatComponent from '../../../../components/DatComponent/DatComponent'
 import { Post } from '../../../../Types/Types'
 import styles from './Posts.module.css'
+interface arr {
+  id: number
+  author: string
+  cover: string
+  created_at: string
+  preview: string
+  review: string
+}
+
+interface arrAndPagination {
+  list: arr[]
+  pagination: object
+}
+
+type response = arr[] | arrAndPagination
 interface Component {
   page: number
   dataLength: number
-  data: any
+  data: response
+
   setFilter(value: string): void
 }
 export default function PostsContent({
@@ -16,7 +32,8 @@ export default function PostsContent({
 
   setFilter,
 }: Component) {
-  console.log(data, 'VVVVvv')
+  console.log(data)
+
   return (
     <>
       {dataLength == 0 ? (
