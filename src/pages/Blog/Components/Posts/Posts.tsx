@@ -12,7 +12,7 @@ interface Comp {
 export default function Posts({ filter, setFilter }: Comp) {
   const [page, setPage] = useState<number>(1)
   const { data, error } = useSWR(
-    ENDPOINTS.BLOG_POSTS + `?_limit=5&_page=${page}&preview_like=${filter}`,
+    ENDPOINTS.BLOG_POSTS + `?preview_like=${filter}&_limit=5&_page=${page}`,
   )
 
   if (error) {
@@ -21,7 +21,7 @@ export default function Posts({ filter, setFilter }: Comp) {
   if (!data) {
     return <div>Loading ...</div>
   }
-  console.log(data)
+
   return (
     <>
       <div className={styles['posts-container']}>
@@ -33,10 +33,10 @@ export default function Posts({ filter, setFilter }: Comp) {
         />
         {data && (
           <Pagination
-            data={filter == '' ? data?.pagination : data}
+            data={data}
             setPage={setPage}
             page={page}
-            isFilter={filter == '' ? true : false}
+            filter={filter}
           />
         )}
       </div>

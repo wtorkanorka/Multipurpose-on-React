@@ -12,36 +12,32 @@ interface Pagination {
   setPage(value: number): void
   data: any
   page: number
-  isFilter: boolean
+  filter: string
 }
 export default function Pagination({
   setPage,
   data,
   page,
-  isFilter,
+  filter,
 }: Pagination) {
-  const [arrayOfPages, setArrayOfPages] = useState<number[]>([])
-  const [lastPage, setLastPage] = useState<number>(0)
-  console.log(arrayOfPages)
+  const [lastPage, setLastPage] = useState<number>(1)
 
   useEffect(() => {
-    if (isFilter) {
+    if (data?.pagination?.last) {
       const lastPageNumber = Number(
-        new URL(data?.last).searchParams.get('_page'),
+        new URL(data?.pagination?.last).searchParams.get('_page'),
       )
-      setLastPage(lastPage)
-
-      const arr = getIndexesOfPages(lastPageNumber)
-      setArrayOfPages(arr)
+      setLastPage(lastPageNumber)
     } else {
-      setArrayOfPages(data)
+      setPage(1)
     }
-  }, [])
-  console.log(data, 'AAAAAAa')
+  }, [filter])
+
+  const indexes = getIndexesOfPages(lastPage)
 
   return (
     <div className={styles['buttons-container']}>
-      {arrayOfPages?.map((_, index: number) => {
+      {indexes?.map((_, index: number) => {
         const pageNumber = index + 1
         return (
           <button

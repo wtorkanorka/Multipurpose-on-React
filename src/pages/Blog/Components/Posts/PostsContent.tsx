@@ -32,8 +32,6 @@ export default function PostsContent({
 
   setFilter,
 }: Component) {
-  console.log(data)
-
   return (
     <>
       {dataLength == 0 ? (

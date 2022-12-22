@@ -7,7 +7,7 @@ interface LinkHeader {
 type Test = LinkHeader
 export async function fetcher<Test>(url: string): Promise<{}> {
   const res = await fetch(url)
-  console.log(url)
+
   const link = res.headers.get('Link')
   if (!res.ok) {
     const error = new Error(
