@@ -12,7 +12,7 @@ export default function SubscribeNewsletter() {
 
   return (
     <div ref={ref}>
-      <Wrapper>
+      <Wrapper backgroundColor="var(--background-color-white)">
         <div
           className={styles['container']}
           style={{

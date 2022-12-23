@@ -12,7 +12,7 @@ export default function OurServices() {
 
   return (
     <div ref={ref}>
-      <Wrapper>
+      <Wrapper backgroundColor="var(--background-color-white)">
         <TitleOfPage position="center">Our Services</TitleOfPage>
         <h2
           className={styles['h2']}

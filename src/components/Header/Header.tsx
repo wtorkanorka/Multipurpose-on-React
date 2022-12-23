@@ -5,6 +5,7 @@ import SmartImage from '../Image/Image'
 import { useState } from 'react'
 import cx from 'classnames'
 import { useInView } from 'react-intersection-observer'
+import SwitchThemeButton from '../SwitchThemeButton/SwitchThemeButton'
 
 export default function Header() {
   const [visible, setVisible] = useState(false)
@@ -19,11 +20,7 @@ export default function Header() {
           </p>
         </Link>
         <div>
-          <img
-            src="/src/assets/icons/light.svg"
-            alt="light"
-            className={styles['img-position']}
-          />
+          <SwitchThemeButton styles={styles['img-position']} />
         </div>
 
         <button
@@ -87,11 +84,7 @@ export default function Header() {
             </li>
           </ul>
         </nav>
-        <img
-          src="/src/assets/icons/light.svg"
-          alt="light"
-          className={styles['img-position']}
-        />
+        <SwitchThemeButton styles={styles['img-position']} />
       </div>
     </>
   )

@@ -1,0 +1,38 @@
+:root {
+  /* --white: #ffffff;
+  --p-color: #7b7b7b;
+  --h2-color: #373737;
+  --title-of-page: #ff5300;
+  --background: #ff5300;
+  --h3-orange: #ff5300;
+  --border: white;
+  --background-comp: #fff7f4;
+  --border-gray: #373737;
+  --svg-color: #ff5300;
+  --border-orange: #ff5300;
+  --h2-gray: #373737;
+  --aqua: #00acff;
+  --footer-background: #373737; */
+  --paragraph: #7b7b7b;
+  --pre-title-of-blog: #ff5300;
+  --title-of-block: #373737;
+  --background-pinterest-component: #fff7f4;
+  --background-second-color: #fff;
+  --background-color-white: #fff;
+  --orange-permanent: #ff5300;
+  --white-permanent: #fff;
+  --paragraph-permanent: #7b7b7b;
+  --black-to-white: #000;
+
+  --title-header-first: #ff5300;
+  --title-header-second: #000;
+  --header-nav: #373737;
+  --header-nav-active: #ff5300;
+  --home-hero-h1-color: #373737;
+  --smart-button: #ff5300;
+  --our-services-blocks: #fff;
+  --our-services-number: #efefef;
+  --about-us-li: #373737;
+  --orange-svg: #ff5300;
+  --our-testimonial-blocks: #fff;
+}

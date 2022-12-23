@@ -36,7 +36,7 @@ export default function OurTestimonial() {
 
   return (
     <div ref={ref}>
-      <Wrapper backgroundColor="var(--background-comp)">
+      <Wrapper backgroundColor="var(--background-pinterest-component)">
         <TitleOfPage position="center">Our Testimonial</TitleOfPage>
         <div>
           <h2
@@ -69,7 +69,7 @@ export default function OurTestimonial() {
                 >
                   <path
                     d="M6.465 8 .278 1.812 2.045.045 10 8l-7.955 7.955-1.767-1.768L6.465 8Z"
-                    fill="#373737"
+                    fill="var(--home-hero-h1-color)"
                   />
                 </svg>
               </button>
@@ -89,7 +89,7 @@ export default function OurTestimonial() {
                 >
                   <path
                     d="M6.465 8 .278 1.812 2.045.045 10 8l-7.955 7.955-1.767-1.768L6.465 8Z"
-                    fill="#373737"
+                    fill="var(--home-hero-h1-color)"
                   />
                 </svg>
               </button>
@@ -108,7 +108,7 @@ export default function OurTestimonial() {
                   >
                     <StarRatings
                       rating={i.rating / 2}
-                      starRatedColor="var(--background)"
+                      starRatedColor="var(--orange-permanent)"
                       numberOfStars={5}
                       name="rating"
                       starDimension="20px"
@@ -156,7 +156,7 @@ export default function OurTestimonial() {
                 >
                   <path
                     d="M6.465 8 .278 1.812 2.045.045 10 8l-7.955 7.955-1.767-1.768L6.465 8Z"
-                    fill="#373737"
+                    fill="var(--home-hero-h1-color)"
                   />
                 </svg>
               </button>
@@ -176,7 +176,7 @@ export default function OurTestimonial() {
                 >
                   <path
                     d="M6.465 8 .278 1.812 2.045.045 10 8l-7.955 7.955-1.767-1.768L6.465 8Z"
-                    fill="#373737"
+                    fill="var(--home-hero-h1-color)"
                   />
                 </svg>
               </button>

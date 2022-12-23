@@ -12,7 +12,7 @@
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
     width: 40px;
     height: 40px;
-    background-color: #fff;
+    background-color: var(--white);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,11 +22,11 @@
       background-color: var(--background);
     }
     svg path {
-      fill: #ff5300;
+      fill: var(--svg-color);
     }
     &:active {
       svg path {
-        fill: #fff;
+        fill: var(--white);
       }
     }
   }

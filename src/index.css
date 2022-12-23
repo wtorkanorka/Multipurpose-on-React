@@ -13,27 +13,15 @@
   src: url(./assets/fonts/Poppins-Black.woff2);
   font-weight: 700;
 }
-:root {
-  --white: #ffffff;
-  --p-color: #7b7b7b;
-  --h2-color: #373737;
-  --title-of-page: #ff5300;
-  --background: #ff5300;
-  --h3-orange: #ff5300;
-  --border: white;
-  --background-comp: #fff7f4;
-  --border-gray: #373737;
-  --svg-color: #ff5300;
-  --border-orange: #ff5300;
-  --h2-gray: #373737;
-  --aqua: #00acff;
-  --footer-background: #373737;
-}
+
 html {
   scroll-behavior: smooth;
 }
+* {
+  transition: 0.3s;
+}
 p {
-  color: var(--p-color);
+  color: var(--paragraph);
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;

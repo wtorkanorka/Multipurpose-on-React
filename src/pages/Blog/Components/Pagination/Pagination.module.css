@@ -12,9 +12,9 @@
   justify-content: center;
   width: 50px;
   height: 50px;
-  border: 1px solid #ff5300;
+  border: 1px solid var(--background);
   background-color: transparent;
-  color: #ff5500;
+  color: var(--background);
   font-weight: 500;
   font-size: 20px;
   line-height: 123.6%;
@@ -22,12 +22,12 @@
     background-color: rgba(255, 85, 0, 0.253);
   }
   &:active {
-    background-color: #ff5500;
+    background-color: var(--background);
     color: white;
   }
 }
 
 .active-button {
-  background: #ff5300;
+  background: var(--background);
   color: white;
 }

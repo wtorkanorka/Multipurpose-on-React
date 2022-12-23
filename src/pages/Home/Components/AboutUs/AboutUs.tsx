@@ -15,7 +15,7 @@ export default function AboutUs() {
   })
 
   return (
-    <Wrapper backgroundColor="var(--background-comp)">
+    <Wrapper backgroundColor="var(--background-pinterest-component)">
       <div className={styles['about-us']} id="aboutUs" ref={ref}>
         <div>
           <div className={styles['title-of-page']}>

@@ -12,7 +12,7 @@ export default function OurCapabilities() {
 
   return (
     <div ref={ref}>
-      <Wrapper>
+      <Wrapper backgroundColor="var(--background-color-white)">
         <div className={styles['block']}>
           <div className={styles['conainer-of-content']}>
             <div

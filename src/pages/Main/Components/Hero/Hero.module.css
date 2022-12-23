@@ -28,7 +28,7 @@
     font-size: 31.25px;
     line-height: 123.6%;
     text-align: center;
-    color: #373737;
+    color: var(--h2-color);
 
     span {
       color: var(--h3-orange);

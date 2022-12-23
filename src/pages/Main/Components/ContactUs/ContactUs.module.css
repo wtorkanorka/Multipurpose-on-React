@@ -38,7 +38,7 @@
 }
 
 .block {
-  background: #ffffff;
+  background: var(--white);
   padding: 18px 18px 30px 18px;
   display: flex;
   flex-direction: column;
