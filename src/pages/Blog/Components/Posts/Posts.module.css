@@ -20,6 +20,7 @@
     line-height: 123.6%;
     margin-top: 20px;
     margin-bottom: 18px;
+    color: var(--black-to-white);
     @media (min-width: 768px) {
       font-size: 25px;
     }

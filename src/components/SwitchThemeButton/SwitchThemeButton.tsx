@@ -11,13 +11,15 @@ export default function SwitchThemeButton({ styles }: Component) {
       className={styles}
       id="switchTheme"
       onClick={() => {
-        let theme = document.getElementById('theme')
-        console.log(theme)
-
-        if (theme!.getAttribute('href') == './src/dark-theme.css') {
-          theme!.href = './src/light-theme.css'
+        const meta = document.querySelector('meta[name="color-scheme"]')
+        if (meta.content === 'dark') {
+          meta.content = 'light'
+          document.body.classList.remove('dark-mode')
+          document.body.classList.add('light-mode')
         } else {
-          theme!.href = './src/dark-theme.css'
+          meta.content = 'dark'
+          document.body.classList.remove('light-mode')
+          document.body.classList.add('dark-mode')
         }
       }}
     />
