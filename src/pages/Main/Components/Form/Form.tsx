@@ -74,7 +74,6 @@ export default function Form() {
                   <input
                     type="tel"
                     placeholder="Mobile No"
-                    // value="+_(___)-___-____"
                     {...register('mobile', {
                       required: true,
                       pattern:
@@ -82,18 +81,7 @@ export default function Form() {
                     })}
                     className={styles['input']}
                   />
-                  {/* маска вызывает ошибку */}
-                  {/* <ReactInputMask
-                    mask="+7 (999)-999-9999"
-                    type="text"
-                    placeholder="Mobile No"
-                    {...register('mobile', {
-                      required: true,
-                      pattern:
-                        /^\+?(\d{1,3})?[- .]?\(?(?:\d{2,3})\)?[- .]?\d\d\d[- .]?\d\d\d\d$/,
-                    })}
-                    className={styles['input']}
-                  ></ReactInputMask> */}
+
                   <div className={styles['container-of-incorrect']}>
                     {errors.mobile && (
                       <p className={styles['incorrect']}>

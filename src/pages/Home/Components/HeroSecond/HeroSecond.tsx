@@ -12,7 +12,7 @@ export default function HeroSecond() {
   return (
     <div ref={ref}>
       <HeaderSecond backgroundColorProps={'none'} />
-      <Wrapper backgroundColor="var(--background-pinterest-component)">
+      <Wrapper backgroundColor="var(--background-colorful-component)">
         <div className={styles['container']}>
           <div className={styles['content']}>
             <h1

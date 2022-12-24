@@ -10,7 +10,7 @@ export default function AboutUsHome() {
     threshold: 0.5,
   })
   return (
-    <Wrapper page="2">
+    <Wrapper page="2" backgroundColor="var(--background-color-white)">
       <div className={styles['about-us']} ref={ref}>
         <div className={styles['container']}>
           <img

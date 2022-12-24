@@ -10,7 +10,11 @@ export default function Hero() {
     threshold: 0.5,
   })
   return (
-    <Wrapper backgroundColor="var(--background-comp)" page="2" boxShadow={true}>
+    <Wrapper
+      backgroundColor="var(--background-colorful-component)"
+      page="2"
+      boxShadow={true}
+    >
       <div className={styles['hero']} ref={ref}>
         <img
           src="/src/assets/images/hero-image.svg"

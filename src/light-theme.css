@@ -1,28 +1,17 @@
 :root {
-  /* --white: #ffffff;
-  --p-color: #7b7b7b;
-  --h2-color: #373737;
-  --title-of-page: #ff5300;
-  --background: #ff5300;
-  --h3-orange: #ff5300;
-  --border: white;
-  --background-comp: #fff7f4;
-  --border-gray: #373737;
-  --svg-color: #ff5300;
-  --border-orange: #ff5300;
-  --h2-gray: #373737;
-  --aqua: #00acff;
-  --footer-background: #373737; */
   --paragraph: #7b7b7b;
   --pre-title-of-blog: #ff5300;
   --title-of-block: #373737;
-  --background-pinterest-component: #fff7f4;
+  --background-colorful-component: #fff7f4;
   --background-second-color: #fff;
   --background-color-white: #fff;
   --orange-permanent: #ff5300;
   --white-permanent: #fff;
   --paragraph-permanent: #7b7b7b;
   --black-to-white: #000;
+  --orange-to-white: #ff5300;
+  --aqua-permanent: #00acff;
+  --almost-black-permanent: #373737;
 
   --title-header-first: #ff5300;
   --title-header-second: #000;
@@ -35,4 +24,7 @@
   --about-us-li: #373737;
   --orange-svg: #ff5300;
   --our-testimonial-blocks: #fff;
+  --site-blocks-background: #fff;
+  --site-blocks-svg: #ff5300;
+  --header-background-white: #fff;
 }

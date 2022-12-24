@@ -23,8 +23,8 @@ export default function OurBlog() {
   return (
     <div className={styles['our-blog-container']}>
       <div className={styles['heading']}>
-        <p>Our Blog</p>
-        <h2>
+        <p className={styles['paragraph']}>Our Blog</p>
+        <h2 className={styles['h2-style']}>
           Our Latest{'\n'}
           <span className={styles['span-style']}>
             Blogs

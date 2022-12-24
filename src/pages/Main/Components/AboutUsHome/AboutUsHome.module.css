@@ -32,9 +32,7 @@
     margin-bottom: 18px;
   }
   h2 {
-    span {
-      color: var(--h3-orange);
-    }
+    color: var(--title-of-block);
     margin-bottom: 18px;
   }
   .about-us-paragraph {
@@ -70,6 +68,7 @@
     padding: 25px 42px 18px 42px;
     justify-content: center;
     align-items: center;
+    background-color: var(--header-background-white);
     @media (min-width: 768px) {
       padding: 35px 17px 18px 17px;
     }
@@ -79,7 +78,7 @@
     font-size: 20px;
     line-height: 123.6%;
     text-align: center;
-    color: var(--h2-color);
+    color: var(--paragraph);
     margin: 0;
     margin-top: 37px;
     @media (min-width: 768px) {
@@ -117,19 +116,19 @@
     }
   }
   .cover-color-1 {
-    background: var(--background);
+    background: var(--orange-permanent);
     box-shadow: 4px 5px 15px rgba(255, 83, 0, 0.4);
   }
   .cover-color-2 {
-    background: var(--p-color);
+    background: var(--paragraph-permanent);
     box-shadow: 4px 5px 15px rgba(0, 0, 0, 0.4);
   }
   .cover-color-3 {
-    background: var(--aqua);
+    background: var(--aqua-permanent);
     box-shadow: 4px 5px 15px rgba(0, 194, 255, 0.4);
   }
   .cover-color-4 {
-    background: var(--h2-color);
+    background: var(--almost-black-permanent);
     box-shadow: 4px 5px 15px rgba(0, 0, 0, 0.4);
   }
   @media (min-width: 768px) {

@@ -23,7 +23,7 @@ export default function OurBlog() {
 
   return (
     <div ref={ref}>
-      <Wrapper backgroundColor="var(--background-pinterest-component)">
+      <Wrapper backgroundColor="var(--background-colorful-component)">
         <TitleOfPage position="center">Our Blog</TitleOfPage>
 
         <h2
