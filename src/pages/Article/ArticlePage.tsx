@@ -8,14 +8,22 @@ import Articles from './Components/Article/Article'
 export default function ArticlePage() {
   const { id } = useParams()
   const [filter, setFilter] = useState('')
+  const { data, error } = useSWR(ENDPOINTS.ARTICLES + `?id_like=${id}`)
+
   useEffect(() => {
     scrollTo(0, 0)
   }, [])
+  if (error) {
+    return <div>error</div>
+  }
+  if (!data) {
+    return <div>Loading...</div>
+  }
+
   return (
     <Layout
-      title="35 Stellar Graphic Design Blogs
-    to Keep You Educated and Inspired"
-      pathTitle="Home - Blog Page - Graphic Design"
+      title={data[0]?.title}
+      pathTitle={`Home - Blog Page - ${data[0]?.path_title}`}
       setFilter={setFilter}
       filter={filter}
     >
