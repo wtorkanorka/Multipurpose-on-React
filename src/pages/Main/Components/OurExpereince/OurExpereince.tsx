@@ -1,5 +1,5 @@
 import React from 'react'
-import SmartButton from '../../../../components/Button/Button'
+import { Button } from '../../../../components/Button/Button'
 import styles from './OurExpereince.module.css'
 import cx from 'classnames'
 import { useInView } from 'react-intersection-observer'
@@ -61,7 +61,7 @@ export default function OurExpereince() {
           </p>
         </div>
         <div className={styles['button']}>
-          <SmartButton>Contact Us</SmartButton>
+          <Button>Contact Us</Button>
         </div>
       </div>
 

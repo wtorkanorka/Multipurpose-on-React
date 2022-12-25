@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Button from '../../../../components/Button/Button'
+import { Button } from '../../../../components/Button/Button'
 import DatComponent from '../../../../components/DatComponent/DatComponent'
 import { Post } from '../../../../Types/Types'
 import styles from './Posts.module.css'
@@ -32,6 +32,8 @@ export default function PostsContent({
 
   setFilter,
 }: Component) {
+  data, 'PostsContent Data'
+
   return (
     <>
       {dataLength == 0 ? (

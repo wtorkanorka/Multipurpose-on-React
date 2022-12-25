@@ -5,7 +5,7 @@ import SmartImage from '../Image/Image'
 import { useState } from 'react'
 import cx from 'classnames'
 import { useInView } from 'react-intersection-observer'
-import SwitchThemeButton from '../SwitchThemeButton/SwitchThemeButton'
+import { SwitchThemeButton } from '../SwitchThemeButton/SwitchThemeButton'
 
 export default function Header() {
   const [visible, setVisible] = useState(false)

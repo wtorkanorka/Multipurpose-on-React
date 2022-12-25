@@ -1,6 +1,6 @@
 import React from 'react'
 import { useInView } from 'react-intersection-observer'
-import SmartButton from '../../../../components/Button/Button'
+import { Button } from '../../../../components/Button/Button'
 import { Wrapper } from '../../../../components/Wrapper/Wrapper'
 import styles from './Hero.module.css'
 import cx from 'classnames'
@@ -32,7 +32,7 @@ export default function Hero() {
             <br />
             Exercitation veniam consequat sunt nostrud amet.
           </p>
-          <SmartButton>Contact Us</SmartButton>
+          <Button>Contact Us</Button>
         </div>
       </div>
     </Wrapper>

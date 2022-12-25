@@ -1,5 +1,5 @@
 import React from 'react'
-import SmartButton from '../../../../components/Button/Button'
+import { Button } from '../../../../components/Button/Button'
 import { Wrapper } from '../../../../components/Wrapper/Wrapper'
 import styles from './AboutUsHome.module.css'
 import cx from 'classnames'
@@ -37,7 +37,7 @@ export default function AboutUsHome() {
               blandit faucibus est, dui interdum ut amet. Adipiscing feugiat vel
               at posuere in. Pellentesque volutpat vestibulum.
             </p>
-            <SmartButton>Contact Us</SmartButton>
+            <Button>Contact Us</Button>
           </div>
         </div>
         <ul className={styles['blocks']}>

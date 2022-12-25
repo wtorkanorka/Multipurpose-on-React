@@ -1,9 +1,9 @@
 import React from 'react'
-import SmartButton from '../../../../components/Button/Button'
+
 import styles from './Form.module.css'
 import { useForm } from 'react-hook-form'
 import ReactInputMask from 'react-input-mask'
-import Button from '../../../../components/Button/Button'
+import { Button } from '../../../../components/Button/Button'
 export default function Form() {
   const {
     register,
@@ -30,7 +30,7 @@ export default function Form() {
           <form
             className={styles['input-container']}
             onSubmit={handleSubmit(data => {
-              console.log(data)
+              data
             })}
           >
             <div className={styles['inputs']}>

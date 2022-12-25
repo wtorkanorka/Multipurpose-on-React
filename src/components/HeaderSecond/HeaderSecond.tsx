@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { useInView } from 'react-intersection-observer'
 import Image from '../Image/Image'
 import cx from 'classnames'
-import SwitchThemeButton from '../SwitchThemeButton/SwitchThemeButton'
+import { SwitchThemeButton } from '../SwitchThemeButton/SwitchThemeButton'
 export default function HeaderSecond({ backgroundColorProps = 'white' }: any) {
   const [visible, setVisible] = useState(false)
   const { ref, inView, entry } = useInView({
@@ -16,8 +16,6 @@ export default function HeaderSecond({ backgroundColorProps = 'white' }: any) {
       <div
         className={styles['header']}
         style={{
-          // backgroundColor:
-          //   backgroundColorProps !== 'white' ? '#fff7f4' : 'white',
           boxShadow:
             backgroundColorProps == 'white'
               ? '0px 1px 10px rgba(0, 0, 0, 0.1)'

@@ -2,10 +2,9 @@ import React from 'react'
 import styles from './OurBlog.module.css'
 import { OurBLogType } from '../../../../Types/Types'
 import useSWR from 'swr'
-
 import { useState } from 'react'
-import SmartImage from '../../../../components/Image/Image'
-import PaginationButtons from '../../../../components/PaginationButtons/PaginationButtons'
+import Image from '../../../../components/Image/Image'
+import { PaginationButtons } from '../../../../components/PaginationButtons/PaginationButtons'
 import { chunkify } from '../../../../functions/functions'
 import { ENDPOINTS } from '../../../../constants/endpoints'
 export default function OurBlog() {
@@ -50,7 +49,7 @@ export default function OurBlog() {
                 </div>
                 <div className={styles['author']}>
                   <div className={styles['author-photo']}>
-                    <SmartImage path={i.author.photo} />
+                    <Image path={i.author.photo} />
                   </div>
                   <div className={styles['author-content']}>
                     <h2 className={styles['name']}>{i.author.full_name}</h2>

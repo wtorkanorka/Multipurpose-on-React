@@ -2,7 +2,7 @@ import React from 'react'
 import { TitleOfPage } from '../TItleOfPage/TitleOfPage'
 import { Wrapper } from '../../../../components/Wrapper/Wrapper'
 import styles from './OurBlog.module.css'
-import SmartButton from '../../../../components/Button/Button'
+import { Button } from '../../../../components/Button/Button'
 import useSWR from 'swr'
 import { PostsType } from '../../../../Types/Types'
 import SmartImage from '../../../../components/Image/Image'
@@ -68,7 +68,7 @@ export default function OurBlog() {
                   <p className={styles['p-style']}>{i.review}</p>
                   <div className={styles['smart-button']}>
                     <Link to={`/blog/${i.id}`}>
-                      <SmartButton type="button">Read More</SmartButton>
+                      <Button type="button">Read More</Button>
                     </Link>
                   </div>
                 </div>

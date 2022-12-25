@@ -1,5 +1,5 @@
 import React from 'react'
-import SmartButton from '../../../../components/Button/Button'
+import { Button } from '../../../../components/Button/Button'
 import { TitleOfPage } from '../TItleOfPage/TitleOfPage'
 import { Wrapper } from '../../../../components/Wrapper/Wrapper'
 import styles from './SubscribeNewsletter.module.css'
@@ -39,7 +39,7 @@ export default function SubscribeNewsletter() {
               name="input-value"
             />
             <div className={styles['button-position']}>
-              <SmartButton type="submit">Subscribe Now</SmartButton>
+              <Button type="submit">Subscribe Now</Button>
             </div>
           </form>
         </div>
