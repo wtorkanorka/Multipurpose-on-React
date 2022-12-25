@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './Header.module.css'
 import { Link } from 'react-router-dom'
-import SmartImage from '../Image/Image'
+import { Image } from '../Image/Image'
 import { useState } from 'react'
 import cx from 'classnames'
 import { useInView } from 'react-intersection-observer'
@@ -9,7 +9,9 @@ import { SwitchThemeButton } from '../SwitchThemeButton/SwitchThemeButton'
 
 export default function Header() {
   const [visible, setVisible] = useState(false)
-
+  const [stateInvert, setStateInvert] = useState<string | null | number>(
+    localStorage.getItem('invert'),
+  )
   return (
     <>
       <div className={styles['header-mobile']}>
@@ -20,14 +22,18 @@ export default function Header() {
           </p>
         </Link>
         <div>
-          <SwitchThemeButton styles={styles['img-position']} />
+          <SwitchThemeButton
+            styles={styles['img-position']}
+            stateInvert={stateInvert}
+            setStateInvert={setStateInvert}
+          />
         </div>
 
         <button
           onClick={() => setVisible(!visible)}
           className={styles['button-burger']}
         >
-          <SmartImage path="images/burger" />
+          <Image path="images/burger" />
         </button>
         <ul
           className={cx(
@@ -84,7 +90,11 @@ export default function Header() {
             </li>
           </ul>
         </nav>
-        <SwitchThemeButton styles={styles['img-position']} />
+        <SwitchThemeButton
+          styles={styles['img-position']}
+          stateInvert={stateInvert}
+          setStateInvert={setStateInvert}
+        />
       </div>
     </>
   )

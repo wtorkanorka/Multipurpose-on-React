@@ -1,5 +1,5 @@
 import React from 'react'
-import SmartImage from '../../../../components/Image/Image'
+import { Image } from '../../../../components/Image/Image'
 import styles from './ClientsFeedback.module.css'
 import useSWR from 'swr'
 import cx from 'classnames'
@@ -46,7 +46,7 @@ export default function ClientsFeedback() {
               return (
                 <div className={styles['review']} key={i.id}>
                   <div className={styles['cover']}>
-                    <SmartImage path={i.cover} />
+                    <Image path={i.cover} />
                   </div>
                   <h3 className={styles['author']}>{i.author}</h3>
                   <p className={styles['position']}>{i.position}</p>

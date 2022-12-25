@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './BlogArticle.module.css'
 import cx from 'classnames'
-import Image from '../../../../components/Image/Image'
+import { Image } from '../../../../components/Image/Image'
 import { useState } from 'react'
 interface Filter {
   setFilter(value: string): void

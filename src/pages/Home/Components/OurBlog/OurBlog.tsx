@@ -5,10 +5,10 @@ import styles from './OurBlog.module.css'
 import { Button } from '../../../../components/Button/Button'
 import useSWR from 'swr'
 import { PostsType } from '../../../../Types/Types'
-import SmartImage from '../../../../components/Image/Image'
+import { Image } from '../../../../components/Image/Image'
 import { useInView } from 'react-intersection-observer'
 import { ENDPOINTS } from '../../../../constants/endpoints'
-import Image from '../../../../components/Image/Image'
+
 import { Link } from 'react-router-dom'
 
 export default function OurBlog() {

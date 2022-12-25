@@ -5,6 +5,8 @@
   height: 250px;
   /* overflow-x: hidden;
   overflow-y: hidden; */
+
+  transition: 0s;
   @media (min-width: 768px) {
     margin-top: 60px;
     margin-bottom: 120px;

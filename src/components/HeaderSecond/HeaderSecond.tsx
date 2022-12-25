@@ -2,11 +2,14 @@ import styles from './HeaderSecond.module.css'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useInView } from 'react-intersection-observer'
-import Image from '../Image/Image'
+import { Image } from '../Image/Image'
 import cx from 'classnames'
 import { SwitchThemeButton } from '../SwitchThemeButton/SwitchThemeButton'
 export default function HeaderSecond({ backgroundColorProps = 'white' }: any) {
   const [visible, setVisible] = useState(false)
+  const [stateInvert, setStateInvert] = useState<string | null | number>(
+    localStorage.getItem('invert'),
+  )
   const { ref, inView, entry } = useInView({
     triggerOnce: true,
     threshold: 0.5,
@@ -110,7 +113,10 @@ export default function HeaderSecond({ backgroundColorProps = 'white' }: any) {
         )}
       >
         <li>
-          <SwitchThemeButton />
+          <SwitchThemeButton
+            stateInvert={stateInvert}
+            setStateInvert={setStateInvert}
+          />
         </li>
         <li>
           <Link to="/home">Home</Link>

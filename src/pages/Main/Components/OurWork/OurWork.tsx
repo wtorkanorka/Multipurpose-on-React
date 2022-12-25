@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './OurWork.module.css'
 import { useState } from 'react'
-import SmartImage from '../../../../components/Image/Image'
+import { Image } from '../../../../components/Image/Image'
 import useSWR from 'swr'
 
 import { OurWorkTypes } from '../../../../Types/Types'

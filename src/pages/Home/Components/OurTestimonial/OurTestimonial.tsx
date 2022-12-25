@@ -9,7 +9,7 @@ import { Reviews } from '../../../../Types/Types'
 
 import { useState, useEffect } from 'react'
 import cx from 'classnames'
-import SmartImage from '../../../../components/Image/Image'
+import { Image } from '../../../../components/Image/Image'
 import { useInView } from 'react-intersection-observer'
 import { ENDPOINTS } from '../../../../constants/endpoints'
 export default function OurTestimonial() {
@@ -124,7 +124,7 @@ export default function OurTestimonial() {
                         </div>
                       </div>
                       <div>
-                        <SmartImage path="images/dots" />
+                        <Image path="images/dots" />
                       </div>
                     </div>
                   </div>
