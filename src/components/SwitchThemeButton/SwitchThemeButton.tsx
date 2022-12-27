@@ -1,66 +1,56 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { memo } from 'react'
+import styles from './SwitchThemeButton.module.css'
+import { ThemeContext } from '../../ThemeContext'
 
 interface FC {
   styles?: string
   name?: string
   content?: string
-  stateInvert: string | null | number
-  setStateInvert(value: string | null | number): void
 }
 
-export const SwitchThemeButton = memo(
-  ({ styles, stateInvert, setStateInvert }: FC) => {
-    const meta: any = document.querySelector('meta[name="color-scheme"]')
-    useEffect(() => {
-      if (localStorage.getItem('invert') == null) {
-        if (meta.content == 'dark') {
-          localStorage.setItem('invert', '0')
-          setStateInvert(0)
+export const SwitchThemeButton = memo(() => {
+  const meta: any = document.querySelector('meta[name="color-scheme"]')
+  const { theme } = useContext(ThemeContext)
+  const { toggle } = useContext(ThemeContext)
+  const mql = window.matchMedia('(prefers-color-scheme: dark)')
+
+  function invertColor() {
+    switch (theme) {
+      case 'light':
+        return 0
+      case 'dark':
+        return 1
+      case 'auto':
+        mql ? 1 : 0
+        break
+    }
+  }
+  return (
+    <img
+      className={styles['theme-button']}
+      src={`/src/assets/icons/${
+        theme == 'auto'
+          ? 'auto-theme.png'
+          : theme == 'light'
+          ? 'sun.png'
+          : 'night.png'
+      }`}
+      alt="light"
+      id="switchTheme"
+      onClick={() => {
+        toggle()
+        if (theme == 'light') {
+          document.body.classList.add('dark-mode')
+          document.body.classList.remove('light-mode')
+        } else {
+          document.body.classList.remove('dark-mode')
+          document.body.classList.add('light-mode')
         }
-        if (meta.content == 'light') {
-          localStorage.setItem('invert', '1')
-          setStateInvert(1)
-        }
-      }
-      if (localStorage.getItem('invert') == '1') {
-        document.body.classList.remove('light-mode')
-        document.body.classList.add('dark-mode')
-      } else {
-        document.body.classList.remove('dark-mode')
-        document.body.classList.add('light-mode')
-      }
-    }, [])
-
-    return (
-      <img
-        src="/src/assets/icons/light.svg"
-        alt="light"
-        className={styles}
-        id="switchTheme"
-        onClick={() => {
-          console.log(localStorage.getItem('invert'))
-
-          if (meta!.content === 'dark') {
-            meta!.content = 'light'
-            document.body.classList.remove('dark-mode')
-            document.body.classList.add('light-mode')
-
-            localStorage.removeItem('invert')
-            localStorage.setItem('invert', '0')
-            setStateInvert(0)
-          } else {
-            meta!.content = 'dark'
-            document.body.classList.remove('light-mode')
-            document.body.classList.add('dark-mode')
-
-            localStorage.removeItem('invert')
-            localStorage.setItem('invert', '1')
-            setStateInvert(1)
-          }
-        }}
-        style={{ filter: `invert(${Number(stateInvert)})` }}
-      />
-    )
-  },
-)
+      }}
+      style={{
+        filter: `invert(${invertColor()})`,
+      }}
+    />
+  )
+})

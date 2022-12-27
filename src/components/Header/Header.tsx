@@ -9,9 +9,7 @@ import { SwitchThemeButton } from '../SwitchThemeButton/SwitchThemeButton'
 
 export default function Header() {
   const [visible, setVisible] = useState(false)
-  const [stateInvert, setStateInvert] = useState<string | null | number>(
-    localStorage.getItem('invert'),
-  )
+
   return (
     <>
       <div className={styles['header-mobile']}>
@@ -22,11 +20,7 @@ export default function Header() {
           </p>
         </Link>
         <div>
-          <SwitchThemeButton
-            styles={styles['img-position']}
-            stateInvert={stateInvert}
-            setStateInvert={setStateInvert}
-          />
+          <SwitchThemeButton />
         </div>
 
         <button
@@ -90,11 +84,7 @@ export default function Header() {
             </li>
           </ul>
         </nav>
-        <SwitchThemeButton
-          styles={styles['img-position']}
-          stateInvert={stateInvert}
-          setStateInvert={setStateInvert}
-        />
+        <SwitchThemeButton />
       </div>
     </>
   )

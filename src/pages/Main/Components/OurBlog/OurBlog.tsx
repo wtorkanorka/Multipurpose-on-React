@@ -16,9 +16,11 @@ export default function OurBlog() {
     return <div>ERROR</div>
   }
   if (!data) {
-    return <div>LAODING...</div>
+    return <div>LOADING...</div>
   }
   const sliced = chunkify(data)
+  console.log(sliced, 'sliced')
+
   return (
     <div className={styles['our-blog-container']}>
       <div className={styles['heading']}>
@@ -54,7 +56,11 @@ export default function OurBlog() {
                   <div className={styles['author-content']}>
                     <h2 className={styles['name']}>{i.author.full_name}</h2>
                     <div className={styles['date']}>
-                      <p>{i.author.date}</p>
+                      <div className={styles['date']}>
+                        <p>{i.author.month}</p>
+                        <p>{i.author.number}</p>
+                        <p>{i.author.year}</p>
+                      </div>
                       <p>•</p>
                       <p>{i.author.time}</p>
                     </div>

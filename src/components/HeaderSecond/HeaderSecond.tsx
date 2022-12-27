@@ -7,9 +7,7 @@ import cx from 'classnames'
 import { SwitchThemeButton } from '../SwitchThemeButton/SwitchThemeButton'
 export default function HeaderSecond({ backgroundColorProps = 'white' }: any) {
   const [visible, setVisible] = useState(false)
-  const [stateInvert, setStateInvert] = useState<string | null | number>(
-    localStorage.getItem('invert'),
-  )
+
   const { ref, inView, entry } = useInView({
     triggerOnce: true,
     threshold: 0.5,
@@ -113,10 +111,7 @@ export default function HeaderSecond({ backgroundColorProps = 'white' }: any) {
         )}
       >
         <li>
-          <SwitchThemeButton
-            stateInvert={stateInvert}
-            setStateInvert={setStateInvert}
-          />
+          <SwitchThemeButton />
         </li>
         <li>
           <Link to="/home">Home</Link>
