@@ -1,5 +1,5 @@
 import React from 'react'
-import SmartImage from '../../../../components/Image/Image'
+import { Image } from '../../../../components/Image/Image'
 import styles from './TeamMember.module.css'
 import useSWR from 'swr'
 import cx from 'classnames'

@@ -2,10 +2,12 @@ import styles from './HeaderSecond.module.css'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useInView } from 'react-intersection-observer'
-import Image from '../Image/Image'
+import { Image } from '../Image/Image'
 import cx from 'classnames'
+import { SwitchThemeButton } from '../SwitchThemeButton/SwitchThemeButton'
 export default function HeaderSecond({ backgroundColorProps = 'white' }: any) {
   const [visible, setVisible] = useState(false)
+
   const { ref, inView, entry } = useInView({
     triggerOnce: true,
     threshold: 0.5,
@@ -15,8 +17,6 @@ export default function HeaderSecond({ backgroundColorProps = 'white' }: any) {
       <div
         className={styles['header']}
         style={{
-          backgroundColor:
-            backgroundColorProps !== 'white' ? '#fff7f4' : 'white',
           boxShadow:
             backgroundColorProps == 'white'
               ? '0px 1px 10px rgba(0, 0, 0, 0.1)'
@@ -28,7 +28,7 @@ export default function HeaderSecond({ backgroundColorProps = 'white' }: any) {
             <p
               style={{
                 opacity: inView ? '1' : '0',
-                transition: '1s',
+
                 marginLeft: inView ? '0px' : '-20px',
               }}
             >
@@ -40,7 +40,7 @@ export default function HeaderSecond({ backgroundColorProps = 'white' }: any) {
           <ul
             style={{
               opacity: inView ? '1' : '0',
-              transition: '1s',
+
               marginBottom: inView ? '0px' : '-20px',
             }}
           >
@@ -65,15 +65,15 @@ export default function HeaderSecond({ backgroundColorProps = 'white' }: any) {
           </ul>
           <div className={styles['lets-talk']}>
             <button>Let`s Talk</button>
-          </div>
-        </div>
+          </div>{' '}
+        </div>{' '}
       </div>
       <div
         className={styles['header-second']}
         style={{
           backgroundColor: backgroundColorProps,
           opacity: inView ? '1' : '0',
-          transition: '1s',
+
           marginLeft: inView ? '0px' : '-20px',
         }}
       >
@@ -110,6 +110,9 @@ export default function HeaderSecond({ backgroundColorProps = 'white' }: any) {
           styles['nav-ul'],
         )}
       >
+        <li>
+          <SwitchThemeButton />
+        </li>
         <li>
           <Link to="/home">Home</Link>
         </li>

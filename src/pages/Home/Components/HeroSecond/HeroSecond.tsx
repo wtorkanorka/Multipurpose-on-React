@@ -1,8 +1,9 @@
 import HeaderSecond from '../../../../components/HeaderSecond/HeaderSecond'
 import styles from './HeroSecond.module.css'
-import SmartButton from '../../../../components/Button/Button'
+
 import { Wrapper } from '../../../../components/Wrapper/Wrapper'
 import { useInView } from 'react-intersection-observer'
+import { Button } from '../../../../components/Button/Button'
 export default function HeroSecond() {
   const { ref, inView, entry } = useInView({
     triggerOnce: true,
@@ -11,7 +12,7 @@ export default function HeroSecond() {
   return (
     <div ref={ref}>
       <HeaderSecond backgroundColorProps={'none'} />
-      <Wrapper backgroundColor="var(--background-comp)">
+      <Wrapper backgroundColor="var(--background-colorful-component)">
         <div className={styles['container']}>
           <div className={styles['content']}>
             <h1
@@ -37,7 +38,8 @@ export default function HeroSecond() {
               in digni ssim euismod purus donec mus vulputate habitant iaculis.
               Com odo enim ornare turpis tempus enim, nibh nulla. Rhoncus sed.
             </p>
-            <SmartButton type="button">Get Start Now</SmartButton>
+
+            <Button type="button">Get Start Now</Button>
           </div>
           <div
             className={styles['image']}

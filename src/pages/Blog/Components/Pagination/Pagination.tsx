@@ -1,27 +1,17 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import styles from './Pagination.module.css'
-import {
-  chunkify,
-  getIndexesOfPages,
-  parseLinkHeader,
-} from '../../../../functions/functions'
+import { getIndexesOfPages } from '../../../../functions/functions'
 import cx from 'classnames'
-import useSWR from 'swr'
-import { ENDPOINTS } from '../../../../constants/endpoints'
+import { ThemeContext } from '../../../../ThemeContext'
 interface Pagination {
   setPage(value: number): void
   data: any
   page: number
-  filter: string
 }
-export default function Pagination({
-  setPage,
-  data,
-  page,
-  filter,
-}: Pagination) {
+export default function Pagination({ setPage, data, page }: Pagination) {
   const [lastPage, setLastPage] = useState<number>(1)
-
+  const { searchForTagState } = useContext(ThemeContext)
+  const { searchState } = useContext(ThemeContext)
   useEffect(() => {
     if (data?.pagination?.last) {
       const lastPageNumber = Number(
@@ -31,7 +21,7 @@ export default function Pagination({
     } else {
       setPage(1)
     }
-  }, [filter])
+  }, [searchState, searchForTagState])
 
   const indexes = getIndexesOfPages(lastPage)
 

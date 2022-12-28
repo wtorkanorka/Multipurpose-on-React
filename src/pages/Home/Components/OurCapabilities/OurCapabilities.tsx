@@ -2,7 +2,7 @@ import React from 'react'
 import { Wrapper } from '../../../../components/Wrapper/Wrapper'
 import styles from './OurCapabilities.module.css'
 import { TitleOfPage } from '../TItleOfPage/TitleOfPage'
-import SmartImage from '../../../../components/Image/Image'
+import { Image } from '../../../../components/Image/Image'
 import { useInView } from 'react-intersection-observer'
 export default function OurCapabilities() {
   const { ref, inView, entry } = useInView({
@@ -12,7 +12,7 @@ export default function OurCapabilities() {
 
   return (
     <div ref={ref}>
-      <Wrapper>
+      <Wrapper backgroundColor="var(--background-color-white)">
         <div className={styles['block']}>
           <div className={styles['conainer-of-content']}>
             <div
@@ -103,7 +103,7 @@ export default function OurCapabilities() {
         >
           <div className={styles['content']}>
             <div className={styles['img-style']}>
-              <SmartImage path="images/man" />
+              <Image path="images/man" />
             </div>
             <h3>120</h3>
             <h4>Top Experts</h4>
@@ -111,7 +111,7 @@ export default function OurCapabilities() {
           <div className={styles['vertical-line']}></div>
           <div className={styles['content']}>
             <div className={styles['img-style']}>
-              <SmartImage path="images/target" />
+              <Image path="images/target" />
             </div>
             <h3>500</h3>
             <h4>Strategies</h4>
@@ -119,7 +119,7 @@ export default function OurCapabilities() {
           <div className={styles['vertical-line']}></div>
           <div className={styles['content']}>
             <div className={styles['img-style']}>
-              <SmartImage path="images/analysis" />
+              <Image path="images/analysis" />
             </div>
             <h3>347</h3>
             <h4>Great Results</h4>
@@ -127,7 +127,7 @@ export default function OurCapabilities() {
           <div className={styles['vertical-line']}></div>
           <div className={styles['content']}>
             <div className={styles['img-style']}>
-              <SmartImage path="images/data-analytics" />
+              <Image path="images/data-analytics" />
             </div>
             <h3>120</h3>
             <h4>Hight Rankings</h4>

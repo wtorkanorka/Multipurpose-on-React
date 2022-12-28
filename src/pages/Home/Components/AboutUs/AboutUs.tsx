@@ -4,7 +4,7 @@ import { TitleOfPage } from '../TItleOfPage/TitleOfPage'
 import styles from './AboutUs.module.css'
 
 import { Wrapper } from '../../../../components/Wrapper/Wrapper'
-import SmartImage from '../../../../components/Image/Image'
+import { Image } from '../../../../components/Image/Image'
 import { useInView } from 'react-intersection-observer'
 import cx from 'classnames'
 
@@ -15,7 +15,7 @@ export default function AboutUs() {
   })
 
   return (
-    <Wrapper backgroundColor="var(--background-comp)">
+    <Wrapper backgroundColor="var(--background-colorful-component)">
       <div className={styles['about-us']} id="aboutUs" ref={ref}>
         <div>
           <div className={styles['title-of-page']}>
@@ -48,15 +48,15 @@ export default function AboutUs() {
               )}
             >
               <li>
-                <SmartImage path="images/checkbox" />
+                <Image path="images/checkbox" />
                 Innovative website design
               </li>
               <li>
-                <SmartImage path="images/checkbox" />
+                <Image path="images/checkbox" />
                 UI/UX design with global trends
               </li>
               <li>
-                <SmartImage path="images/checkbox" />
+                <Image path="images/checkbox" />
                 Web and email hosting service
               </li>
             </ul>

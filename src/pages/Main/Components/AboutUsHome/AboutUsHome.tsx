@@ -1,5 +1,5 @@
 import React from 'react'
-import SmartButton from '../../../../components/Button/Button'
+import { Button } from '../../../../components/Button/Button'
 import { Wrapper } from '../../../../components/Wrapper/Wrapper'
 import styles from './AboutUsHome.module.css'
 import cx from 'classnames'
@@ -10,7 +10,7 @@ export default function AboutUsHome() {
     threshold: 0.5,
   })
   return (
-    <Wrapper page="2">
+    <Wrapper page="2" backgroundColor="var(--background-color-white)">
       <div className={styles['about-us']} ref={ref}>
         <div className={styles['container']}>
           <img
@@ -37,7 +37,7 @@ export default function AboutUsHome() {
               blandit faucibus est, dui interdum ut amet. Adipiscing feugiat vel
               at posuere in. Pellentesque volutpat vestibulum.
             </p>
-            <SmartButton>Contact Us</SmartButton>
+            <Button>Contact Us</Button>
           </div>
         </div>
         <ul className={styles['blocks']}>

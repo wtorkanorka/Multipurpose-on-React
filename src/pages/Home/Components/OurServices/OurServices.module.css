@@ -4,7 +4,7 @@
   font-weight: 600;
   font-size: 39.0625px;
   line-height: 59px;
-  color: var(--h2-gray);
+  color: var(--title-of-block);
 }
 .blocks ul {
   display: flex;
@@ -20,6 +20,7 @@
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   padding: 30px 20px 20px 25px;
+  background-color: var(--our-services-blocks);
 }
 .blocks li p {
   margin-top: 15px;
@@ -27,19 +28,20 @@
 .blocks li h3 {
   margin-top: 15px;
   font-weight: 600;
+  color: var(--home-hero-h1-color);
 }
 .blocks li h5 {
   font-weight: 500;
   font-size: 12.8px;
   line-height: 19px;
-  color: var(--p-color);
+  color: var(--paragraph);
   margin: 5px 0 15px 0;
 }
 .number {
   font-weight: 600;
   font-size: 64px;
   line-height: 73px;
-  color: #efefef;
+  color: var(--our-services-number);
 }
 .container-for-image {
   display: flex;

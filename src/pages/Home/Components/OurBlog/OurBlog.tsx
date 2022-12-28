@@ -2,13 +2,14 @@ import React from 'react'
 import { TitleOfPage } from '../TItleOfPage/TitleOfPage'
 import { Wrapper } from '../../../../components/Wrapper/Wrapper'
 import styles from './OurBlog.module.css'
-import SmartButton from '../../../../components/Button/Button'
+import { Button } from '../../../../components/Button/Button'
 import useSWR from 'swr'
 import { PostsType } from '../../../../Types/Types'
-import SmartImage from '../../../../components/Image/Image'
+import { Image } from '../../../../components/Image/Image'
 import { useInView } from 'react-intersection-observer'
 import { ENDPOINTS } from '../../../../constants/endpoints'
-import Image from '../../../../components/Image/Image'
+
+import { Link } from 'react-router-dom'
 
 export default function OurBlog() {
   const { data, error } = useSWR<PostsType>(ENDPOINTS.BLOG_POSTS)
@@ -22,7 +23,7 @@ export default function OurBlog() {
 
   return (
     <div ref={ref}>
-      <Wrapper backgroundColor="var(--background-comp)">
+      <Wrapper backgroundColor="var(--background-colorful-component)">
         <TitleOfPage position="center">Our Blog</TitleOfPage>
 
         <h2
@@ -66,7 +67,9 @@ export default function OurBlog() {
                   </nav>
                   <p className={styles['p-style']}>{i.review}</p>
                   <div className={styles['smart-button']}>
-                    <SmartButton type="button">Read More</SmartButton>
+                    <Link to={`/blog/${i.id}`}>
+                      <Button type="button">Read More</Button>
+                    </Link>
                   </div>
                 </div>
               )
