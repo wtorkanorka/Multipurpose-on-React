@@ -1,5 +1,5 @@
 import React from 'react'
-import SmartImage from '../../../../components/Image/Image'
+import { Image } from '../../../../components/Image/Image'
 import styles from './OurWork.module.css'
 import { useState } from 'react'
 import { OurWorkTypes } from '../../../../Types/Types'
@@ -20,7 +20,7 @@ export default function OurWorkContent({ i }: any) {
       onMouseOver={handleMouseOver}
       onMouseOut={handleMouseOut}
     >
-      <SmartImage path={i.cover} />
+      <Image path={i.cover} />
       <div
         className={styles['hover']}
         style={{ display: isHovering == true ? 'flex' : 'none' }}

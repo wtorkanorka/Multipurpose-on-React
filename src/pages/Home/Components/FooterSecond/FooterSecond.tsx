@@ -19,6 +19,7 @@ export default function FooterSecond() {
               transition: '1s',
               marginLeft: inView ? '0px' : '-20px',
             }}
+            className={styles['logo']}
           >
             <span>Digi</span>
             ency
@@ -141,9 +142,9 @@ export default function FooterSecond() {
           </div>
         </div>
       </div>
-
+      <div className={styles['line']}></div>
       <div className={styles['copyright-container']}>
-        <div>
+        <div className={styles['privacy-container']}>
           <div
             className={styles['text-content']}
             style={{
@@ -155,7 +156,18 @@ export default function FooterSecond() {
             <p>©</p>
             <p>Copyright 2021. All Right Reserved By Ojjomedia</p>
           </div>
+          <div className={styles['privacy']}>
+            <div className={styles['circle-and-p']}>
+              <div className={styles['circle']}></div>
+              <p>Privacy Plicy</p>
+            </div>
+            <div className={styles['circle-and-p']}>
+              <div className={styles['circle']}></div>
+              <p>Therms of Us</p>
+            </div>
+          </div>
         </div>
+
         <GoUpButton />
       </div>
     </div>

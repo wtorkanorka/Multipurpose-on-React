@@ -1,7 +1,7 @@
 import React, { DetailedHTMLProps } from 'react'
 import styles from './TeamMember.module.css'
 import { useState } from 'react'
-import SmartImage from '../../../../components/Image/Image'
+import { Image } from '../../../../components/Image/Image'
 import SiteBlocks from '../../../../components/siteBlocks/SiteBlocks'
 import cx from 'classnames'
 type Props = DetailedHTMLProps<
@@ -33,7 +33,7 @@ export default function TeamMemberContent({ i }: Test) {
       onMouseOver={handleMouseOver}
       onMouseOut={handleMouseOut}
     >
-      <SmartImage path={i.cover} />
+      <Image path={i.cover} />
       <h3 className={styles['author']}>{i.author}</h3>
       <p className={styles['position']}>{i.position}</p>
       <div

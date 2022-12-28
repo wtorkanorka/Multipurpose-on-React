@@ -1,6 +1,6 @@
 .button {
   all: unset;
-  background-color: var(--background);
+  background-color: var(--smart-button);
   display: inline-block;
   cursor: pointer;
   padding: 10px 22px;

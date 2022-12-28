@@ -8,13 +8,13 @@
     opacity: 0.5;
   }
   &:nth-child(1n) {
-    background: var(--background);
+    background: var(--orange-permanent);
   }
   &:nth-child(2n) {
-    background: var(--border-gray);
+    background: var(--almost-black-permanent);
   }
   &:nth-child(3n) {
-    background: var(--p-color);
+    background: var(--paragraph-permanent);
   }
 }
 .pagination {

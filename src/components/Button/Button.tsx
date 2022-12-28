@@ -1,4 +1,4 @@
-import React, { HTMLAttributes } from 'react'
+import React, { HTMLAttributes, memo, useEffect } from 'react'
 import cx from 'classnames'
 import {
   DetailedHTMLProps,
@@ -19,10 +19,13 @@ type Props = Test &
     >
   >
 
-export default function Button({ Link, style, children, ...rest }: Props) {
+export const Button = memo(({ Link, style, children, ...rest }: Props) => {
+  useEffect(() => {
+    ;('Рендер Кнопки')
+  }, [])
   return (
     <button className={cx(styles['button'], style)} {...rest}>
       {children}
     </button>
   )
-}
+})

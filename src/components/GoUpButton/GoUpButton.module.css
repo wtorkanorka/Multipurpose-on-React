@@ -2,7 +2,7 @@
   all: unset;
   width: 58px;
   height: 58px;
-  background: var(--background);
+  background: var(--orange-permanent);
   border-radius: 50%;
   margin-top: 6px;
 

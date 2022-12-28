@@ -1,5 +1,5 @@
 .title {
-  color: var(--title-of-page);
+  color: var(--pre-title-of-blog);
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
@@ -13,11 +13,11 @@
 .line {
   height: 1px;
   width: 40px;
-  border: 1px solid var(--title-of-page);
+  border: 1px solid var(--pre-title-of-blog);
 }
 
 .another-line {
   height: 1px;
   width: 40px;
-  border: 1px solid var(--border);
+  border: 1px solid var(--pre-title-of-blog);
 }

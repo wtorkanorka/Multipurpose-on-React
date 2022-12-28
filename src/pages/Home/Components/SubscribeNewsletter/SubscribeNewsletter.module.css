@@ -1,5 +1,5 @@
 .container {
-  background: var(--background);
+  background: var(--orange-permanent);
   padding: 51px 40px;
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
@@ -13,7 +13,7 @@
   font-weight: 600;
   font-size: 39.0625px;
   line-height: 59px;
-  color: var(--white);
+  color: var(--white-permanent);
   margin-top: 15px;
 }
 .input {
@@ -25,11 +25,11 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: var(--p-color);
+  color: var(--paragraph-permanent);
 }
 .form-style {
   position: relative;
-  background: var(--white);
+  background: var(--white-permanent);
   border-radius: 5px;
   display: flex;
   align-items: center;
@@ -63,11 +63,11 @@
   }
   .input {
     width: 100%;
-    background-color: var(--white);
+    background-color: var(--white-permanent);
   }
   .form-style {
     flex-direction: column;
-    background-color: var(--background);
+    background-color: var(--orange-permanent);
     width: 100%;
   }
   .title {

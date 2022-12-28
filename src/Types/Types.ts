@@ -45,7 +45,9 @@ export interface ClientsFeedbackType {
   position: string
 }
 interface AuthorOurBlog {
-  date: string
+  month: string
+  number: number
+  year: string
   time: string
   full_name: string
   photo: string
