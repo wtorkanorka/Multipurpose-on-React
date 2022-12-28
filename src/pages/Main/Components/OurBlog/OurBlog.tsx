@@ -19,7 +19,6 @@ export default function OurBlog() {
     return <div>LOADING...</div>
   }
   const sliced = chunkify(data)
-  console.log(sliced, 'sliced')
 
   return (
     <div className={styles['our-blog-container']}>

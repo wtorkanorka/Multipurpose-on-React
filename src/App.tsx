@@ -8,9 +8,8 @@ import Home from './pages/Home/Home'
 import { ThemeContext } from './ThemeContext'
 function App() {
   const [theme, setTheme] = useState('auto')
-
-  const mql = window.matchMedia('(prefers-color-scheme: dark)')
-
+  const [searchForTagState, setSearchForTagState] = useState('')
+  const [searchState, setSearchState] = useState('')
   const changeTheme = () => {
     if (theme == 'auto') {
       setTheme('light')
@@ -19,6 +18,12 @@ function App() {
     } else if (theme == 'dark') {
       setTheme('auto')
     }
+  }
+  const searchForTag = (e: string) => {
+    setSearchForTagState(e)
+  }
+  const changeSearchState = (e: string) => {
+    setSearchState(e)
   }
   return (
     <>
@@ -41,6 +46,10 @@ function App() {
         value={{
           theme,
           toggle: changeTheme,
+          searchState,
+          toggleSearch: changeSearchState,
+          searchForTagState,
+          toggleTags: searchForTag,
         }}
       >
         <Routes>

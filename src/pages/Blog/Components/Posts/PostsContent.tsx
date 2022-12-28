@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { Button } from '../../../../components/Button/Button'
 import DatComponent from '../../../../components/DatComponent/DatComponent'
+import { ThemeContext } from '../../../../ThemeContext'
 import { Post } from '../../../../Types/Types'
 import styles from './Posts.module.css'
 interface arr {
@@ -23,17 +24,9 @@ interface Component {
   page: number
   dataLength: number
   data: response
-
-  setFilter(value: string): void
 }
-export default function PostsContent({
-  dataLength,
-  data,
-
-  setFilter,
-}: Component) {
-  data, 'PostsContent Data'
-
+export default function PostsContent({ dataLength, data }: Component) {
+  const { toggleSearch } = useContext(ThemeContext)
   return (
     <>
       {dataLength == 0 ? (
@@ -41,7 +34,7 @@ export default function PostsContent({
           Нет таких постов
           <Button
             onClick={() => {
-              setFilter('')
+              toggleSearch('')
             }}
           >
             Вернуться

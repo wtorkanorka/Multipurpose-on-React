@@ -17,6 +17,7 @@ export default function OurWork() {
       ? ENDPOINTS.OUR_WORK
       : ENDPOINTS.OUR_WORK + `?type=${filter}`,
   )
+  console.log(data)
 
   return (
     <div className={styles['our-work-container']}>
