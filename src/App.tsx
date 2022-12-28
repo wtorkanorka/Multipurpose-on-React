@@ -10,13 +10,24 @@ function App() {
   const [theme, setTheme] = useState('auto')
   const [searchForTagState, setSearchForTagState] = useState('')
   const [searchState, setSearchState] = useState('')
+  const mql = window.matchMedia('(prefers-color-scheme: dark)')
+  const [globalTheme, setGlobalTheme] = useState<boolean>(mql.matches)
+
   const changeTheme = () => {
     if (theme == 'auto') {
-      setTheme('light')
+      if (mql.matches) {
+        document.body.classList.remove('dark-mode')
+        document.body.classList.add('light-mode')
+        setTheme('light')
+      } else {
+        document.body.classList.add('dark-mode')
+        document.body.classList.remove('light-mode')
+        setTheme('dark')
+      }
     } else if (theme == 'light') {
       setTheme('dark')
     } else if (theme == 'dark') {
-      setTheme('auto')
+      setTheme('light')
     }
   }
   const searchForTag = (e: string) => {
@@ -44,6 +55,7 @@ function App() {
 
       <ThemeContext.Provider
         value={{
+          windowsThemeIsDark: globalTheme,
           theme,
           toggle: changeTheme,
           searchState,

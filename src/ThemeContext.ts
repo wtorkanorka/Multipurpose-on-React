@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { createContext } from 'react'
 const Comp = {
+  windowsThemeIsDark: false,
   theme: '',
   toggle: () => {},
   searchForTagState: '',

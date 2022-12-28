@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useCallback, useContext, useEffect, useState } from 'react'
 import { memo } from 'react'
 import styles from './SwitchThemeButton.module.css'
 import { ThemeContext } from '../../ThemeContext'
@@ -7,7 +7,8 @@ export const SwitchThemeButton = memo(() => {
   const { theme } = useContext(ThemeContext)
   const { toggle } = useContext(ThemeContext)
   const [stateInvertColor, setStateInvertColor] = useState<number>(0)
-  const mql = window.matchMedia('(prefers-color-scheme: dark)')
+  const { windowsThemeIsDark } = useContext(ThemeContext)
+  console.log(theme)
 
   function invertColor() {
     switch (theme) {
@@ -18,12 +19,31 @@ export const SwitchThemeButton = memo(() => {
         setStateInvertColor(0)
         break
       case 'auto':
-        mql.matches ? setStateInvertColor(1) : setStateInvertColor(0)
+        windowsThemeIsDark ? setStateInvertColor(1) : setStateInvertColor(0)
         break
     }
   }
   useEffect(() => {
     invertColor()
+  }, [theme])
+  const changeTheme = useCallback(() => {
+    if (theme === 'auto') {
+      if (windowsThemeIsDark) {
+        document.body.classList.remove('dark-mode')
+        document.body.classList.add('light-mode')
+      } else {
+        document.body.classList.add('dark-mode')
+        document.body.classList.remove('light-mode')
+      }
+    }
+    if (theme === 'light') {
+      document.body.classList.add('dark-mode')
+      document.body.classList.remove('light-mode')
+    }
+    if (theme === 'dark') {
+      document.body.classList.remove('dark-mode')
+      document.body.classList.add('light-mode')
+    }
   }, [theme])
   return (
     <img
@@ -39,17 +59,7 @@ export const SwitchThemeButton = memo(() => {
       id="switchTheme"
       onClick={() => {
         toggle()
-
-        if (theme == 'light') {
-          document.body.classList.add('dark-mode')
-          document.body.classList.remove('light-mode')
-        } else if (theme == 'dark') {
-          document.body.classList.remove('dark-mode')
-          document.body.classList.add('light-mode')
-        } else {
-          document.body.classList.remove('dark-mode')
-          document.body.classList.remove('light-mode')
-        }
+        changeTheme()
       }}
       style={{
         filter: `invert(${stateInvertColor})`,
