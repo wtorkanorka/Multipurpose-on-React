@@ -8,8 +8,8 @@ import Home from './pages/Home/Home'
 import { ThemeContext } from './ThemeContext'
 function App() {
   const [theme, setTheme] = useState('auto')
+
   const mql = window.matchMedia('(prefers-color-scheme: dark)')
-  console.log(mql.matches)
 
   const changeTheme = () => {
     if (theme == 'auto') {
@@ -17,7 +17,7 @@ function App() {
     } else if (theme == 'light') {
       setTheme('dark')
     } else if (theme == 'dark') {
-      setTheme('light')
+      setTheme('auto')
     }
   }
   return (
