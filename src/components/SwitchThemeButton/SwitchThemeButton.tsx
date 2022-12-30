@@ -4,11 +4,13 @@ import styles from './SwitchThemeButton.module.css'
 import { ThemeContext } from '../../ThemeContext'
 
 export const SwitchThemeButton = memo(() => {
-  const { theme } = useContext(ThemeContext)
-  const { toggle } = useContext(ThemeContext)
-  const [stateInvertColor, setStateInvertColor] = useState<number>(0)
-  const { windowsThemeIsDark } = useContext(ThemeContext)
-  console.log(theme)
+  const {
+    stateInvertColor,
+    setStateInvertColor,
+    windowsThemeIsDark,
+    toggle,
+    theme,
+  } = useContext(ThemeContext)
 
   function invertColor() {
     switch (theme) {

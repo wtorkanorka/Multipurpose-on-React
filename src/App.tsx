@@ -12,6 +12,7 @@ function App() {
   const [searchState, setSearchState] = useState('')
   const mql = window.matchMedia('(prefers-color-scheme: dark)')
   const [globalTheme, setGlobalTheme] = useState<boolean>(mql.matches)
+  const [stateInvertColor, setStateInvertColor] = useState<number>(0)
 
   const changeTheme = () => {
     if (theme == 'auto') {
@@ -38,21 +39,6 @@ function App() {
   }
   return (
     <>
-      <ul style={{ display: 'flex', gap: '10px' }}>
-        <li>
-          <Link to="/">Main</Link>
-        </li>
-        <li>
-          <Link to="/home">Home</Link>
-        </li>
-        <li>
-          <Link to="/blog">Blog</Link>
-        </li>
-        <li>
-          <Link to="/blog/1">Article</Link>
-        </li>
-      </ul>
-
       <ThemeContext.Provider
         value={{
           windowsThemeIsDark: globalTheme,
@@ -62,6 +48,8 @@ function App() {
           toggleSearch: changeSearchState,
           searchForTagState,
           toggleTags: searchForTag,
+          stateInvertColor,
+          setStateInvertColor,
         }}
       >
         <Routes>
