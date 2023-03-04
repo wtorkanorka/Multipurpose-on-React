@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styles from './Header.module.css'
 import { Link } from 'react-router-dom'
 import { Image } from '../Image/Image'
@@ -6,10 +6,11 @@ import { useState } from 'react'
 import cx from 'classnames'
 import { useInView } from 'react-intersection-observer'
 import { SwitchThemeButton } from '../SwitchThemeButton/SwitchThemeButton'
+import { ThemeContext } from '../../ThemeContext'
 
 export default function Header() {
   const [visible, setVisible] = useState(false)
-
+  const { stateInvertColor } = useContext(ThemeContext)
   return (
     <>
       <div className={styles['header-mobile']}>
@@ -27,7 +28,9 @@ export default function Header() {
           onClick={() => setVisible(!visible)}
           className={styles['button-burger']}
         >
-          <Image path="images/burger" />
+          <div style={{ filter: `invert(${stateInvertColor})` }}>
+            <Image path="images/burger" />
+          </div>
         </button>
         <ul
           className={cx(

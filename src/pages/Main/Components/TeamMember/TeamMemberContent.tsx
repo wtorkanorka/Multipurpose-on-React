@@ -14,24 +14,18 @@ interface I {
   position: string
   cover: string
 }
-interface Test {
+interface DataContent {
   i: I
 }
-export default function TeamMemberContent({ i }: Test) {
+export default function TeamMemberContent({ i }: DataContent) {
   const [isHovering, setIsHovering] = useState(false)
-  const handleMouseOver = () => {
-    setIsHovering(true)
-  }
 
-  const handleMouseOut = () => {
-    setIsHovering(false)
-  }
   return (
     <li
       className={styles['profile']}
       key={i.id}
-      onMouseOver={handleMouseOver}
-      onMouseOut={handleMouseOut}
+      onMouseOver={() => setIsHovering(true)}
+      onMouseOut={() => setIsHovering(false)}
     >
       <Image path={i.cover} />
       <h3 className={styles['author']}>{i.author}</h3>

@@ -7,16 +7,22 @@
   box-shadow: 1px 6px 8px -9px inset;
   gap: 18px;
   text-align: center;
+
   h1 {
     font-weight: 600;
     font-size: 31.25px;
     line-height: 123.6%;
-
+    margin-top: 37px;
     color: var(--black-to-white);
+
     @media (min-width: 768px) {
       font-weight: 700;
       font-size: 48px;
       line-height: 123.6%;
+      margin-top: 60px;
+    }
+    @media (min-width: 1336px) {
+      margin-top: 80px;
     }
   }
   h3 {

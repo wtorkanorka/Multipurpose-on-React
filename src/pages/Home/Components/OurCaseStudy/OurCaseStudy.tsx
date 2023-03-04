@@ -135,7 +135,7 @@ export default function OurCaseStudy() {
 
           <div className={styles['blocks']}>
             <ul>
-              {data?.map(i => {
+              {data?.list.map(i => {
                 return (
                   <div key={i.id}>
                     <OurCaseStudyTextContent i={i} filter={filter} />

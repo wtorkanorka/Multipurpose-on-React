@@ -153,7 +153,7 @@
   @media (min-width: 768px) {
     padding: 60px 40px;
     flex-direction: row;
-    /* новыйстиль */
+
     justify-content: space-between;
   }
   @media (min-width: 1360px) {

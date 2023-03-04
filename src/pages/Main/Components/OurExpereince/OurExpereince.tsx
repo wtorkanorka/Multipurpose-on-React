@@ -81,7 +81,6 @@ export default function OurExpereince() {
             inView ? styles['animated'] : styles['non-animated'],
           )}
         >
-          {' '}
           <h3>50+</h3>
           <p>Team Member</p>
         </div>

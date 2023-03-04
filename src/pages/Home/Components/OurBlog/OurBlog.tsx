@@ -44,7 +44,7 @@ export default function OurBlog() {
           }}
         >
           {data?.length !== 0 ? (
-            data?.slice(0, 3).map(i => {
+            data?.list.slice(0, 3).map(i => {
               return (
                 <div className={styles['blog-post']} key={i.id}>
                   <div className={styles['image']}>
@@ -75,7 +75,7 @@ export default function OurBlog() {
               )
             })
           ) : (
-            <div>Тут ничего, обидно?</div>
+            <div>Ошибка</div>
           )}
         </div>
       </Wrapper>

@@ -1,12 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styles from './BlogArticle.module.css'
 import cx from 'classnames'
 import { Image } from '../../../../components/Image/Image'
 import { useState } from 'react'
-interface Filter {
-  setFilter(value: string): void
-}
-export default function BlogArticle({ setFilter }: Filter) {
+import { ThemeContext } from '../../../../ThemeContext'
+
+export default function BlogArticle() {
+  const { toggleTags } = useContext(ThemeContext)
+  const { toggleSearch } = useContext(ThemeContext)
   return (
     <article className={styles['container']}>
       <div className={cx(styles['form-container'])}>
@@ -14,7 +15,7 @@ export default function BlogArticle({ setFilter }: Filter) {
           className={styles['form']}
           onSubmit={e => {
             e.preventDefault()
-            setFilter(e.target.name.value)
+            toggleSearch(e.target.name.value)
           }}
         >
           <input type="text" name="name" placeholder="Search here..." />
@@ -74,12 +75,55 @@ export default function BlogArticle({ setFilter }: Filter) {
       <div className={cx(styles['article-container'])}>
         <h4>Tags</h4>
         <ul className={styles['tags-ul']}>
-          <li>Business</li>
-          <li>Graphic Design</li>
-          <li>Technology</li>
-          <li>Business Idea</li>
-          <li>App Development</li>
-          <li>Website Design</li>
+          <li
+            onClick={() => {
+              toggleTags('')
+            }}
+          >
+            reset
+          </li>
+          <li
+            onClick={() => {
+              toggleTags('Business')
+            }}
+          >
+            Business
+          </li>
+          <li
+            onClick={() => {
+              toggleTags('Graphic Design')
+            }}
+          >
+            Graphic Design
+          </li>
+          <li
+            onClick={() => {
+              toggleTags('Technology')
+            }}
+          >
+            Technology
+          </li>
+          <li
+            onClick={() => {
+              toggleTags('Business Idea')
+            }}
+          >
+            Business Idea
+          </li>
+          <li
+            onClick={() => {
+              toggleTags('App Development')
+            }}
+          >
+            App Development
+          </li>
+          <li
+            onClick={() => {
+              toggleTags('Website Design')
+            }}
+          >
+            Website Design
+          </li>
         </ul>
       </div>
     </article>

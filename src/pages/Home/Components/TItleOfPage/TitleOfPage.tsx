@@ -1,7 +1,6 @@
 import React from 'react'
 import styles from './TitleOfPage.module.css'
 import cx from 'classnames'
-import { DetailedHTMLProps, HTMLAttributes, PropsWithChildren } from 'react'
 
 interface Types {
   children: React.ReactNode

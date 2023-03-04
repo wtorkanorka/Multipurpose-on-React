@@ -67,10 +67,11 @@
   gap: 15px;
   min-width: 440px;
   scroll-snap-align: start;
-
+  justify-content: space-between;
   @media (min-width: 768px) {
     gap: 20px;
     padding: 25px;
+    justify-content: none;
   }
   @media (min-width: 1360px) {
     gap: 29px;

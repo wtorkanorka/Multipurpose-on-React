@@ -17,9 +17,11 @@
 html {
   scroll-behavior: smooth;
 }
-* {
+
+div {
   transition: 0.3s;
 }
+
 p {
   color: var(--paragraph);
   font-weight: 500;

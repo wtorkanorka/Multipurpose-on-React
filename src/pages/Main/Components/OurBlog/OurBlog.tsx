@@ -18,8 +18,7 @@ export default function OurBlog() {
   if (!data) {
     return <div>LOADING...</div>
   }
-  const sliced = chunkify(data)
-  console.log(sliced, 'sliced')
+  const sliced = chunkify(data.list)
 
   return (
     <div className={styles['our-blog-container']}>
@@ -73,7 +72,7 @@ export default function OurBlog() {
         {error && <div>Ошибка при запросе</div>}
       </div>
       <ul className={styles['pagination']}>
-        <PaginationButtons setPage={setPage} page={page} data={data} />
+        <PaginationButtons setPage={setPage} page={page} data={data.list} />
       </ul>
     </div>
   )

@@ -109,7 +109,7 @@ export default function OurWork() {
         </div>
       </div>
       <div className={styles['images-container']}>
-        {data?.map((i: OurWorkTypes, index: number) => {
+        {data?.list.map((i: OurWorkTypes, index: number) => {
           return <OurWorkContent i={i} key={index} />
         })}
 

@@ -7,7 +7,7 @@ import { useParams } from 'react-router-dom'
 import Articles from './Components/Article/Article'
 export default function ArticlePage() {
   const { id } = useParams()
-  const [filter, setFilter] = useState('')
+
   const { data, error } = useSWR(ENDPOINTS.ARTICLES + `?id_like=${id}`)
 
   useEffect(() => {
@@ -22,10 +22,8 @@ export default function ArticlePage() {
 
   return (
     <Layout
-      title={data[0]?.title}
-      pathTitle={`Home - Blog Page - ${data[0]?.path_title}`}
-      setFilter={setFilter}
-      filter={filter}
+      title={data.list[0]?.title}
+      pathTitle={`Home - Blog Page - ${data.list[0]?.path_title}`}
     >
       <Articles id={Number(id)} />
     </Layout>

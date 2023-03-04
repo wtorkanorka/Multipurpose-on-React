@@ -1,19 +1,16 @@
 import styles from './HeaderSecond.module.css'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useInView } from 'react-intersection-observer'
 import { Image } from '../Image/Image'
 import cx from 'classnames'
 import { SwitchThemeButton } from '../SwitchThemeButton/SwitchThemeButton'
+import { ThemeContext } from '../../ThemeContext'
 export default function HeaderSecond({ backgroundColorProps = 'white' }: any) {
   const [visible, setVisible] = useState(false)
-
-  const { ref, inView, entry } = useInView({
-    triggerOnce: true,
-    threshold: 0.5,
-  })
+  const { stateInvertColor } = useContext(ThemeContext)
   return (
-    <div ref={ref}>
+    <div>
       <div
         className={styles['header']}
         style={{
@@ -25,25 +22,13 @@ export default function HeaderSecond({ backgroundColorProps = 'white' }: any) {
       >
         <div className={styles['logo']}>
           <Link to="/">
-            <p
-              style={{
-                opacity: inView ? '1' : '0',
-
-                marginLeft: inView ? '0px' : '-20px',
-              }}
-            >
+            <p>
               <span>Digi</span>ency
             </p>
           </Link>
         </div>
         <div className={styles['navigation']}>
-          <ul
-            style={{
-              opacity: inView ? '1' : '0',
-
-              marginBottom: inView ? '0px' : '-20px',
-            }}
-          >
+          <ul>
             <li>
               <Link to="/home">Home</Link>
             </li>
@@ -72,13 +57,10 @@ export default function HeaderSecond({ backgroundColorProps = 'white' }: any) {
         className={styles['header-second']}
         style={{
           backgroundColor: backgroundColorProps,
-          opacity: inView ? '1' : '0',
-
-          marginLeft: inView ? '0px' : '-20px',
         }}
       >
         <div className={styles['logo']}>
-          <Link to="/1">
+          <Link to="/">
             <p>
               <span>Digi</span>ency
             </p>
@@ -100,7 +82,9 @@ export default function HeaderSecond({ backgroundColorProps = 'white' }: any) {
           className={styles['navigation']}
           onClick={() => setVisible(!visible)}
         >
-          <Image path="images/burger" />
+          <div style={{ filter: `invert(${stateInvertColor})` }}>
+            <Image path="images/burger" />
+          </div>
         </div>
       </div>
 

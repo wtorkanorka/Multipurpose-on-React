@@ -20,9 +20,6 @@ type Props = Test &
   >
 
 export const Button = memo(({ Link, style, children, ...rest }: Props) => {
-  useEffect(() => {
-    ;('Рендер Кнопки')
-  }, [])
   return (
     <button className={cx(styles['button'], style)} {...rest}>
       {children}

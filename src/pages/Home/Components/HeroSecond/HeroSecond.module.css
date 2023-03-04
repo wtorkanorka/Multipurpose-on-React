@@ -3,6 +3,7 @@
   gap: 36px;
   align-items: center;
   justify-content: center;
+  margin-top: 100px;
 }
 .paragraph-h1 {
   font-weight: 700;
@@ -29,9 +30,10 @@
   .container {
     display: flex;
     gap: 28px;
-    margin-top: 73px;
+
     padding-bottom: 73px;
     align-items: center;
+    margin-top: 80px;
   }
   .image img {
     width: 329px;
@@ -43,6 +45,7 @@
     flex-direction: column-reverse;
     margin-top: 50px;
     gap: 70px;
+    margin-top: 50px;
   }
   .image img {
     max-width: 100%;

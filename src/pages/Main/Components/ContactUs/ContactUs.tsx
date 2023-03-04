@@ -68,9 +68,7 @@ export default function ContactUs() {
         </ul>
       </div>
       <Form />
-
       <MapComponent />
-
       <ul className={styles['clients-logo']}>
         <li>
           <img
