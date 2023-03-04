@@ -24,11 +24,13 @@ export default function Article({ id }: Props) {
   }
 
   function createMarkup() {
-    return { __html: `${data?.content}` }
+    return { __html: `${data?.list.content}` }
   }
+  console.log(data)
+
   return (
     <>
-      {Object.keys(data).length === 0 && (
+      {Object.keys(data.list).length === 0 && (
         <div>
           <p>Нет данных о статье на сервере</p>
           <Button

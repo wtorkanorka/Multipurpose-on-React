@@ -25,5 +25,5 @@ export async function fetcher<Test>(url: string): Promise<{}> {
     }
   }
 
-  return data
+  return { list: data }
 }

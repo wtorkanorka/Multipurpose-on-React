@@ -12,20 +12,13 @@ export default function OurCaseStudyTextContent({ i, filter }: any) {
   })
   const [isHovering, setIsHovering] = useState(false)
 
-  const handleMouseOver = () => {
-    setIsHovering(true)
-  }
-
-  const handleMouseOut = () => {
-    setIsHovering(false)
-  }
   return (
     <li
       key={i.id}
       className={styles['li-hover']}
       ref={ref}
-      onMouseOver={handleMouseOver}
-      onMouseOut={handleMouseOut}
+      onMouseOver={() => setIsHovering(true)}
+      onMouseOut={() => setIsHovering(false)}
     >
       <div
         onClick={() => {

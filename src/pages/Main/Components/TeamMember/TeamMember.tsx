@@ -30,7 +30,7 @@ export default function TeamMember() {
           inView ? styles['animated'] : styles['non-animated'],
         )}
       >
-        {data?.map((i, index: number) => {
+        {data?.list.map((i, index: number) => {
           return <TeamMemberContent i={i} key={index} />
         })}
       </ul>

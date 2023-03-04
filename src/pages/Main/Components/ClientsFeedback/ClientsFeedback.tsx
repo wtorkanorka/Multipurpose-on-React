@@ -24,7 +24,8 @@ export default function ClientsFeedback() {
   if (!data) {
     return <div>LOADING ...</div>
   }
-  const sliced = chunkify(data)
+  const sliced = chunkify(data.list)
+  console.log(data)
 
   return (
     <Wrapper backgroundColor="var(--background-colorful-component)">
@@ -62,7 +63,7 @@ export default function ClientsFeedback() {
           )}
           ref={ref}
         >
-          <PaginationButtons setPage={setPage} page={page} data={data} />
+          <PaginationButtons setPage={setPage} page={page} data={data.list} />
         </ul>
       </div>
     </Wrapper>

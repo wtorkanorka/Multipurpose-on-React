@@ -30,7 +30,7 @@ export default function Posts() {
     <>
       <div className={styles['posts-container']}>
         <PostsContent dataLength={data?.length} data={data} page={page} />
-        {data && <Pagination data={data} setPage={setPage} page={page} />}
+        {data.list && <Pagination data={data} setPage={setPage} page={page} />}
       </div>
     </>
   )

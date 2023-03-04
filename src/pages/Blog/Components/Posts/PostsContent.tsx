@@ -14,19 +14,18 @@ interface arr {
   review: string
 }
 
-interface arrAndPagination {
+interface response {
   list: arr[]
-  pagination: object
 }
-
-type response = arr[] | arrAndPagination
 interface Component {
   page: number
   dataLength: number
   data: response
 }
-export default function PostsContent({ dataLength, data }: Component) {
+export default function PostsContent({ dataLength, data, page }: Component) {
   const { toggleSearch } = useContext(ThemeContext)
+  console.log(data)
+
   return (
     <>
       {dataLength == 0 ? (
@@ -42,25 +41,11 @@ export default function PostsContent({ dataLength, data }: Component) {
         </div>
       ) : null}
       {data?.list &&
-        data?.list?.map((i: Post, index: number) => {
+        data?.list?.map((i: arr) => {
           return (
             <div className={styles['post']} key={i.id}>
               <img src={i.cover} alt={i.cover} />
-              <DatComponent i={i} />
-              <h3>{i.preview}</h3>
-              <p className={styles['paragraph']}>{i.review}</p>
-              <Link to={`/blog/${i.id}`}>
-                <Button>Read More</Button>
-              </Link>
-            </div>
-          )
-        })}
-      {!data?.list &&
-        data?.map((i: Post, index: number) => {
-          return (
-            <div className={styles['post']} key={i.id}>
-              <img src={i.cover} alt={i.cover} />
-              <DatComponent i={i} />
+              <DatComponent />
               <h3>{i.preview}</h3>
               <p className={styles['paragraph']}>{i.review}</p>
               <Link to={`/blog/${i.id}`}>

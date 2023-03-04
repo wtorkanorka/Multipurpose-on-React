@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { createContext } from 'react'
-const Comp = {
+const initial = {
   windowsThemeIsDark: false,
   theme: '',
   toggle: () => {},
@@ -11,4 +11,4 @@ const Comp = {
   stateInvertColor: 0,
   setStateInvertColor: (e: number) => {},
 }
-export const ThemeContext = createContext(Comp)
+export const ThemeContext = createContext(initial)
