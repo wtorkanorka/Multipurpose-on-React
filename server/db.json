@@ -677,7 +677,9 @@
       "preview": "35 Stellar Graphic Design Blogs to Keep You Educated and Inspired",
       "cover": "https://picsum.photos/id/231/80",
       "author": {
-        "date": "January 25, 2021",
+        "month": "January",
+        "number": 13,
+        "year": "2021",
         "time": "5 min Read",
         "full_name": "Cristofer Westervelt123",
         "photo": "images/cristofer-westervelt"
@@ -689,7 +691,9 @@
       "preview": "Ridiculously powerful 2021 iPad Pro may drop this month",
       "cover": "https://picsum.photos/id/232/80",
       "author": {
-        "date": "January 25, 2021",
+        "month": "January",
+        "number": 14,
+        "year": "2021",
         "time": "5 min Read",
         "full_name": "Haylie Mango",
         "photo": "images/haylie-mango"
@@ -701,7 +705,9 @@
       "preview": "How to set up Square Online store: a step-by-step guide",
       "cover": "https://picsum.photos/id/233/80",
       "author": {
-        "date": "January 25, 2021",
+        "month": "January",
+        "number": 15,
+        "year": "2021",
         "time": "5 min Read",
         "full_name": "Ashlynn Gouse",
         "photo": "images/client-feedback-2"
@@ -713,7 +719,9 @@
       "preview": "Memphis Design: the defining look of the 1980s",
       "cover": "https://picsum.photos/id/234/80",
       "author": {
-        "date": "January 25, 2021",
+        "month": "January",
+        "number": 16,
+        "year": "2021",
         "time": "5 min Read",
         "full_name": "Justin Septimus",
         "photo": "images/client-feedback-1"
@@ -726,7 +734,9 @@
       "cover": "https://picsum.photos/id/235/80",
 
       "author": {
-        "date": "January 25, 2021",
+        "month": "January",
+        "number": 17,
+        "year": "2021",
         "time": "5 min Read",
         "full_name": "Phillip Curtis",
         "photo": "images/philipp"
@@ -738,7 +748,9 @@
       "preview": "What is Design Thinking and how does it create innovation?",
       "cover": "https://picsum.photos/id/236/80",
       "author": {
-        "date": "January 25, 2021",
+        "month": "January",
+        "number": 18,
+        "year": "2021",
         "time": "5 min Read",
         "full_name": "Gustavo Herwitz",
         "photo": "images/tommy"
@@ -750,7 +762,9 @@
       "preview": "Ridiculously powerful 2021 iPad Pro may drop this month",
       "cover": "https://picsum.photos/id/237/80",
       "author": {
-        "date": "January 25, 2021",
+        "month": "January",
+        "number": 19,
+        "year": "2021",
         "time": "5 min Read",
         "full_name": "Talan Torff",
         "photo": "images/tolik"
@@ -762,7 +776,9 @@
       "preview": "35 Stellar Graphic Design Blogs to Keep You Educated and Inspired",
       "cover": "https://picsum.photos/id/238/80",
       "author": {
-        "date": "January 25, 2021",
+        "month": "January",
+        "number": 20,
+        "year": "2021",
         "time": "5 min Read",
         "full_name": "Abram Vaccaro",
         "photo": "images/linkoln"
@@ -774,7 +790,65 @@
       "preview": "35 Stellar Graphic Design Blogs to Keep You Educated and Inspired",
       "cover": "https://picsum.photos/id/238/80",
       "author": {
-        "date": "January 25, 2021",
+        "month": "January",
+        "number": 21,
+        "year": "2021",
+        "time": "5 min Read",
+        "full_name": "Abram Vaccaro",
+        "photo": "images/linkoln"
+      }
+    },
+    {
+      "id": 10,
+      "position": "Developer",
+      "preview": "35 Stellar Graphic Design Blogs to Keep You Educated and Inspired",
+      "cover": "https://picsum.photos/id/238/80",
+      "author": {
+        "month": "January",
+        "number": 22,
+        "year": "2021",
+        "time": "5 min Read",
+        "full_name": "Abram Vaccaro",
+        "photo": "images/linkoln"
+      }
+    },
+    {
+      "id": 11,
+      "position": "Developer",
+      "preview": "35 Stellar Graphic Design Blogs to Keep You Educated and Inspired",
+      "cover": "https://picsum.photos/id/238/80",
+      "author": {
+        "month": "January",
+        "number": 23,
+        "year": "2021",
+        "time": "5 min Read",
+        "full_name": "Abram Vaccaro",
+        "photo": "images/linkoln"
+      }
+    },
+    {
+      "id": 12,
+      "position": "Developer",
+      "preview": "35 Stellar Graphic Design Blogs to Keep You Educated and Inspired",
+      "cover": "https://picsum.photos/id/238/80",
+      "author": {
+        "month": "January",
+        "number": 24,
+        "year": "2021",
+        "time": "5 min Read",
+        "full_name": "Abram Vaccaro",
+        "photo": "images/linkoln"
+      }
+    },
+    {
+      "id": 13,
+      "position": "Developer",
+      "preview": "35 Stellar Graphic Design Blogs to Keep You Educated and Inspired",
+      "cover": "https://picsum.photos/id/238/80",
+      "author": {
+        "month": "January",
+        "number": 25,
+        "year": "2021",
         "time": "5 min Read",
         "full_name": "Abram Vaccaro",
         "photo": "images/linkoln"

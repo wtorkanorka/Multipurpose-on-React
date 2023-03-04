@@ -1,7 +1,7 @@
 .header-mobile {
   height: 50px;
   width: 100%;
-  background-color: var(--white);
+  background-color: var(--header-background-white);
   align-items: center;
   display: flex;
   justify-content: space-between;
@@ -23,9 +23,9 @@
     font-size: 25px;
     line-height: 123.6%;
     text-align: center;
-    color: black;
+    color: var(--title-header-second);
     span {
-      color: var(--title-of-page);
+      color: var(--orange-permanent);
     }
     &:active {
       color: var(--h3-orange);
@@ -50,6 +50,7 @@
   height: 80px;
   align-items: center;
   padding: 27px 40px;
+  background-color: var(--header-background-white);
   nav {
     ul {
       display: flex;
@@ -68,7 +69,7 @@
         }
         a {
           text-decoration: none;
-          color: black;
+          color: var(--header-nav);
           &:active {
             color: var(--h3-orange);
           }
@@ -83,12 +84,12 @@
     text-decoration: none;
 
     p {
-      color: black;
+      color: var(--title-header-second);
       font-weight: 600;
       font-size: 20px;
       line-height: 123.6%;
       span {
-        color: var(--h3-orange);
+        color: var(--orange-permanent);
       }
 
       @media (min-width: 1360px) {
@@ -115,9 +116,9 @@
 .navigation-mobile {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+
   background-color: white;
-  padding: 10px;
+
   position: absolute;
   right: 0;
   top: 48px;
@@ -130,7 +131,7 @@
   li:hover {
     background-color: var(--h3-orange);
     a {
-      color: white;
+      color: var(--orange-permanent);
     }
   }
   li {
@@ -139,11 +140,12 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: var(--header-background-white);
     a {
       text-decoration: none;
-      color: black;
+      color: var(--header-nav);
       &:active {
-        color: var(--h3-orange);
+        color: var(--orange-permanent);
       }
     }
   }

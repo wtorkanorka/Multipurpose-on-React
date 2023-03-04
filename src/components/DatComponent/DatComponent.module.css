@@ -19,6 +19,7 @@
     font-weight: 400;
     font-size: 12.8px;
     line-height: 123.6%;
+    color: var(--paragraph-permanent);
     @media (min-width: 768px) {
       font-size: 16px;
       line-height: 150.6%;

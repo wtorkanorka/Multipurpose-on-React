@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { memo } from 'react'
 import { useState, useEffect } from 'react'
 import { chunkify } from '../../functions/functions'
 import styles from './PaginationButtons.module.css'
-export default function PaginationButtons({ setPage, page, data }: any) {
+export const PaginationButtons = memo(({ setPage, page, data }: any) => {
   const sliced = chunkify(data)
 
   return (
@@ -21,4 +21,4 @@ export default function PaginationButtons({ setPage, page, data }: any) {
       })}
     </>
   )
-}
+})

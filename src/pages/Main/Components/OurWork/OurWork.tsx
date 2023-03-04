@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './OurWork.module.css'
 import { useState } from 'react'
-import SmartImage from '../../../../components/Image/Image'
+import { Image } from '../../../../components/Image/Image'
 import useSWR from 'swr'
 
 import { OurWorkTypes } from '../../../../Types/Types'
@@ -39,7 +39,14 @@ export default function OurWork() {
               }}
             >
               <div>
-                <p style={{ color: active == 1 ? 'var(--h3-orange)' : '' }}>
+                <p
+                  style={{
+                    color:
+                      active == 1
+                        ? 'var(--orange-permanent)'
+                        : 'var(--paragraph-permanent)',
+                  }}
+                >
                   All
                 </p>
               </div>
@@ -50,7 +57,14 @@ export default function OurWork() {
               }}
             >
               <div>
-                <p style={{ color: active == 2 ? 'var(--h3-orange)' : '' }}>
+                <p
+                  style={{
+                    color:
+                      active == 2
+                        ? 'var(--orange-permanent)'
+                        : 'var(--paragraph-permanent)',
+                  }}
+                >
                   Graphic Design
                 </p>
               </div>
@@ -61,7 +75,14 @@ export default function OurWork() {
               }}
             >
               <div>
-                <p style={{ color: active == 3 ? 'var(--h3-orange)' : '' }}>
+                <p
+                  style={{
+                    color:
+                      active == 3
+                        ? 'var(--orange-permanent)'
+                        : 'var(--paragraph-permanent)',
+                  }}
+                >
                   UI/UX Design
                 </p>
               </div>
@@ -72,7 +93,14 @@ export default function OurWork() {
               }}
             >
               <div>
-                <p style={{ color: active == 4 ? 'var(--h3-orange)' : '' }}>
+                <p
+                  style={{
+                    color:
+                      active == 4
+                        ? 'var(--orange-permanent)'
+                        : 'var(--paragraph-permanent)',
+                  }}
+                >
                   Web Development
                 </p>
               </div>

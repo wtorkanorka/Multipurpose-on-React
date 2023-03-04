@@ -1,10 +1,11 @@
 import React from 'react'
 import styles from './Header.module.css'
 import { Link } from 'react-router-dom'
-import SmartImage from '../Image/Image'
+import { Image } from '../Image/Image'
 import { useState } from 'react'
 import cx from 'classnames'
 import { useInView } from 'react-intersection-observer'
+import { SwitchThemeButton } from '../SwitchThemeButton/SwitchThemeButton'
 
 export default function Header() {
   const [visible, setVisible] = useState(false)
@@ -19,18 +20,14 @@ export default function Header() {
           </p>
         </Link>
         <div>
-          <img
-            src="/src/assets/icons/light.svg"
-            alt="light"
-            className={styles['img-position']}
-          />
+          <SwitchThemeButton />
         </div>
 
         <button
           onClick={() => setVisible(!visible)}
           className={styles['button-burger']}
         >
-          <SmartImage path="images/burger" />
+          <Image path="images/burger" />
         </button>
         <ul
           className={cx(
@@ -87,11 +84,7 @@ export default function Header() {
             </li>
           </ul>
         </nav>
-        <img
-          src="/src/assets/icons/light.svg"
-          alt="light"
-          className={styles['img-position']}
-        />
+        <SwitchThemeButton />
       </div>
     </>
   )

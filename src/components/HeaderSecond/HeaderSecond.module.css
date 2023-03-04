@@ -6,14 +6,15 @@
   display: flex;
   justify-content: space-between;
   position: relative;
+  background-color: var(--background-colorful-component);
 }
 .logo span {
-  color: var(--title-of-page);
+  color: var(--title-header-first);
 }
 .logo p {
   font-size: 39.06px;
   line-height: 46px;
-  color: black;
+  color: var(--title-header-second);
 }
 .logo a {
   text-decoration: none;
@@ -24,11 +25,11 @@
   ul {
     li {
       a {
-        color: black;
+        color: var(--header-nav);
         text-decoration: none;
 
         &:active {
-          color: var(--h3-orange);
+          color: var(--header-nav-active);
         }
       }
     }
@@ -45,16 +46,18 @@
   color: black;
 }
 .navigation li:active {
-  color: #ff5300;
+  color: var(--background);
 }
 .nav-ul {
   display: none;
 }
 .lets-talk button {
   all: unset;
-  border: 2px solid black;
+
   height: 50px;
   width: 135px;
+  border: 2px solid var(--header-nav);
+  color: var(--header-nav);
   display: flex;
   align-items: center;
   border-radius: 10px;
@@ -96,8 +99,12 @@
     ul {
       li {
         a {
-          color: black;
+          color: var(--header-nav);
           text-decoration: none;
+
+          &:active {
+            color: var(--header-nav-active);
+          }
         }
       }
     }
@@ -115,7 +122,8 @@
   }
   .lets-talk button {
     all: unset;
-    border: 2px solid black;
+    border: 2px solid var(--header-nav);
+    color: var(--header-nav);
     height: 30px;
     width: 85px;
     display: flex;
@@ -128,6 +136,10 @@
   }
 }
 @media (max-width: 767px) {
+  .lets-talk button {
+    border: 2px solid var(--header-nav);
+    color: var(--header-nav);
+  }
   .logo p {
     font-weight: 500;
     font-size: 25px;
@@ -156,6 +168,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+
     &:hover {
       background-color: var(--h3-orange);
       a {
@@ -183,6 +196,7 @@
     align-items: center;
     height: 50px;
     padding: 0 16px;
+    background-color: var(--background-colorful-component);
   }
   .navigation {
     display: flex;
@@ -219,6 +233,16 @@
 .animated {
   animation: animated-burger 0.5s ease-in-out;
   transform-origin: top;
+  background-color: var(--background-second-color);
+
+  a {
+    color: var(--header-nav);
+    text-decoration: none;
+
+    &:active {
+      color: var(--header-nav-active);
+    }
+  }
 }
 
 @keyframes animated-burger {

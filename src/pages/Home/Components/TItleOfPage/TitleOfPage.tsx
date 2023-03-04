@@ -12,7 +12,7 @@ interface Types {
 export function TitleOfPage({
   position = 'none',
   children,
-  color = '#FF5300',
+  color = 'var(--pre-title-of-blog)',
 }: Types) {
   return (
     <div
