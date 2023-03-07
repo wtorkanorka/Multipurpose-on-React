@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './OurCaseStudy.module.css'
 import { useState, useEffect } from 'react'
 import shareBox from '../../../../assets/icons/share-box-line.svg'
-import SmartImage from '../../../../components/Image/Image'
+import { Image } from '../../../../components/Image/Image'
 import { useInView } from 'react-intersection-observer'
 export default function OurCaseStudyTextContent({ i, filter }: any) {
   const [visible, setVisible] = useState(false)
@@ -12,20 +12,13 @@ export default function OurCaseStudyTextContent({ i, filter }: any) {
   })
   const [isHovering, setIsHovering] = useState(false)
 
-  const handleMouseOver = () => {
-    setIsHovering(true)
-  }
-
-  const handleMouseOut = () => {
-    setIsHovering(false)
-  }
   return (
     <li
       key={i.id}
       className={styles['li-hover']}
       ref={ref}
-      onMouseOver={handleMouseOver}
-      onMouseOut={handleMouseOut}
+      onMouseOver={() => setIsHovering(true)}
+      onMouseOut={() => setIsHovering(false)}
     >
       <div
         onClick={() => {
@@ -36,7 +29,7 @@ export default function OurCaseStudyTextContent({ i, filter }: any) {
           transition: `${i.id / (i.id + 1 * 2)}s`,
         }}
       >
-        <SmartImage path={`${i.image}`} />
+        <Image path={`${i.image}`} />
       </div>
 
       {isHovering && (

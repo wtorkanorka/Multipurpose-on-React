@@ -9,12 +9,15 @@ import { Reviews } from '../../../../Types/Types'
 
 import { useState, useEffect } from 'react'
 import cx from 'classnames'
-import SmartImage from '../../../../components/Image/Image'
+import { Image } from '../../../../components/Image/Image'
 import { useInView } from 'react-intersection-observer'
 import { ENDPOINTS } from '../../../../constants/endpoints'
 export default function OurTestimonial() {
+  interface Arr {
+    list: Reviews
+  }
   const [page, setPage] = useState(1)
-  const { data, error } = useSWR<Reviews>(
+  const { data, error } = useSWR<Arr>(
     ENDPOINTS.OUR_TESTIMONIAL + `?_limit=3&_page=${page}`,
   )
 
@@ -26,7 +29,7 @@ export default function OurTestimonial() {
   if (page < 1) {
     setPage(1)
   }
-  if (data?.length == 0) {
+  if (data?.list.length == 0) {
     setPage(() => page - 1)
   }
 
@@ -36,7 +39,7 @@ export default function OurTestimonial() {
 
   return (
     <div ref={ref}>
-      <Wrapper backgroundColor="var(--background-comp)">
+      <Wrapper backgroundColor="var(--background-colorful-component)">
         <TitleOfPage position="center">Our Testimonial</TitleOfPage>
         <div>
           <h2
@@ -69,7 +72,7 @@ export default function OurTestimonial() {
                 >
                   <path
                     d="M6.465 8 .278 1.812 2.045.045 10 8l-7.955 7.955-1.767-1.768L6.465 8Z"
-                    fill="#373737"
+                    fill="var(--home-hero-h1-color)"
                   />
                 </svg>
               </button>
@@ -89,13 +92,13 @@ export default function OurTestimonial() {
                 >
                   <path
                     d="M6.465 8 .278 1.812 2.045.045 10 8l-7.955 7.955-1.767-1.768L6.465 8Z"
-                    fill="#373737"
+                    fill="var(--home-hero-h1-color)"
                   />
                 </svg>
               </button>
             )}
             {!error ? (
-              data?.map(i => {
+              data?.list?.map(i => {
                 return (
                   <div
                     className={styles['comment']}
@@ -108,7 +111,7 @@ export default function OurTestimonial() {
                   >
                     <StarRatings
                       rating={i.rating / 2}
-                      starRatedColor="var(--background)"
+                      starRatedColor="var(--orange-permanent)"
                       numberOfStars={5}
                       name="rating"
                       starDimension="20px"
@@ -124,7 +127,7 @@ export default function OurTestimonial() {
                         </div>
                       </div>
                       <div>
-                        <SmartImage path="images/dots" />
+                        <Image path="images/dots" />
                       </div>
                     </div>
                   </div>
@@ -134,10 +137,12 @@ export default function OurTestimonial() {
               <div>Ошибка при запросе</div>
             )}
 
-            {data?.length == 0 || (data !== undefined && data?.length) < 3 ? (
+            {data?.list.length == 0 ||
+            (data !== undefined && data?.list.length) < 3 ? (
               <div className={styles['comment']}>Ничего нет</div>
             ) : null}
-            {data !== undefined && data?.length * page !== res1.data?.length ? (
+            {data !== undefined &&
+            data?.list.length * page !== res1.data?.length ? (
               <button
                 className={cx(
                   styles['nav-button-second'],
@@ -156,7 +161,7 @@ export default function OurTestimonial() {
                 >
                   <path
                     d="M6.465 8 .278 1.812 2.045.045 10 8l-7.955 7.955-1.767-1.768L6.465 8Z"
-                    fill="#373737"
+                    fill="var(--home-hero-h1-color)"
                   />
                 </svg>
               </button>
@@ -176,7 +181,7 @@ export default function OurTestimonial() {
                 >
                   <path
                     d="M6.465 8 .278 1.812 2.045.045 10 8l-7.955 7.955-1.767-1.768L6.465 8Z"
-                    fill="#373737"
+                    fill="var(--home-hero-h1-color)"
                   />
                 </svg>
               </button>

@@ -9,15 +9,17 @@ interface Review {
   review: string
   rating: number
   author: ReviewAuthor
+  list: any
 }
 
 export interface Post {
-  cover: string
-  author: string
-  preview: string
-  review: string
-  created_at: string
   id: number
+  cover: string
+  preview: string
+  created_at: string
+  author: string
+  review: string
+  tag: string
 }
 export interface TeamMembers {
   id: number
@@ -43,7 +45,9 @@ export interface ClientsFeedbackType {
   position: string
 }
 interface AuthorOurBlog {
-  date: string
+  month: string
+  number: number
+  year: string
   time: string
   full_name: string
   photo: string

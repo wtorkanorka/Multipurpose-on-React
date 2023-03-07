@@ -2,29 +2,32 @@ import React from 'react'
 import styles from './OurBlog.module.css'
 import { OurBLogType } from '../../../../Types/Types'
 import useSWR from 'swr'
-
 import { useState } from 'react'
-import SmartImage from '../../../../components/Image/Image'
-import PaginationButtons from '../../../../components/PaginationButtons/PaginationButtons'
+import { Image } from '../../../../components/Image/Image'
+import { PaginationButtons } from '../../../../components/PaginationButtons/PaginationButtons'
 import { chunkify } from '../../../../functions/functions'
 import { ENDPOINTS } from '../../../../constants/endpoints'
 export default function OurBlog() {
+  interface Arr {
+    list: []
+  }
   const [page, setPage] = useState(1)
 
-  const { data, error } = useSWR<[]>(ENDPOINTS.OUR_BLOG)
+  const { data, error } = useSWR<Arr>(ENDPOINTS.OUR_BLOG)
 
   if (error) {
     return <div>ERROR</div>
   }
   if (!data) {
-    return <div>LAODING...</div>
+    return <div>LOADING...</div>
   }
-  const sliced = chunkify(data)
+  const sliced = chunkify(data.list)
+
   return (
     <div className={styles['our-blog-container']}>
       <div className={styles['heading']}>
-        <p>Our Blog</p>
-        <h2>
+        <p className={styles['paragraph']}>Our Blog</p>
+        <h2 className={styles['h2-style']}>
           Our Latest{'\n'}
           <span className={styles['span-style']}>
             Blogs
@@ -50,12 +53,16 @@ export default function OurBlog() {
                 </div>
                 <div className={styles['author']}>
                   <div className={styles['author-photo']}>
-                    <SmartImage path={i.author.photo} />
+                    <Image path={i.author.photo} />
                   </div>
                   <div className={styles['author-content']}>
                     <h2 className={styles['name']}>{i.author.full_name}</h2>
                     <div className={styles['date']}>
-                      <p>{i.author.date}</p>
+                      <div className={styles['date']}>
+                        <p>{i.author.month}</p>
+                        <p>{i.author.number}</p>
+                        <p>{i.author.year}</p>
+                      </div>
                       <p>•</p>
                       <p>{i.author.time}</p>
                     </div>
@@ -68,7 +75,7 @@ export default function OurBlog() {
         {error && <div>Ошибка при запросе</div>}
       </div>
       <ul className={styles['pagination']}>
-        <PaginationButtons setPage={setPage} page={page} data={data} />
+        <PaginationButtons setPage={setPage} page={page} data={data.list} />
       </ul>
     </div>
   )

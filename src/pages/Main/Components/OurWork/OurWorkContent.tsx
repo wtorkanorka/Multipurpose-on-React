@@ -1,26 +1,19 @@
 import React from 'react'
-import SmartImage from '../../../../components/Image/Image'
+import { Image } from '../../../../components/Image/Image'
 import styles from './OurWork.module.css'
 import { useState } from 'react'
-import { OurWorkTypes } from '../../../../Types/Types'
+
 export default function OurWorkContent({ i }: any) {
   const [isHovering, setIsHovering] = useState(false)
-  const handleMouseOver = () => {
-    setIsHovering(true)
-  }
-
-  const handleMouseOut = () => {
-    setIsHovering(false)
-  }
 
   return (
     <div
       key={i.id}
       className={styles['image-container']}
-      onMouseOver={handleMouseOver}
-      onMouseOut={handleMouseOut}
+      onMouseOver={() => setIsHovering(true)}
+      onMouseOut={() => setIsHovering(false)}
     >
-      <SmartImage path={i.cover} />
+      <Image path={i.cover} />
       <div
         className={styles['hover']}
         style={{ display: isHovering == true ? 'flex' : 'none' }}

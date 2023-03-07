@@ -1,12 +1,14 @@
 .header-mobile {
   height: 50px;
   width: 100%;
-  background-color: var(--white);
+  background-color: var(--header-background-white);
   align-items: center;
   display: flex;
   justify-content: space-between;
   padding: 13px 17px;
-  position: relative;
+  z-index: 4;
+  position: fixed;
+  width: 100%;
   .button-burger {
     justify-content: flex-end;
   }
@@ -23,9 +25,9 @@
     font-size: 25px;
     line-height: 123.6%;
     text-align: center;
-    color: black;
+    color: var(--title-header-second);
     span {
-      color: var(--title-of-page);
+      color: var(--orange-permanent);
     }
     &:active {
       color: var(--h3-orange);
@@ -50,6 +52,10 @@
   height: 80px;
   align-items: center;
   padding: 27px 40px;
+  background-color: var(--header-background-white);
+  position: fixed;
+  width: 100%;
+  z-index: 4;
   nav {
     ul {
       display: flex;
@@ -68,7 +74,7 @@
         }
         a {
           text-decoration: none;
-          color: black;
+          color: var(--header-nav);
           &:active {
             color: var(--h3-orange);
           }
@@ -83,12 +89,12 @@
     text-decoration: none;
 
     p {
-      color: black;
+      color: var(--title-header-second);
       font-weight: 600;
       font-size: 20px;
       line-height: 123.6%;
       span {
-        color: var(--h3-orange);
+        color: var(--orange-permanent);
       }
 
       @media (min-width: 1360px) {
@@ -115,46 +121,72 @@
 .navigation-mobile {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+
   background-color: white;
-  padding: 10px;
+
   position: absolute;
   right: 0;
-  top: 70px;
+  top: 48px;
+  width: 100%;
+  text-align: center;
+  z-index: 100;
   li:active {
     color: var(--h3-orange);
   }
-
+  li:hover {
+    background-color: var(--h3-orange);
+    a {
+      color: var(--orange-permanent);
+    }
+  }
   li {
+    height: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--header-background-white);
     a {
       text-decoration: none;
-      color: black;
+      color: var(--header-nav);
       &:active {
-        color: var(--h3-orange);
+        color: var(--orange-permanent);
       }
     }
   }
 }
 
 .visible {
-  display: none;
+  transform: rotate3d(1, 0, 0, 90deg);
+  transform-origin: top;
+  pointer-events: none;
+  transition: 0.5s;
 }
 
 .animated {
   animation: animated-burger 0.5s ease-in-out;
+  transform-origin: top;
 }
 
 @keyframes animated-burger {
   0% {
-    opacity: 0;
-    margin-top: -20px;
+    transform: rotate3d(1, 0, 0, 90deg);
   }
   50% {
     opacity: 0.5;
   }
 
   100% {
-    opacity: 1;
-    margin-top: 0;
+    transform: rotate3d(1, 0, 0, 0deg);
   }
 }
+
+/* @keyframes animated-burger-reverse {
+  0% {
+    transform: rotate3d(1, 0, 0, 0deg);
+  }
+
+  100% {
+    transform: rotate3d(1, 0, 0, 90deg);
+  }
+} */

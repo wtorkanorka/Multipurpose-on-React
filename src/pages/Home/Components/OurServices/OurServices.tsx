@@ -2,7 +2,7 @@ import { TitleOfPage } from '../TItleOfPage/TitleOfPage'
 import styles from './OurServices.module.css'
 import ux from '../../../..//assets/images/ux-interface.svg'
 import { Wrapper } from '../../../../components/Wrapper/Wrapper'
-import SmartImage from '../../../../components/Image/Image'
+import { Image } from '../../../../components/Image/Image'
 import { useInView } from 'react-intersection-observer'
 export default function OurServices() {
   const { ref, inView, entry } = useInView({
@@ -12,7 +12,7 @@ export default function OurServices() {
 
   return (
     <div ref={ref}>
-      <Wrapper>
+      <Wrapper backgroundColor="var(--background-color-white)">
         <TitleOfPage position="center">Our Services</TitleOfPage>
         <h2
           className={styles['h2']}
@@ -33,7 +33,7 @@ export default function OurServices() {
               }}
             >
               <div className={styles['container-for-image']}>
-                <SmartImage path="images/ux-interface" />
+                <Image path="images/ux-interface" />
                 <article className={styles['number']}>01</article>
               </div>
               <div>
@@ -56,7 +56,7 @@ export default function OurServices() {
               }}
             >
               <div className={styles['container-for-image']}>
-                <SmartImage path="images/game-design" />
+                <Image path="images/game-design" />
                 <article className={styles['number']}>02</article>
               </div>
               <div>
@@ -79,7 +79,7 @@ export default function OurServices() {
               }}
             >
               <div className={styles['container-for-image']}>
-                <SmartImage path="images/graphic-design" />
+                <Image path="images/graphic-design" />
                 <article className={styles['number']}>03</article>
               </div>
               <div>
@@ -102,7 +102,7 @@ export default function OurServices() {
               }}
             >
               <div className={styles['container-for-image']}>
-                <SmartImage path="images/web-design" />
+                <Image path="images/web-design" />
                 <article className={styles['number']}>04</article>
               </div>
               <div>
@@ -125,7 +125,7 @@ export default function OurServices() {
               }}
             >
               <div className={styles['container-for-image']}>
-                <SmartImage path="images/app-developmen" />
+                <Image path="images/app-developmen" />
                 <article className={styles['number']}>05</article>
               </div>
               <div>
@@ -148,7 +148,7 @@ export default function OurServices() {
               }}
             >
               <div className={styles['container-for-image']}>
-                <SmartImage path="images/digital-marketing" />
+                <Image path="images/digital-marketing" />
                 <article className={styles['number']}>06</article>
               </div>
               <div>

@@ -1,6 +1,6 @@
 .our-expereince-container {
   padding: 50px 16px;
-  background-color: var(--background-comp);
+  background-color: var(--background-colorful-component);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,9 +26,7 @@
       font-size: 25px;
       line-height: 123.6%;
       margin-bottom: 18px;
-      span {
-        color: var(--h3-orange);
-      }
+      color: var(--title-of-block);
       @media (min-width: 768px) {
         font-weight: 600;
         font-size: 31.25px;
@@ -92,7 +90,7 @@
     }
   }
   .block {
-    background: #ffffff;
+    background: var(--header-background-white);
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
     height: 250px;
     flex-direction: column;
@@ -104,6 +102,7 @@
       font-size: 48px;
       line-height: 123.6%;
       margin-bottom: 25px;
+      color: var(--black-to-white);
       @media (min-width: 768px) {
         font-weight: 500;
         font-size: 25px;
@@ -121,7 +120,7 @@
       font-weight: 500;
       font-size: 25px;
       line-height: 123.6%;
-      color: var(--p-color);
+      color: var(--paragraph-permanent);
       @media (min-width: 768px) {
         font-weight: 400;
         font-size: 16px;
@@ -154,11 +153,20 @@
   @media (min-width: 768px) {
     padding: 60px 40px;
     flex-direction: row;
-    /* новыйстиль */
+
     justify-content: space-between;
   }
   @media (min-width: 1360px) {
     padding: 83px 135px;
     justify-content: center;
   }
+}
+.non-animated {
+  opacity: 0;
+
+  transition: 1s;
+}
+.animated {
+  opacity: 1;
+  transition: 1s;
 }

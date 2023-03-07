@@ -1,24 +1,24 @@
-import React, { useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import styles from './Posts.module.css'
 import useSWR from 'swr'
 import { ENDPOINTS } from '../../../../constants/endpoints'
-import SmartImage from '../../../../components/Image/Image'
-import Button from '../../../../components/Button/Button'
-import { Post } from '../../../../Types/Types'
 import Pagination from '../Pagination/Pagination'
-import { chunkify } from '../../../../functions/functions'
-import BlogArticle from '../BlogArticle/BlogArticle'
 import PostsContent from './PostsContent'
+import { ThemeContext } from '../../../../ThemeContext'
 interface Comp {
   setFilter(value: string): void
   filter: string
 }
-export default function Posts({ filter, setFilter }: Comp) {
-  const [page, setPage] = useState<number>(1)
 
-  const { data, error } = useSWR<[]>(
-    ENDPOINTS.BLOG_POST + `?preview_like=${filter}`,
+export default function Posts() {
+  const [page, setPage] = useState<number>(1)
+  const { searchForTagState } = useContext(ThemeContext)
+  const { searchState } = useContext(ThemeContext)
+  const { data, error } = useSWR(
+    ENDPOINTS.BLOG_POSTS +
+      `?preview_like=${searchState}&tag_like=${searchForTagState}&_limit=5&_page=${page}`,
   )
+
   if (error) {
     return <div>ERROR</div>
   }
@@ -26,18 +26,11 @@ export default function Posts({ filter, setFilter }: Comp) {
     return <div>Loading ...</div>
   }
 
-  const sliced = chunkify(data, 5)
-
   return (
     <>
       <div className={styles['posts-container']}>
-        <PostsContent
-          dataLength={data?.length}
-          sliced={sliced}
-          page={page}
-          setFilter={setFilter}
-        />
-        <Pagination data={data} setPage={setPage} page={page} />
+        <PostsContent dataLength={data?.length} data={data} page={page} />
+        {data.list && <Pagination data={data} setPage={setPage} page={page} />}
       </div>
     </>
   )

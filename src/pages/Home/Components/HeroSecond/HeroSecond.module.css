@@ -3,12 +3,13 @@
   gap: 36px;
   align-items: center;
   justify-content: center;
+  margin-top: 100px;
 }
 .paragraph-h1 {
   font-weight: 700;
   font-size: 48.83px;
   line-height: 73px;
-  color: var(--h2-gray);
+  color: var(--home-hero-h1-color);
   margin-bottom: 18px;
 }
 .image img {
@@ -18,6 +19,7 @@
 .paragraph-p {
   margin-bottom: 30px;
 }
+
 @media (max-width: 1200px) {
   .paragraph-h1 {
     font-style: normal;
@@ -28,9 +30,10 @@
   .container {
     display: flex;
     gap: 28px;
-    margin-top: 73px;
+
     padding-bottom: 73px;
     align-items: center;
+    margin-top: 80px;
   }
   .image img {
     width: 329px;
@@ -42,6 +45,7 @@
     flex-direction: column-reverse;
     margin-top: 50px;
     gap: 70px;
+    margin-top: 50px;
   }
   .image img {
     max-width: 100%;

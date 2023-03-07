@@ -11,8 +11,11 @@ import cx from 'classnames'
 import { InView, useInView } from 'react-intersection-observer'
 import { ENDPOINTS } from '../../../../constants/endpoints'
 export default function OurCaseStudy() {
+  interface Arr {
+    list: OurCase[]
+  }
   const [filter, setFilter] = useState('')
-  const { data, error } = useSWR<OurCase[]>(
+  const { data, error } = useSWR<Arr>(
     filter == ''
       ? ENDPOINTS.OUR_CASE_STUDY
       : ENDPOINTS.OUR_CASE_STUDY + `?type=${filter}`,
@@ -28,7 +31,7 @@ export default function OurCaseStudy() {
 
   return (
     <div ref={ref}>
-      <Wrapper>
+      <Wrapper backgroundColor="var(--background-color-white)">
         <TitleOfPage position="center">Our Case Study</TitleOfPage>
         <div className={styles['container-for-content']}>
           <h2
@@ -47,7 +50,7 @@ export default function OurCaseStudy() {
               <button
                 className={cx(filter == '' ? styles['width-button'] : '')}
                 style={{
-                  background: filter == '' ? 'var(--h3-orange)' : 'none',
+                  background: filter == '' ? 'var(--smart-button)' : 'none',
                   color: filter == '' ? 'white' : '#7B7B7B',
                   borderRadius: '10px',
                 }}
@@ -59,7 +62,7 @@ export default function OurCaseStudy() {
               <button
                 style={{
                   background:
-                    filter == 'ux_design' ? 'var(--h3-orange)' : 'none',
+                    filter == 'ux_design' ? 'var(--smart-button)' : 'none',
                   color: filter == 'ux_design' ? 'white' : '#7B7B7B',
                   borderRadius: '10px',
                 }}
@@ -74,7 +77,7 @@ export default function OurCaseStudy() {
               <button
                 style={{
                   background:
-                    filter == 'web_design' ? 'var(--h3-orange)' : 'none',
+                    filter == 'web_design' ? 'var(--smart-button)' : 'none',
                   color: filter == 'web_design' ? 'white' : '#7B7B7B',
                 }}
                 className={cx(
@@ -88,7 +91,9 @@ export default function OurCaseStudy() {
               <button
                 style={{
                   background:
-                    filter == 'app_development' ? 'var(--h3-orange)' : 'none',
+                    filter == 'app_development'
+                      ? 'var(--smart-button)'
+                      : 'none',
                   color: filter == 'app_development' ? 'white' : '#7B7B7B',
                   borderRadius: '10px',
                 }}
@@ -103,7 +108,7 @@ export default function OurCaseStudy() {
               <button
                 style={{
                   background:
-                    filter == 'game_design' ? 'var(--h3-orange)' : 'none',
+                    filter == 'game_design' ? 'var(--smart-button)' : 'none',
                   color: filter == 'game_design' ? 'white' : '#7B7B7B',
                   borderRadius: '10px',
                 }}
@@ -118,7 +123,7 @@ export default function OurCaseStudy() {
               <button
                 style={{
                   background:
-                    filter == 'graphic_design' ? 'var(--h3-orange)' : 'none',
+                    filter == 'graphic_design' ? 'var(--smart-button)' : 'none',
                   color: filter == 'graphic_design' ? 'white' : '#7B7B7B',
                   borderRadius: '10px',
                 }}
@@ -133,7 +138,7 @@ export default function OurCaseStudy() {
 
           <div className={styles['blocks']}>
             <ul>
-              {data?.map(i => {
+              {data?.list.map(i => {
                 return (
                   <div key={i.id}>
                     <OurCaseStudyTextContent i={i} filter={filter} />

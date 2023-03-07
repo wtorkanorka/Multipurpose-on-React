@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
 
-  background-color: var(--footer-background);
+  background-color: var(--almost-black-permanent);
 }
 .footer-top {
   padding: 50px 16px;
@@ -95,7 +95,7 @@
 }
 .input-container {
   width: 100%;
-  border: 1px solid var(--border-orange);
+  border: 1px solid var(--orange-permanent);
   height: 60px;
   display: flex;
   justify-content: space-between;
@@ -115,7 +115,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--background);
+    background-color: var(--orange-permanent);
     height: 100%;
     min-width: 81px;
     img {
@@ -138,12 +138,12 @@
 
   align-items: center;
   justify-content: center;
-  background-color: var(--background);
+  background-color: var(--orange-permanent);
   p {
     font-weight: 400;
     font-size: 16px;
     line-height: 150.6%;
-    color: var(--white);
+    color: var(--white-permanent);
   }
 
   @media (min-width: 1360px) {

@@ -1,7 +1,6 @@
 import React from 'react'
 import styles from './TitleOfPage.module.css'
 import cx from 'classnames'
-import { DetailedHTMLProps, HTMLAttributes, PropsWithChildren } from 'react'
 
 interface Types {
   children: React.ReactNode
@@ -12,7 +11,7 @@ interface Types {
 export function TitleOfPage({
   position = 'none',
   children,
-  color = '#FF5300',
+  color = 'var(--pre-title-of-blog)',
 }: Types) {
   return (
     <div

@@ -1,6 +1,4 @@
 .clients-feedback-container {
-  padding: 50px 16px;
-  background: var(--background-comp);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,6 +11,7 @@
   text-align: center;
   margin-top: 16px;
   margin-bottom: 18px;
+  color: var(--title-of-block);
   @media (min-width: 768px) {
     margin-top: 18px;
     margin-bottom: 60px;
@@ -26,10 +25,6 @@
     font-size: 39.06px;
     line-height: 123.6%;
   }
-}
-
-.span-style {
-  color: var(--h3-orange);
 }
 
 .commentary-container {
@@ -49,7 +44,7 @@
 }
 .review {
   padding: 26px 12px 18px 35px;
-  background: var(--background);
+  background: var(--orange-permanent);
   min-width: 226px;
   max-width: 470px;
   position: relative;
@@ -74,7 +69,7 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 150.6%;
-  color: var(--white);
+  color: var(--white-permanent);
   margin-bottom: 8px;
   text-align: left;
   @media (min-width: 768px) {
@@ -91,7 +86,7 @@
   font-weight: 400;
   font-size: 12.8px;
   line-height: 123.6%;
-  color: var(--white);
+  color: var(--white-permanent);
   margin-bottom: 12px;
   text-align: left;
   @media (min-width: 768px) {
@@ -104,7 +99,7 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 150.6%;
-  color: var(--white);
+  color: var(--white-permanent);
   text-align: left;
 }
 
@@ -112,4 +107,12 @@
   display: flex;
   gap: 4px;
   margin-top: 60px;
+}
+.non-animated {
+  transform: rotate3d(1, 0, 0, -90deg);
+  transition: 1s;
+}
+.animated {
+  transform: rotate3d(1, 0, 0, 0deg);
+  transition: 1s;
 }

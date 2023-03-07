@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 50px;
   img {
     max-width: 100%;
 
@@ -11,6 +12,7 @@
     @media (min-width: 1360px) {
       min-width: 639px;
       margin-left: 39px;
+      margin-top: 80px;
     }
   }
   p {
@@ -28,10 +30,10 @@
     font-size: 31.25px;
     line-height: 123.6%;
     text-align: center;
-    color: #373737;
+    color: var(--title-of-block);
 
     span {
-      color: var(--h3-orange);
+      color: var(--orange-permanent);
     }
     @media (min-width: 1360px) {
       font-weight: 600;
@@ -59,4 +61,14 @@
       text-align: left;
     }
   }
+}
+.non-animated {
+  opacity: 0;
+  margin-right: -20px;
+  transition: 1s;
+}
+.animated {
+  opacity: 1;
+  transition: 1s;
+  margin-right: 0px;
 }

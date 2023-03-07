@@ -2,27 +2,32 @@ import React from 'react'
 import { TitleOfPage } from '../TItleOfPage/TitleOfPage'
 import { Wrapper } from '../../../../components/Wrapper/Wrapper'
 import styles from './OurBlog.module.css'
-import SmartButton from '../../../../components/Button/Button'
+import { Button } from '../../../../components/Button/Button'
 import useSWR from 'swr'
 import { PostsType } from '../../../../Types/Types'
-import SmartImage from '../../../../components/Image/Image'
+import { Image } from '../../../../components/Image/Image'
 import { useInView } from 'react-intersection-observer'
 import { ENDPOINTS } from '../../../../constants/endpoints'
-import Image from '../../../../components/Image/Image'
+
+import { Link } from 'react-router-dom'
 
 export default function OurBlog() {
-  const { data, error } = useSWR<PostsType>(ENDPOINTS.BLOG_POST)
+  interface Test {
+    list: PostsType
+  }
+  const { data, error } = useSWR<Test>(ENDPOINTS.BLOG_POSTS)
   const { ref, inView, entry } = useInView({
     triggerOnce: true,
     threshold: 0.1,
   })
+
   if (error) {
     return <p>An error occurred while fetching the data.</p>
   }
 
   return (
     <div ref={ref}>
-      <Wrapper backgroundColor="var(--background-comp)">
+      <Wrapper backgroundColor="var(--background-colorful-component)">
         <TitleOfPage position="center">Our Blog</TitleOfPage>
 
         <h2
@@ -42,8 +47,8 @@ export default function OurBlog() {
             transition: '1s',
           }}
         >
-          {data?.length !== 0 ? (
-            data?.slice(0, 3).map(i => {
+          {data?.list.length !== 0 ? (
+            data?.list.slice(0, 3).map(i => {
               return (
                 <div className={styles['blog-post']} key={i.id}>
                   <div className={styles['image']}>
@@ -64,15 +69,17 @@ export default function OurBlog() {
                       <h5>10 Comment</h5>
                     </div>
                   </nav>
-                  <p className={styles['p-style']}>{i.full_content}</p>
+                  <p className={styles['p-style']}>{i.review}</p>
                   <div className={styles['smart-button']}>
-                    <SmartButton type="button">Read More</SmartButton>
+                    <Link to={`/blog/${i.id}`}>
+                      <Button type="button">Read More</Button>
+                    </Link>
                   </div>
                 </div>
               )
             })
           ) : (
-            <div>Тут ничего, обидно?</div>
+            <div>Ошибка</div>
           )}
         </div>
       </Wrapper>

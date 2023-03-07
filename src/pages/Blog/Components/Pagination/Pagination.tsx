@@ -1,32 +1,47 @@
-import React from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import styles from './Pagination.module.css'
-import { chunkify } from '../../../../functions/functions'
+import { getIndexesOfPages } from '../../../../functions/functions'
 import cx from 'classnames'
+import { ThemeContext } from '../../../../ThemeContext'
 interface Pagination {
   setPage(value: number): void
   data: any
   page: number
 }
 export default function Pagination({ setPage, data, page }: Pagination) {
-  const lengthData = chunkify(data, 5)
+  const [lastPage, setLastPage] = useState<number>(1)
+  const { searchForTagState } = useContext(ThemeContext)
+  const { searchState } = useContext(ThemeContext)
+  useEffect(() => {
+    if (data?.pagination?.last) {
+      const lastPageNumber = Number(
+        new URL(data?.pagination?.last).searchParams.get('_page'),
+      )
+      setLastPage(lastPageNumber)
+    } else {
+      setPage(1)
+    }
+  }, [searchState, searchForTagState])
+
+  const indexes = getIndexesOfPages(lastPage)
 
   return (
     <div className={styles['buttons-container']}>
-      {lengthData?.map((_, index: number) => {
-        console.log(index, 'INDEX')
+      {indexes?.map((_, index: number) => {
+        const pageNumber = index + 1
         return (
           <button
             className={cx(
               styles['button'],
-              index + 1 == page ? styles['active-button'] : '',
+              pageNumber == page ? styles['active-button'] : '',
             )}
             onClick={() => {
-              setPage(index + 1)
+              setPage(pageNumber)
               scrollTo(0, 400)
             }}
             key={index}
           >
-            {index + 1 < 10 ? '0' + (index + 1) : index + 1}
+            {pageNumber < 10 ? '0' + pageNumber : pageNumber}
           </button>
         )
       })}

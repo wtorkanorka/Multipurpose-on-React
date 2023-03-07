@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './OurWork.module.css'
 import { useState } from 'react'
-import SmartImage from '../../../../components/Image/Image'
+import { Image } from '../../../../components/Image/Image'
 import useSWR from 'swr'
 
 import { OurWorkTypes } from '../../../../Types/Types'
@@ -9,10 +9,13 @@ import { OurWorkTypes } from '../../../../Types/Types'
 import OurWorkContent from './OurWorkContent'
 import { ENDPOINTS } from '../../../../constants/endpoints'
 export default function OurWork() {
+  interface Arr {
+    list: []
+  }
   const [active, setActive] = useState(1)
   const [filter, setFilter] = useState('all')
 
-  const { data, error } = useSWR<[]>(
+  const { data, error } = useSWR<Arr>(
     filter == 'all'
       ? ENDPOINTS.OUR_WORK
       : ENDPOINTS.OUR_WORK + `?type=${filter}`,
@@ -39,7 +42,14 @@ export default function OurWork() {
               }}
             >
               <div>
-                <p style={{ color: active == 1 ? 'var(--h3-orange)' : '' }}>
+                <p
+                  style={{
+                    color:
+                      active == 1
+                        ? 'var(--orange-permanent)'
+                        : 'var(--paragraph-permanent)',
+                  }}
+                >
                   All
                 </p>
               </div>
@@ -50,7 +60,14 @@ export default function OurWork() {
               }}
             >
               <div>
-                <p style={{ color: active == 2 ? 'var(--h3-orange)' : '' }}>
+                <p
+                  style={{
+                    color:
+                      active == 2
+                        ? 'var(--orange-permanent)'
+                        : 'var(--paragraph-permanent)',
+                  }}
+                >
                   Graphic Design
                 </p>
               </div>
@@ -61,7 +78,14 @@ export default function OurWork() {
               }}
             >
               <div>
-                <p style={{ color: active == 3 ? 'var(--h3-orange)' : '' }}>
+                <p
+                  style={{
+                    color:
+                      active == 3
+                        ? 'var(--orange-permanent)'
+                        : 'var(--paragraph-permanent)',
+                  }}
+                >
                   UI/UX Design
                 </p>
               </div>
@@ -72,7 +96,14 @@ export default function OurWork() {
               }}
             >
               <div>
-                <p style={{ color: active == 4 ? 'var(--h3-orange)' : '' }}>
+                <p
+                  style={{
+                    color:
+                      active == 4
+                        ? 'var(--orange-permanent)'
+                        : 'var(--paragraph-permanent)',
+                  }}
+                >
                   Web Development
                 </p>
               </div>
@@ -81,7 +112,7 @@ export default function OurWork() {
         </div>
       </div>
       <div className={styles['images-container']}>
-        {data?.map((i: OurWorkTypes, index: number) => {
+        {data?.list.map((i: OurWorkTypes, index: number) => {
           return <OurWorkContent i={i} key={index} />
         })}
 

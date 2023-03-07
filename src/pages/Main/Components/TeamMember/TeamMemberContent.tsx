@@ -1,7 +1,7 @@
 import React, { DetailedHTMLProps } from 'react'
 import styles from './TeamMember.module.css'
 import { useState } from 'react'
-import SmartImage from '../../../../components/Image/Image'
+import { Image } from '../../../../components/Image/Image'
 import SiteBlocks from '../../../../components/siteBlocks/SiteBlocks'
 import cx from 'classnames'
 type Props = DetailedHTMLProps<
@@ -14,26 +14,20 @@ interface I {
   position: string
   cover: string
 }
-interface Test {
+interface DataContent {
   i: I
 }
-export default function TeamMemberContent({ i }: Test) {
+export default function TeamMemberContent({ i }: DataContent) {
   const [isHovering, setIsHovering] = useState(false)
-  const handleMouseOver = () => {
-    setIsHovering(true)
-  }
 
-  const handleMouseOut = () => {
-    setIsHovering(false)
-  }
   return (
     <li
       className={styles['profile']}
       key={i.id}
-      onMouseOver={handleMouseOver}
-      onMouseOut={handleMouseOut}
+      onMouseOver={() => setIsHovering(true)}
+      onMouseOut={() => setIsHovering(false)}
     >
-      <SmartImage path={i.cover} />
+      <Image path={i.cover} />
       <h3 className={styles['author']}>{i.author}</h3>
       <p className={styles['position']}>{i.position}</p>
       <div
