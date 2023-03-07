@@ -50,7 +50,7 @@ export default function AboutUsHome() {
           >
             <div className={cx(styles['block-cover'], styles['cover-color-1'])}>
               <img
-                src="/src/assets/icons/icon-file.svg"
+                src="/test/src/assets/icons/icon-file.svg"
                 alt="/src/assets/icons/icon-file.svg"
               />
             </div>
