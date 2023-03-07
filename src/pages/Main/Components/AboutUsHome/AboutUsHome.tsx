@@ -14,7 +14,7 @@ export default function AboutUsHome() {
       <div className={styles['about-us']} ref={ref}>
         <div className={styles['container']}>
           <img
-            src="/src/assets/images/about-us-image-2.svg"
+            src="/assets/images/about-us-image-2.svg"
             alt="/src/assets/images/about-us-image-2.svg"
             className={cx(
               styles['about-us-image'],
