@@ -13,8 +13,11 @@ import { Image } from '../../../../components/Image/Image'
 import { useInView } from 'react-intersection-observer'
 import { ENDPOINTS } from '../../../../constants/endpoints'
 export default function OurTestimonial() {
+  interface Arr {
+    list: Reviews
+  }
   const [page, setPage] = useState(1)
-  const { data, error } = useSWR<Reviews>(
+  const { data, error } = useSWR<Arr>(
     ENDPOINTS.OUR_TESTIMONIAL + `?_limit=3&_page=${page}`,
   )
 
@@ -26,7 +29,7 @@ export default function OurTestimonial() {
   if (page < 1) {
     setPage(1)
   }
-  if (data?.length == 0) {
+  if (data?.list.length == 0) {
     setPage(() => page - 1)
   }
 
@@ -134,10 +137,12 @@ export default function OurTestimonial() {
               <div>Ошибка при запросе</div>
             )}
 
-            {data?.length == 0 || (data !== undefined && data?.length) < 3 ? (
+            {data?.list.length == 0 ||
+            (data !== undefined && data?.list.length) < 3 ? (
               <div className={styles['comment']}>Ничего нет</div>
             ) : null}
-            {data !== undefined && data?.length * page !== res1.data?.length ? (
+            {data !== undefined &&
+            data?.list.length * page !== res1.data?.length ? (
               <button
                 className={cx(
                   styles['nav-button-second'],

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useRef } from 'react'
 import styles from './BlogArticle.module.css'
 import cx from 'classnames'
 import { Image } from '../../../../components/Image/Image'
@@ -8,6 +8,8 @@ import { ThemeContext } from '../../../../ThemeContext'
 export default function BlogArticle() {
   const { toggleTags } = useContext(ThemeContext)
   const { toggleSearch } = useContext(ThemeContext)
+  const input = useRef<HTMLInputElement>(null)
+
   return (
     <article className={styles['container']}>
       <div className={cx(styles['form-container'])}>
@@ -15,10 +17,15 @@ export default function BlogArticle() {
           className={styles['form']}
           onSubmit={e => {
             e.preventDefault()
-            toggleSearch(e.target.name.value)
+            toggleSearch(input.current!.value)
           }}
         >
-          <input type="text" name="name" placeholder="Search here..." />
+          <input
+            type="text"
+            name="name"
+            placeholder="Search here..."
+            ref={input}
+          />
           <input type="submit" value="" />
         </form>
       </div>

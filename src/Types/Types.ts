@@ -13,13 +13,13 @@ interface Review {
 }
 
 export interface Post {
-  cover: string
-  author: string
-  preview: string
-  review: string
-  created_at: string
   id: number
-  number_of_article: number
+  cover: string
+  preview: string
+  created_at: string
+  author: string
+  review: string
+  tag: string
 }
 export interface TeamMembers {
   id: number

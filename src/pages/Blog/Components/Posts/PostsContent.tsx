@@ -24,7 +24,6 @@ interface Component {
 }
 export default function PostsContent({ dataLength, data, page }: Component) {
   const { toggleSearch } = useContext(ThemeContext)
-  console.log(data)
 
   return (
     <>

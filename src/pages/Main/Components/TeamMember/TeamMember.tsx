@@ -8,11 +8,14 @@ import TeamMemberContent from './TeamMemberContent'
 import { ENDPOINTS } from '../../../../constants/endpoints'
 import { useInView } from 'react-intersection-observer'
 export default function TeamMember() {
+  interface Arr {
+    list: TeamMembers[]
+  }
   const { ref, inView, entry } = useInView({
     triggerOnce: true,
     threshold: 0.5,
   })
-  const { data, error } = useSWR<TeamMembers[]>(ENDPOINTS.TEAM_MEMBER)
+  const { data, error } = useSWR<Arr>(ENDPOINTS.TEAM_MEMBER)
   if (error) {
     return <div>ERROR</div>
   }

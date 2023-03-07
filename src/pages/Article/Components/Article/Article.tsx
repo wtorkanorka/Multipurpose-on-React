@@ -1,18 +1,20 @@
-import React from 'react'
-import { useParams } from 'react-router-dom'
-import styles from './Article.module.css'
 import useSWR from 'swr'
 import { ENDPOINTS } from '../../../../constants/endpoints'
 import { Button } from '../../../../components/Button/Button'
-import DatComponent from '../../../../components/DatComponent/DatComponent'
-import cx from 'classnames'
+
 import '../../../../global.css'
 interface Props {
   id: number
 }
+interface Test {
+  content: string
+  id: number
+  path_title: string
+}
 interface Data {
   id: number
   content?: string
+  list: Test
 }
 export default function Article({ id }: Props) {
   const { data, error } = useSWR<Data>(ENDPOINTS.ARTICLES + '/' + id)
@@ -26,7 +28,6 @@ export default function Article({ id }: Props) {
   function createMarkup() {
     return { __html: `${data?.list.content}` }
   }
-  console.log(data)
 
   return (
     <>

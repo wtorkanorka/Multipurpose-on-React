@@ -12,11 +12,15 @@ import { ENDPOINTS } from '../../../../constants/endpoints'
 import { Link } from 'react-router-dom'
 
 export default function OurBlog() {
-  const { data, error } = useSWR<PostsType>(ENDPOINTS.BLOG_POSTS)
+  interface Test {
+    list: PostsType
+  }
+  const { data, error } = useSWR<Test>(ENDPOINTS.BLOG_POSTS)
   const { ref, inView, entry } = useInView({
     triggerOnce: true,
     threshold: 0.1,
   })
+
   if (error) {
     return <p>An error occurred while fetching the data.</p>
   }
@@ -43,7 +47,7 @@ export default function OurBlog() {
             transition: '1s',
           }}
         >
-          {data?.length !== 0 ? (
+          {data?.list.length !== 0 ? (
             data?.list.slice(0, 3).map(i => {
               return (
                 <div className={styles['blog-post']} key={i.id}>
