@@ -9,11 +9,20 @@ type Props = Types & PropsWithChildren<HTMLAttributes<HTMLPictureElement>>
 export const Image = memo(({ styleParams, path, children, ...rest }: Props) => {
   return (
     <picture {...rest}>
-      <source srcSet={`/src/assets/${path}.avif`} type="image/avif" />
-      <source srcSet={`/src/assets/${path}.jpg`} type="image/jpg" />
-      <source srcSet={`/src/assets/${path}.webp`} type="image/webp" />
+      <source
+        srcSet={`/Multipurpose-on-React/src/assets/${path}.avif`}
+        type="image/avif"
+      />
+      <source
+        srcSet={`/Multipurpose-on-React/src/assets/${path}.jpg`}
+        type="image/jpg"
+      />
+      <source
+        srcSet={`/Multipurpose-on-React/src/assets/${path}.webp`}
+        type="image/webp"
+      />
       <img
-        src={`/src/assets/${path}.jpg`}
+        src={`/Multipurpose-on-React/src/assets/${path}.jpg`}
         alt={`${path}`}
         style={styleParams}
       />
