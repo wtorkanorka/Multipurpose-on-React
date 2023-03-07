@@ -15,7 +15,6 @@ export default function DatComponent() {
       </div>
       <div className={styles['dac-content']}>
         <img src="/src/assets/icons/message-circle.svg" alt="message" />
-
         <p>10 Comment</p>
       </div>
     </ul>
