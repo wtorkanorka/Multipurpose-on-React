@@ -8,9 +8,12 @@ import { PaginationButtons } from '../../../../components/PaginationButtons/Pagi
 import { chunkify } from '../../../../functions/functions'
 import { ENDPOINTS } from '../../../../constants/endpoints'
 export default function OurBlog() {
+  interface Arr {
+    list: []
+  }
   const [page, setPage] = useState(1)
 
-  const { data, error } = useSWR<[]>(ENDPOINTS.OUR_BLOG)
+  const { data, error } = useSWR<Arr>(ENDPOINTS.OUR_BLOG)
 
   if (error) {
     return <div>ERROR</div>

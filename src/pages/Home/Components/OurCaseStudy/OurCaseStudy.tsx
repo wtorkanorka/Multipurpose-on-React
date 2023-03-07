@@ -11,8 +11,11 @@ import cx from 'classnames'
 import { InView, useInView } from 'react-intersection-observer'
 import { ENDPOINTS } from '../../../../constants/endpoints'
 export default function OurCaseStudy() {
+  interface Arr {
+    list: OurCase[]
+  }
   const [filter, setFilter] = useState('')
-  const { data, error } = useSWR<OurCase[]>(
+  const { data, error } = useSWR<Arr>(
     filter == ''
       ? ENDPOINTS.OUR_CASE_STUDY
       : ENDPOINTS.OUR_CASE_STUDY + `?type=${filter}`,

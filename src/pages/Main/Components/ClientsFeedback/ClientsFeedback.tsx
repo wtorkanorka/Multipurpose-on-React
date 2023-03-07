@@ -11,21 +11,24 @@ import { ENDPOINTS } from '../../../../constants/endpoints'
 import { useInView } from 'react-intersection-observer'
 import { Wrapper } from '../../../../components/Wrapper/Wrapper'
 export default function ClientsFeedback() {
+  interface Arr {
+    list: []
+  }
   const { ref, inView, entry } = useInView({
     triggerOnce: true,
     threshold: 0.5,
   })
   const [page, setPage] = useState(1)
 
-  const { data, error } = useSWR<[]>(ENDPOINTS.CLIENTS_FEEDBACK)
+  const { data, error } = useSWR<Arr>(ENDPOINTS.CLIENTS_FEEDBACK)
   if (error) {
     return <div>ERROR</div>
   }
   if (!data) {
     return <div>LOADING ...</div>
   }
-  const sliced = chunkify(data.list)
-  console.log(data)
+
+  const sliced = chunkify(data?.list)
 
   return (
     <Wrapper backgroundColor="var(--background-colorful-component)">

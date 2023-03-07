@@ -9,10 +9,13 @@ import { OurWorkTypes } from '../../../../Types/Types'
 import OurWorkContent from './OurWorkContent'
 import { ENDPOINTS } from '../../../../constants/endpoints'
 export default function OurWork() {
+  interface Arr {
+    list: []
+  }
   const [active, setActive] = useState(1)
   const [filter, setFilter] = useState('all')
 
-  const { data, error } = useSWR<[]>(
+  const { data, error } = useSWR<Arr>(
     filter == 'all'
       ? ENDPOINTS.OUR_WORK
       : ENDPOINTS.OUR_WORK + `?type=${filter}`,
