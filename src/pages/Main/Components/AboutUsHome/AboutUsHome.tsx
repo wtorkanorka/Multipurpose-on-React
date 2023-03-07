@@ -4,6 +4,7 @@ import { Wrapper } from '../../../../components/Wrapper/Wrapper'
 import styles from './AboutUsHome.module.css'
 import cx from 'classnames'
 import { useInView } from 'react-intersection-observer'
+import firstImg from '/src/assets/images/about-us-image-2.svg'
 export default function AboutUsHome() {
   const { ref, inView, entry } = useInView({
     triggerOnce: true,
@@ -14,7 +15,7 @@ export default function AboutUsHome() {
       <div className={styles['about-us']} ref={ref}>
         <div className={styles['container']}>
           <img
-            src="/assets/images/about-us-image-2.svg"
+            src={firstImg}
             alt="/src/assets/images/about-us-image-2.svg"
             className={cx(
               styles['about-us-image'],
