@@ -4,7 +4,11 @@ import { Wrapper } from '../../../../components/Wrapper/Wrapper'
 import styles from './AboutUsHome.module.css'
 import cx from 'classnames'
 import { useInView } from 'react-intersection-observer'
-import firstImg from '/src/assets/images/about-us-image-2.svg'
+import firstImage from '/src/assets/images/about-us-image-2.svg'
+import secondImg from '/src/assets/icons/icon-file.svg'
+import thirdImg from '/src/assets/icons/more-less.svg'
+import fourthImg from '/src/assets/icons/gear.svg'
+import fifthImg from '/src/assets/icons/share-box-line.svg'
 export default function AboutUsHome() {
   const { ref, inView, entry } = useInView({
     triggerOnce: true,
@@ -15,7 +19,7 @@ export default function AboutUsHome() {
       <div className={styles['about-us']} ref={ref}>
         <div className={styles['container']}>
           <img
-            src={firstImg}
+            src={firstImage}
             alt="/src/assets/images/about-us-image-2.svg"
             className={cx(
               styles['about-us-image'],
@@ -49,10 +53,7 @@ export default function AboutUsHome() {
             )}
           >
             <div className={cx(styles['block-cover'], styles['cover-color-1'])}>
-              <img
-                src="/test/src/assets/icons/icon-file.svg"
-                alt="/src/assets/icons/icon-file.svg"
-              />
+              <img src={secondImg} alt="/src/assets/icons/icon-file.svg" />
             </div>
             <p className={styles['block-p']}>
               World leader in consulting and finance
@@ -65,10 +66,7 @@ export default function AboutUsHome() {
             )}
           >
             <div className={cx(styles['block-cover'], styles['cover-color-2'])}>
-              <img
-                src="/src/assets/icons/more-less.svg"
-                alt="/src/assets/icons/more-less.svg"
-              />
+              <img src={thirdImg} alt="/src/assets/icons/more-less.svg" />
             </div>
             <p className={styles['block-p']}>
               A focused team with a specialized skill
@@ -81,10 +79,7 @@ export default function AboutUsHome() {
             )}
           >
             <div className={cx(styles['block-cover'], styles['cover-color-3'])}>
-              <img
-                src="/src/assets/icons/gear.svg"
-                alt="/src/assets/icons/gear.svg"
-              />
+              <img src={fourthImg} alt="/src/assets/icons/gear.svg" />
             </div>
             <p className={styles['block-p']}>
               Trusted and professional advisors for you
@@ -97,10 +92,7 @@ export default function AboutUsHome() {
             )}
           >
             <div className={cx(styles['block-cover'], styles['cover-color-4'])}>
-              <img
-                src="/src/assets/icons/share-box-line.svg"
-                alt="/src/assets/icons/share-box-line.svg"
-              />
+              <img src={fifthImg} alt="/src/assets/icons/share-box-line.svg" />
             </div>
             <p className={styles['block-p']}>
               Experience to give you a better results

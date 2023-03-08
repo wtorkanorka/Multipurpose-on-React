@@ -4,6 +4,7 @@ import styles from './OurCapabilities.module.css'
 import { TitleOfPage } from '../TItleOfPage/TitleOfPage'
 import { Image } from '../../../../components/Image/Image'
 import { useInView } from 'react-intersection-observer'
+import pana from '/src/assets/images/presentation-pana.svg'
 export default function OurCapabilities() {
   const { ref, inView, entry } = useInView({
     triggerOnce: true,
@@ -84,7 +85,7 @@ export default function OurCapabilities() {
           </div>
           <div className={styles['image']}>
             <img
-              src="/src/assets/images/presentation-pana.svg"
+              src={pana}
               alt="presentation-pana"
               style={{
                 opacity: inView ? '1' : '0',

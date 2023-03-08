@@ -7,7 +7,7 @@ import { Wrapper } from '../../../../components/Wrapper/Wrapper'
 import { Image } from '../../../../components/Image/Image'
 import { useInView } from 'react-intersection-observer'
 import cx from 'classnames'
-
+import pana from '/src/assets/images/statistic-pana.svg'
 export default function AboutUs() {
   const { ref, inView, entry } = useInView({
     triggerOnce: true,
@@ -68,10 +68,7 @@ export default function AboutUs() {
             inView == true ? styles['visible-img'] : '',
           )}
         >
-          <img
-            src="/src/assets/images/statistic-pana.svg"
-            alt="statistic-pana"
-          />
+          <img src={pana} alt="statistic-pana" />
         </div>
         <div className={styles['second-title']}>
           <TitleOfPage position="center">About Us</TitleOfPage>

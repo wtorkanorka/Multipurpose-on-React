@@ -4,6 +4,7 @@ import styles from './HeroSecond.module.css'
 import { Wrapper } from '../../../../components/Wrapper/Wrapper'
 import { useInView } from 'react-intersection-observer'
 import { Button } from '../../../../components/Button/Button'
+import pana from '/src/assets/images/at-work-pana.svg'
 export default function HeroSecond() {
   const { ref, inView, entry } = useInView({
     triggerOnce: true,
@@ -49,7 +50,7 @@ export default function HeroSecond() {
               marginTop: inView ? '0px' : '-20px',
             }}
           >
-            <img src="/src/assets/images/at-work-pana.svg" alt="at-work-pana" />
+            <img src={pana} alt="at-work-pana" />
           </div>
         </div>
       </Wrapper>

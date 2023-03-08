@@ -2,7 +2,13 @@ import React from 'react'
 import Form from '../Form/Form'
 import styles from './ContactUs.module.css'
 import MapComponent from '../../../../components/Map/MapComponent'
-
+import firstImg from '/src/assets/icons/mail.svg'
+import secondImg from '/src/assets/icons/phone-call.svg'
+import thirdImg from '/src/assets/icons/map-pin.svg'
+import fourthImg from '/src/assets/images/clients-logos-1.svg'
+import fifthImg from '/src/assets/images/clients-logos-2.svg'
+import sixthImg from '/src/assets/images/clients-logos-3.svg'
+import seventhImg from '/src/assets/images/clients-logos-4.svg'
 export default function ContactUs() {
   return (
     <div className={styles['contact-us-container']}>
@@ -19,7 +25,7 @@ export default function ContactUs() {
           <li className={styles['block']}>
             <div className={styles['icon-container']}>
               <div className={styles['icon']}>
-                <img src="/src/assets/icons/mail.svg" alt="mail" />
+                <img src={firstImg} alt="mail" />
               </div>
               <div className={styles['icon-title-container']}>
                 <p className={styles['title-block']}>Drop a line</p>
@@ -34,7 +40,7 @@ export default function ContactUs() {
           <li className={styles['block']}>
             <div className={styles['icon-container']}>
               <div className={styles['icon']}>
-                <img src="/src/assets/icons/phone-call.svg" alt="phone-call" />
+                <img src={secondImg} alt="phone-call" />
               </div>
               <div className={styles['icon-title-container']}>
                 <p className={styles['title-block']}>24/7 Service</p>
@@ -51,7 +57,7 @@ export default function ContactUs() {
           <li className={styles['block']}>
             <div className={styles['icon-container']}>
               <div className={styles['icon']}>
-                <img src="/src/assets/icons/map-pin.svg" alt="map-pin" />
+                <img src={thirdImg} alt="map-pin" />
               </div>
               <div className={styles['icon-title-container']}>
                 <p className={styles['title-block']}>Location</p>
@@ -71,28 +77,16 @@ export default function ContactUs() {
       <MapComponent />
       <ul className={styles['clients-logo']}>
         <li>
-          <img
-            src="/src/assets/images/clients-logos-1.svg"
-            alt="clients-logos"
-          />
+          <img src={fourthImg} alt="clients-logos" />
         </li>
         <li>
-          <img
-            src="/src/assets/images/clients-logos-2.svg"
-            alt="clients-logos"
-          />
+          <img src={fifthImg} alt="clients-logos" />
         </li>
         <li>
-          <img
-            src="/src/assets/images/clients-logos-3.svg"
-            alt="clients-logos"
-          />
+          <img src={sixthImg} alt="clients-logos" />
         </li>
         <li>
-          <img
-            src="/src/assets/images/clients-logos-4.svg"
-            alt="clients-logos"
-          />
+          <img src={seventhImg} alt="clients-logos" />
         </li>
       </ul>
     </div>

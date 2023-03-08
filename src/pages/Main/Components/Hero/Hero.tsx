@@ -4,6 +4,7 @@ import { Button } from '../../../../components/Button/Button'
 import { Wrapper } from '../../../../components/Wrapper/Wrapper'
 import styles from './Hero.module.css'
 import cx from 'classnames'
+import firstImg from '/src/assets/images/hero-image.svg'
 export default function Hero() {
   const { ref, inView, entry } = useInView({
     triggerOnce: true,
@@ -17,7 +18,7 @@ export default function Hero() {
     >
       <div className={styles['hero']} ref={ref}>
         <img
-          src="/src/assets/images/hero-image.svg"
+          src={firstImg}
           alt="hero-iamge"
           className={cx(inView ? styles['animated'] : styles['non-animated'])}
         />

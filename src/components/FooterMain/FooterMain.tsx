@@ -2,6 +2,8 @@ import React from 'react'
 import SiteBlocks from '../siteBlocks/SiteBlocks'
 import styles from './FooterMain.module.css'
 import cx from 'classnames'
+import firstImg from '/src/assets/icons/send-plane-fill.svg'
+import goUpImg from '/src/assets/icons/go-up.svg'
 export default function FooterMain() {
   return (
     <div className={styles['footer-container']}>
@@ -54,10 +56,7 @@ export default function FooterMain() {
             >
               <input type="text" placeholder="info@gmail.com" />
               <button type="submit" className={styles['button-submit']}>
-                <img
-                  src="/src/assets/icons/send-plane-fill.svg"
-                  alt="send-plane-fill"
-                />
+                <img src={firstImg} alt="send-plane-fill" />
               </button>
             </form>
           </li>
@@ -71,7 +70,7 @@ export default function FooterMain() {
               scrollTo(0, 0)
             }}
           >
-            <img src="/src/assets/icons/go-up.svg" alt="go-up" />
+            <img src={goUpImg} alt="go-up" />
           </button>
         </div>
       </div>

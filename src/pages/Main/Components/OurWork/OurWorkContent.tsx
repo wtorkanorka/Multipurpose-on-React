@@ -2,7 +2,7 @@ import React from 'react'
 import { Image } from '../../../../components/Image/Image'
 import styles from './OurWork.module.css'
 import { useState } from 'react'
-
+import firstImg from '/src/assets/icons/search-line.svg'
 export default function OurWorkContent({ i }: any) {
   const [isHovering, setIsHovering] = useState(false)
 
@@ -21,7 +21,7 @@ export default function OurWorkContent({ i }: any) {
         <div className={styles['image-content']}>
           <ul>
             <li>
-              <img src="/src/assets/icons/search-line.svg" alt="search" />
+              <img src={firstImg} alt="search" />
             </li>
             <li>
               <h5>Latest work</h5>

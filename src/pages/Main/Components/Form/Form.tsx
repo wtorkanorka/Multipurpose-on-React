@@ -4,6 +4,7 @@ import styles from './Form.module.css'
 import { useForm } from 'react-hook-form'
 import ReactInputMask from 'react-input-mask'
 import { Button } from '../../../../components/Button/Button'
+import firstImg from '/src/assets/images/form-image.svg'
 export default function Form() {
   const {
     register,
@@ -16,7 +17,7 @@ export default function Form() {
     <>
       <div className={styles['form-container']}>
         <img
-          src="/src/assets/images/form-image.svg"
+          src={firstImg}
           alt="form-image.svg"
           className={styles['form-image']}
         />
